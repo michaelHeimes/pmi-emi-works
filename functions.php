@@ -173,7 +173,7 @@ add_action( 'wp_enqueue_scripts', 'trailhead_scripts' );
 /**
  * Enqueue Google Fonts.
  */
-wp_enqueue_style( 'dmc-', 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Francois+One&display=swap', array(), _S_VERSION, );
+wp_enqueue_style( 'dmc-', 'https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Titillium+Web:wght@600;700&display=swap', array(), _S_VERSION, );
  
  function google_font_loader_tag_filter( $html, $handle ) {
 	 if ( $handle === 'dmc-' ) {

@@ -14,9 +14,9 @@ register_nav_menus(
 function trailhead_top_nav() {
 	wp_nav_menu(array(
 		'container'			=> false,						// Remove nav container
-		'menu_id'			=> 'main-nav',					// Adding custom nav id
-		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
-		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion tablet-dropdown" data-submenu-toggle="true" data-hover-delay="200" data-closing-time="200">%3$s</ul>',
+		'menu_id'			=> '',					// Adding custom nav id
+		'menu_class'		=> 'main-nav medium-horizontal menu',	// Adding custom nav class
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion tablet-dropdown" data-submenu-toggle="true" data-hover-delay="20" data-closing-time="20" data-alignment="left">%3$s</ul>',
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)
@@ -54,18 +54,6 @@ class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
 		$output .= "\n$indent<ul class=\"vertical menu\">\n";
 	}
 }
-
-// The Footer Menu
-function trailhead_footer_links() {
-	wp_nav_menu(array(
-		'container'			=> 'false',				// Remove nav container
-		'menu_id'			=> 'footer-links',		// Adding custom nav id
-		'menu_class'		=> 'menu',				// Adding custom nav class
-		'theme_location'	=> 'footer-links',		// Where it's located in the theme
-		'depth'				=> 0,					// Limit the depth of the nav
-		'fallback_cb'		=> ''					// Fallback function
-	));
-} /* End Footer Menu */
 
 // The Social Links Menu
 function trailhead_social_links() {

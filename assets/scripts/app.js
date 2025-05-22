@@ -33,14 +33,14 @@
 
 // Accordian
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.accordion.js
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.accordionMenu.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.accordionMenu.js
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.responsiveAccordionTabs.js
 
 // Menu enhancements
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.drilldown.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.drilldown.js
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.dropdown.js
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.dropdownMenu.js
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.responsiveMenu.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.dropdownMenu.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.responsiveMenu.js
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.responsiveToggle.js
 
 // Equalize heights
@@ -142,6 +142,24 @@
             
         });
     }
+    
+    _app.body_scrolled = function() {
+        const loadNav = document.querySelector(".top-bar.load");
+        if (!loadNav) return;
+        
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting) {
+                    document.body.classList.add("has-scrolled");
+                } else {
+                    document.body.classList.remove("has-scrolled");
+                }
+            },
+            { rootMargin: "0px 0px 0px 0px", threshold: 0 }
+        );
+        
+        observer.observe(loadNav);
+    }
             
     _app.init = function() {
         
@@ -153,6 +171,7 @@
         
         // Custom Functions
         //_app.mobile_takover_nav();
+        _app.body_scrolled();
     }
     
     
