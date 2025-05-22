@@ -85,7 +85,8 @@ $mediumGutter: map-get($grid-margin-gutters, "medium");
 @import "header";
 @import "footer";
 
-// @import "_parts/banner";
+@import "_parts/page-banner";
+@import "_parts/chev-btn";
 
 // @import "_modules/page-modules";
 

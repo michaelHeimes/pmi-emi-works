@@ -91,6 +91,10 @@ header.site-header {
 			@include breakpoint(tablet) {
 				max-width: 220px;
 			}
+			img,
+			svg {
+				filter: drop-shadow(0px 3px 34px #000);
+			}
 		}
 		&.fixed {
 			position: fixed;
@@ -112,13 +116,13 @@ header.site-header {
 			}
 		}
 		&.load {
-			padding: 1rem calc($smallGutter * .5) 0;
+			padding: 0 calc($smallGutter * .5) 0;
 			@include breakpoint(medium) {
-				padding: 1rem calc($mediumGutter * .5) 0;
+				padding: 0 calc($mediumGutter * .5) 0;
 			}
 			@include breakpoint(tablet) {
 				align-items: flex-start;
-				padding: 2.5625rem calc($mediumGutter * .5) 1rem;
+				padding: 0 calc($mediumGutter * .5) 1rem;
 			}
 			@include breakpoint(xlarge) {
 				align-items: center;
@@ -133,8 +137,62 @@ header.site-header {
 				height: 365px;
 				background: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.98) 100%);
 			}
-			.global-ctas {
-				padding-bottom: 1.1rem;
+			> div {
+				position: relative;
+			}
+			.pre-header {
+				margin-right: calc(-#{$smallGutter * 0.5});
+				overflow: hidden;
+				padding-bottom: 9px;
+				@include breakpoint(medium) {
+					margin-right: calc(-#{$mediumGutter * 0.5});
+				}
+				> .cell {
+					padding-right: 0;
+				}
+				.inner {
+					background: #0F0F1F;
+					border: 1px solid rgba(#74BAFF, .55);
+					border-top: 0;
+					border-right: 0;
+					border-radius: 0 0 0 30px;
+					padding: 0.25rem 1.5rem 0.25rem 1.7rem;
+					filter: drop-shadow(0px 3px 6px get-color(primary));
+					.pre-header-links {
+						a {
+							display: flex !important;
+							&:hover,
+							&:focus {
+								color: $color-link-blue;
+								svg path {
+									fill: $color-link-blue;
+								}
+							}
+							svg, 
+							img {
+								margin-right: 12px;
+							}
+						}
+					}
+					.pre-header-social-links {
+						a {
+							&:hover,
+							&:focus {
+								color: $light-gray;
+								svg {
+									path {
+										&[fill="none"] {
+											stroke: $light-gray;
+										}
+										&:not([fill="none"]) {
+											fill: $light-gray;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}			
 		.main-nav {
@@ -142,52 +200,104 @@ header.site-header {
 			font-family: $header-font-family;
 			padding-top: 0.65rem;
 			a {
-				font-size: rem-calc(18);
-				line-height: 1.111;
+				color: $color-link-blue;
+				font-family: $header-font-family;
+				font-weight: 500;
+				font-size: rem-calc(20);
+				line-height: 1;
+				padding: 0.78rem 1.45rem 1.034rem;
+				&:hover,
+				&:focus {
+					color: $light-gray;	
+				}
 			}
 			> li {
 				margin: 0 0rem 0rem;
-				max-width: 200px;
 				
 				> a {
-					font-family: $header-font-family;
-					font-weight: 500;
-					font-size: rem-calc(20);
-					padding: 0.78rem 1.45rem 1.034rem;
-					position: relative;
+					display: block;
+					border: 1px solid transparent;
+					border-bottom: 0;
+					border-radius: 20px 20px 0 0;
+					text-shadow: 0px 3px 6px rgba(0,0,0,0.6);
 				}
 				
-			&.is-active {
-				> a {
-					color: $light-gray;
-					background: rgba(#0F0F1E, .89);
-				}
-			}
-				
-			&.menu-item-has-children {
-				
-				ul.submenu {
-					background: rgba(#0F0F1E, .89);
-					li {
-						a {
-							color: $black;
-							padding: 0.9rem 1.45rem;
-							transition: color .25s ease, background-color .25s ease;
-							&:hover,
-							&:focus {
-								background-color: $black;
-							}
-							
+				&.home-link {
+					a {
+						font-size: 0;
+						&:after {
+							content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="53.529" height="50" viewBox="0 0 53.529 50"><defs><filter id="a" x="0" y="0" width="53.529" height="50" filterUnits="userSpaceOnUse"><feOffset dx="1" dy="1"/><feGaussianBlur stdDeviation="5" result="blur"/><feFlood flood-color="%230032a0"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter></defs><g filter="url(%23a)"><path data-name="ic_home_24px" d="M23.412 34v-7.059h4.706V34H34v-9.412h3.529L25.765 14 14 24.588h3.529V34Z" fill="%234DA5FC"/></g></svg>');
+							display: block;
 						}
-						&.current-menu-item {
+						&:hover,
+						&:focus {
 							a {
-								background-color: $black;
+								&:after {
+									content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="53.529" height="50" viewBox="0 0 53.529 50"><defs><filter id="a" x="0" y="0" width="53.529" height="50" filterUnits="userSpaceOnUse"><feOffset dx="1" dy="1"/><feGaussianBlur stdDeviation="5" result="blur"/><feFlood flood-color="%230032a0"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter></defs><g filter="url(%23a)"><path data-name="ic_home_24px" d="M23.412 34v-7.059h4.706V34H34v-9.412h3.529L25.765 14 14 24.588h3.529V34Z" fill="%23fff"/></g></svg>');
+								}
+							}
+						}
+					}
+					&.active {
+						a {
+							&:after {
+								content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="53.529" height="50" viewBox="0 0 53.529 50"><defs><filter id="a" x="0" y="0" width="53.529" height="50" filterUnits="userSpaceOnUse"><feOffset dx="1" dy="1"/><feGaussianBlur stdDeviation="5" result="blur"/><feFlood flood-color="%230032a0"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter></defs><g filter="url(%23a)"><path data-name="ic_home_24px" d="M23.412 34v-7.059h4.706V34H34v-9.412h3.529L25.765 14 14 24.588h3.529V34Z" fill="%23fff"/></g></svg>');
 							}
 						}
 					}
 				}
-	
-			}
+				
+				&.is-active {
+					> a {
+						color: $light-gray;
+						background: #0F0F1E;
+						border-color: #466C99;
+						position: relative;
+						z-index: 2;
+						&:after {
+							content: '';
+							display: block;
+							top: calc(100% + 6px);
+							left: 0;
+							width: 100%;
+							height: 1px;
+							background: #0F0F1E;
+							z-index: 2;
+						}
+					}
+				}
+					
+				&.menu-item-has-children {
+					
+					ul.submenu {
+						background: rgba(#0F0F1E, .89);
+						border-radius: 0 20px 0 20px;
+						filter: drop-shadow(0px 3px 6px get-color(primary));
+						li {
+							span {
+								display: block;
+								&.subtitle {
+									font-size: rem-calc(15);
+									line-height: 1.2;
+								}
+							}
+							a {
+								transition: color .25s ease;
+								&:hover,
+								&:focus {
+									color: $light-gray;
+								}
+								
+							}
+							&.current-menu-item {
+								a {
+									color: $light-gray;
+								}
+							}
+						}
+					}
+		
+				}
 
 			}
 		}

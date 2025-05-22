@@ -3,6 +3,9 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
+a:hover, a:focus {
+  color: $color-link-blue;
+}
 /*********************
 BACKGROUND COLORS
 *********************/

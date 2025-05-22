@@ -28,9 +28,42 @@ function trailhead_top_nav() {
 
 // Big thanks to Brett Mason (https://github.com/brettsmason) for the awesome walker
 class Topbar_Menu_Walker extends Walker_Nav_Menu {
-	function start_lvl(&$output, $depth = 0, $args = Array() ) {
+
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent<ul class=\"menu\">\n";
+	}
+
+	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+		$output .= '<li' . $class_names . '>';
+
+		$atts = array();
+		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+		$atts['target'] = ! empty( $item->target )     ? $item->target     : '';
+		$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
+		$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
+
+		$attributes = '';
+		foreach ( $atts as $attr => $value ) {
+			if ( ! empty( $value ) ) {
+				$attributes .= ' ' . $attr . '="' . esc_attr( $value ) . '"';
+			}
+		}
+
+		// Allow <br> tags by not escaping $item->title
+		$title = $item->title;
+
+		$item_output = $args->before;
+		$item_output .= '<a'. $attributes .'>';
+		$item_output .= $args->link_before . $title . $args->link_after;
+		$item_output .= '</a>';
+		$item_output .= $args->after;
+
+		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 }
 
@@ -101,18 +134,17 @@ add_filter( 'nav_menu_css_class', 'required_active_nav_class', 10, 2 );
 		
 		// var_dump($args);
 		
-		if ( $args->theme_location == 'region-nav') {
+		if ( $args->theme_location == 'main-nav') {
 		
 			// loop
 			foreach( $items as &$item ) {
 				
 				// vars
-				$icon = get_field('region_badge', $item);
-				$size = 'full';						
+				$submenu_link_subtitle = get_field('submenu_link_subtitle', $item);
 				// append icon
-				if( $icon ) {
+				if( $submenu_link_subtitle ) {
 					
-					$item->title = '<span class="icon-title-wrap grid-x flex-dir-column align-middle align-center"><span class="icon" aria-hidden="true"><img src="' . $icon['url'] . '" alt="' . $icon['alt'] . '"></span><span class="title">' . $item->title . '</span></span>';
+					$item->title = '<span class="title">' . $item->title . '</span><span class="subtitle">' . esc_html($submenu_link_subtitle) .'</span>';
 					
 				}
 				
@@ -122,28 +154,6 @@ add_filter( 'nav_menu_css_class', 'required_active_nav_class', 10, 2 );
 			// return
 			return $items;		
 			
-		}
-			
-		elseif ( $args->theme_location == 'social-links') {
-			
-			// loop
-			foreach( $items as &$item ) {
-				
-				// vars
-				$icon = get_field('icon', $item);
-				$size = 'full';						
-				// append icon
-				if( $icon ) {
-					
-					$item->title = '<span class="icon" aria-hidden="true"><img class="style-svg" src="' . $icon['url'] . '" alt="' . $icon['alt'] . '"></span><span class="show-for-sr"' . $item->title . '</span>';
-					
-				}
-				
-			}
-			
-			// return
-			return $items;		
-
 		} else {			
 			// loop
 			foreach( $items as &$item ) {}

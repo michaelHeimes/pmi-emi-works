@@ -1,0 +1,46 @@
+{
+    "key": "group_682f1064ee5f0",
+    "title": "Submenu Link Subtitles",
+    "fields": [
+        {
+            "key": "field_682f1065803c9",
+            "label": "Submenu Link Subtitle",
+            "name": "submenu_link_subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "This only appears when applied to a submenu link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "3"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1747914939
+}

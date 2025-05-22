@@ -1,0 +1,14 @@
+.button.chev-btn {
+	display: inline-flex !important;
+	svg {
+		margin-left: rem-calc(20);
+	}
+	&.bg-gray-75 {
+		background: rgba(#0F0F1F, .75);
+	}
+	span {
+		&.color-link-blue {
+			color: $color-link-blue;
+		}
+	}
+}
