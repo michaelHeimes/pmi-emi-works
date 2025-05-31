@@ -205,10 +205,10 @@
                     speed: 500,
                     spaceBetween: 0,
                     effect: "fade",
-                    // autoplay: {
-                    //     delay: delay + '000',
-                    //     disableOnInteraction: false,
-                    // },
+                    autoplay: {
+                        delay: delay + '000',
+                        disableOnInteraction: false,
+                    },
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,
@@ -232,29 +232,6 @@
                 
                 
             }
-        }
-        
-        const heroBanner = document.querySelector('.page-banner.style-hero-slider');
-        if(heroBanner) {
-            const setHeroBannerMinHeight = function() {
-                const headerHeight = document.querySelector('.site-header').offsetHeight;
-                const windowHeight = window.innerHeight;
-                
-                // Calculate the min-height by subtracting headerHeight from windowHeight
-                let minHeight = windowHeight - headerHeight;
-        
-                // Ensure the minHeight does not exceed 856px
-                if (minHeight > 856) {
-                    minHeight = 856;
-                }
-                console.log(headerHeight);
-                // Set the min-height of .style-hero-slider
-                heroBanner.style.minHeight = minHeight + 'px';
-            }
-            setHeroBannerMinHeight();
-            window.addEventListener('resize', function() {
-                setHeroBannerMinHeight();
-            });
         }
         
     }

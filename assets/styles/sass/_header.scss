@@ -116,6 +116,10 @@ header.site-header {
 			}
 		}
 		&.load {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
 			padding: 0 calc($smallGutter * .5) 0;
 			@include breakpoint(medium) {
 				padding: 0 calc($mediumGutter * .5) 0;

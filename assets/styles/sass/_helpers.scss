@@ -1,6 +1,28 @@
 .relative {
 	position: relative;
 }
+.overflow-hidden {
+	overflow: hidden;
+}
+.has-object-fit {
+	position: relative;
+	overflow: hidden;
+		img.img-fill,
+		video.img-fill {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;	
+		}	
+}
+.uppercase {
+	display: uppercase;	
+}
+.z-1 {
+	z-index: 1;
+}
 .font-header {
 	font-family: $header-font-family;
 }
@@ -9,4 +31,13 @@
 }
 .color-light-gray {
 	color: $light-gray;
+}
+.color-text-light-gray {
+	color: $color-text-light-gray;
+}
+.color-link-blue {
+	color: $color-link-blue;
+}
+.bg-navy {
+	background-color: $color-navy-blue;
 }
