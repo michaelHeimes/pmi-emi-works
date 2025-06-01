@@ -40,9 +40,6 @@
 		> img {
 			mix-blend-mode: soft-light;
 		}
-		h2 {
-			line-height: 1;
-		}
 		.cards > .cell {
 			margin-bottom: $smallGutter;
 			@include breakpoint(medium) {

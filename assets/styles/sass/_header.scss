@@ -8,6 +8,7 @@
 header.site-header {
 	position: relative;
 	z-index: 99999;
+	background-color: #0F0F1F;
 	@include breakpoint(medium down) {
 		position: fixed;
 		z-index: 99999;
@@ -47,6 +48,7 @@ header.site-header {
 			right: 0;
 			width: 22px;
 			height: 4px;
+			background-color: $color-link-blue;
 			transition: all .3s ease;
 			
 			&:nth-child(1) {
@@ -88,12 +90,18 @@ header.site-header {
 	.top-bar {
 		.logo {
 			max-width: 170px;
-			@include breakpoint(tablet) {
+			margin: 37px 0;
+			@include breakpoint(xxlarge) {
 				max-width: 220px;
+			}
+			a {
+				padding: 0;
 			}
 			img,
 			svg {
-				filter: drop-shadow(0px 3px 34px #000);
+				@include breakpoint(medium) {
+					filter: drop-shadow(0px 3px 34px #000);
+				}
 			}
 		}
 		&.fixed {
@@ -120,26 +128,18 @@ header.site-header {
 			top: 0;
 			left: 0;
 			width: 100%;
-			padding: 0 calc($smallGutter * .5) 0;
+			height: 100%;
+			padding: 0 0 0 calc($smallGutter * .5);
 			@include breakpoint(medium) {
-				padding: 0 calc($mediumGutter * .5) 0;
+				height: auto;
+				padding: 0 0 0 calc($mediumGutter * .5);
 			}
 			@include breakpoint(tablet) {
 				align-items: flex-start;
-				padding: 0 calc($mediumGutter * .5) 1rem;
+				padding: 0 0 calc($mediumGutter * .5) 1rem;
 			}
 			@include breakpoint(xlarge) {
 				align-items: center;
-			}
-			&:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 365px;
-				background: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.98) 100%);
 			}
 			> div {
 				position: relative;
@@ -155,13 +155,15 @@ header.site-header {
 					padding-right: 0;
 				}
 				.inner {
-					background: #0F0F1F;
-					border: 1px solid rgba(#74BAFF, .55);
-					border-top: 0;
-					border-right: 0;
-					border-radius: 0 0 0 30px;
-					padding: 0.25rem 1.5rem 0.25rem 1.7rem;
-					filter: drop-shadow(0px 3px 6px get-color(primary));
+					@include breakpoint(medium) {
+						background: #0F0F1F;
+						border: 1px solid rgba(#74BAFF, .55);
+						border-top: 0;
+						border-right: 0;
+						border-radius: 0 0 0 30px;
+						padding: 0.25rem 1.5rem 0.25rem 1.7rem;
+						filter: drop-shadow(0px 3px 6px get-color(primary));
+					}
 					.pre-header-links {
 						a {
 							display: flex !important;
@@ -175,24 +177,6 @@ header.site-header {
 							svg, 
 							img {
 								margin-right: 12px;
-							}
-						}
-					}
-					.pre-header-social-links {
-						a {
-							&:hover,
-							&:focus {
-								color: $light-gray;
-								svg {
-									path {
-										&[fill="none"] {
-											stroke: $light-gray;
-										}
-										&:not([fill="none"]) {
-											fill: $light-gray;
-										}
-									}
-								}
 							}
 						}
 					}

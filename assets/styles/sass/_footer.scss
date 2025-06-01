@@ -1,40 +1,98 @@
+.footer-cta {
+	padding-top: 4.55rem;
+	padding-top: clamp(4.55rem, 4.055rem + 2.476vw, 6.5rem);
+	@include breakpoint(medium) {
+		padding-top: 6.5rem;
+		padding-top: clamp(4.55rem, 4.055rem + 2.476vw, 6.5rem);
+	}
+	h2 {
+		margin-bottom: 1.55em;
+	}
+	hr {
+		margin-top: 4.681rem;
+		margin-top: clamp(4.681rem, 4.172rem + 2.548vw, 6.688rem);
+		@include breakpoint(medium) {
+			margin-top: 6.688rem;
+			margin-top: clamp(4.681rem, 4.172rem + 2.548vw, 6.688rem);
+		}
+	}
+}
+
 footer#colophon {
-
-	.site-info {
-
+	background-color: $color-navy-blue; 
+	a {
+		color: $color-link-blue;
 	}
-	
-	.left {
-		.bottom {
-			@include breakpoint(medium down) {
-				padding-bottom: 4.1rem;
-			}
-		}
-	}
-		
-	ul#footer-links {
-		@include breakpoint(medium down) {
-			padding-bottom: 4.08rem;
-		}
-		li {
-			a {
-				font-size: rem-calc(14);
-				line-height: rem-calc(19);
-				font-weight: bold;
-				text-transform: uppercase;
-			}
-		}
-	}
-	
-	.copyright {
-		margin-bottom: 0;
-		@include breakpoint(medium down) {
-			text-align: center;
-		}
+	.logo {
+		max-width: 170px;
 		@include breakpoint(tablet) {
-			br {
-				display: none;
+			max-width: 220px;
+		}
+		img,
+		svg {
+			filter: drop-shadow(0px 3px 16px #000);
+		}
+	}
+	.menu {
+		> li > a {
+			@extend .h5;
+			color: $white;
+			font-weight: 600;
+			margin: 0;
+		}
+		.sub-menu {
+			margin: 0;
+			a {
+				font-size: rem-calc(15);
+				line-height: .933333;
+				color: $color-link-blue;	
 			}
+		}
+	}
+	.footer-info {
+		padding-top: 5.031rem;
+		padding-top: clamp(5.031rem, 4.484rem + 2.738vw, 7.188rem);
+		padding-bottom: 1.925rem;
+		padding-bottom: clamp(1.925rem, 1.715rem + 1.048vw, 2.75rem);
+		@include breakpoint(medium) {
+			padding-top: 7.188rem;
+			padding-top: clamp(5.031rem, 4.484rem + 2.738vw, 7.188rem);
+			padding-bottom: 2.75rem;
+			padding-bottom: clamp(1.925rem, 1.715rem + 1.048vw, 2.75rem);
+		}
+		.footer-col {
+			margin-bottom: 1.5rem;
+		}
+		p,
+		.p {
+			font-size: rem-calc(15);
+			line-height: 1.4666;
+		}
+		#social-links {
+			@include breakpoint(small down) {
+				justify-content: center;
+			}
+			svg path {
+				transition: all .25s ease;
+			}
+			a:hover svg {
+				> path {
+					stroke: $white;
+				}
+				g path {
+					fill: $white;
+				}
+			}
+		}
+	}
+	.site-info {
+		background-color: #1C1D1F;
+		padding-top: rem-calc(20);
+		padding-bottom: rem-calc(20);
+		p {
+			margin-bottom: 0;
+			font-size: rem-calc(15);
+			line-height: 1.466;
 		}
 	}
 	

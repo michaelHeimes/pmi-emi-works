@@ -1,0 +1,21 @@
+.footer-cta {
+	background-color: #242424;
+	img {
+		mix-blend-mode: overlay;
+	}
+	.btns-group {
+		a {
+			color: $white;
+			svg path {
+				fill: $white;
+			}
+			&.chev-btn {
+				background-color: $color-link-blue;
+				&:hover,
+				&:focus {
+					background-color: get-color('primary');
+				}
+			}
+		}
+	}
+}

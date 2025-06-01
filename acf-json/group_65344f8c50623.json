@@ -80,7 +80,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -104,8 +104,7 @@
                     },
                     "choices": {
                         "transparent": "Transparent Background",
-                        "mint-border": "Mint Border",
-                        "mint": "Mint Background"
+                        "blue": "Blue"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -115,9 +114,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_65344f8cbc85d",
                     "create_options": 0,
-                    "save_options": 0
+                    "save_options": 0,
+                    "parent_repeater": "field_65344f8cbc85d"
                 },
                 {
                     "key": "field_672a8601e19fd",
@@ -156,7 +155,7 @@
                     "aria-label": "",
                     "type": "link",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -164,6 +163,7 @@
                         "id": ""
                     },
                     "return_format": "array",
+                    "allow_in_bindings": 1,
                     "parent_repeater": "field_65344f8cbc85d"
                 }
             ]
@@ -187,5 +187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748006645
+    "modified": 1748791174
 }

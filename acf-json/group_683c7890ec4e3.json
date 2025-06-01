@@ -1,36 +1,11 @@
 {
-    "key": "group_62df104dacaa3",
-    "title": "GLOBAL: Header Settings",
+    "key": "group_683c7890ec4e3",
+    "title": "GLOBAL: Social Links",
     "fields": [
         {
-            "key": "field_62df105579a2f",
-            "label": "Header Logo",
-            "name": "header_logo",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_682e62298cf7c",
-            "label": "Pre-header Links",
-            "name": "pre-header_links",
+            "key": "field_683c7890f0b60",
+            "label": "Social Links",
+            "name": "global_social_links",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -50,7 +25,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_682e60fac5fb7",
+                    "key": "field_683c789101600",
                     "label": "Icon",
                     "name": "icon",
                     "aria-label": "",
@@ -59,7 +34,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
@@ -74,47 +49,25 @@
                     "mime_types": "",
                     "allow_in_bindings": 0,
                     "preview_size": "thumbnail",
-                    "parent_repeater": "field_682e62298cf7c"
+                    "parent_repeater": "field_683c7890f0b60"
                 },
                 {
-                    "key": "field_682e61f8c5fb8",
+                    "key": "field_683c789101604",
                     "label": "Link",
                     "name": "link",
                     "aria-label": "",
                     "type": "link",
-                    "instructions": "",
-                    "required": 0,
+                    "instructions": "The link title will be hidden from view but available for screen readers.",
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "75",
                         "class": "",
                         "id": ""
                     },
                     "return_format": "array",
                     "allow_in_bindings": 0,
-                    "parent_repeater": "field_682e62298cf7c"
-                },
-                {
-                    "key": "field_683ca3687d0b9",
-                    "label": "Classes",
-                    "name": "classes",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_682e62298cf7c"
+                    "parent_repeater": "field_683c7890f0b60"
                 }
             ]
         }
@@ -124,7 +77,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-header"
+                "value": "theme-general-settings"
             }
         ]
     ],
@@ -137,5 +90,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748804505
+    "modified": 1748794022
 }

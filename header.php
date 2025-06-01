@@ -18,17 +18,20 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	
+	<?php if( !empty( get_field('before_closing_head_tag', 'option') ) ) {
+		echo get_field('before_closing_head_tag', 'option');
+	}?>
+	
 </head>
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'trailhead' ); ?></a>
 		
-			<div class="sticky-container">
-				<header class="site-header" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
+				<header class="site-header" role="banner">
 					<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
 				</header><!-- #masthead -->
-			</div>
 				
 				<div class="off-canvas-wrapper">
 				

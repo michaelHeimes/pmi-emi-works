@@ -26,6 +26,7 @@ $it_cta_cards_cta_link = $fields['it_cta_cards_cta_link'] ?? null;
 
 $itc_heading = $fields['itc_heading'] ?? null;
 $itc_cards = $fields['itc_cards'] ?? null;
+$itc_button_link = $fields['itc_button_link'] ?? null;
 ?>
 	<div class="content">
 		<div class="inner-content">
@@ -177,7 +178,7 @@ $itc_cards = $fields['itc_cards'] ?? null;
 					</section> <!-- end article section -->
 					
 					<?php if( $it_cta_cards_background_image || $it_cta_cards_heading || $it_cta_cards_cards || $it_cta_cards_cta_link ):?>
-						<section class="image-title-cta-cards relative has-object-fit">
+						<section class="image-title-cta-cards relative has-object-fit entry-content">
 							<?php if( $it_cta_cards_background_image ) {
 								echo wp_get_attachment_image(  $it_cta_cards_background_image['id'], 'full', false, [ 'class' => 'img-fill' ] );
 							};?>
@@ -185,7 +186,7 @@ $itc_cards = $fields['itc_cards'] ?? null;
 								<div class="grid-x grid-padding-x align-center">
 									<div class="cell small-12 large-10">
 										<?php if( $it_cta_cards_heading  ):?>
-											<h2 class="text-center color-text-light-gray"><?=wp_kses_post($it_cta_cards_heading);?></h2>
+											<h2 class="text-center color-text-light-gray line-height-1"><?=wp_kses_post($it_cta_cards_heading);?></h2>
 										<?php endif;?>
 										<?php if( $it_cta_cards_cards ):?>
 											<div class="cards grid-x grid-padding-x align-center">
@@ -264,12 +265,12 @@ $itc_cards = $fields['itc_cards'] ?? null;
 					<?php endif;?>
 					
 					<?php if( $itc_heading || $itc_cards ):?>
-						<section class="icon-title-cards">
+						<section class="icon-title-cards entry-content">
 							<div class="grid-container">
 								<div class="inner grid-x grid-padding-x align-center">
 									<div class="cell small-12 large-10">
 										<?php if( $itc_heading ):?>
-											<h2 class="text-center">
+											<h2 class="text-center line-height-1">
 												<?=wp_kses_post($itc_heading);?>
 											</h2>
 										<?php endif;?>
@@ -296,15 +297,23 @@ $itc_cards = $fields['itc_cards'] ?? null;
 												<?php endforeach;?>
 											</div>
 										<?php endif;?>
+										<?php if( $itc_button_link ): ?>
+											<div class="link-wrap text-center">
+												<?php get_template_part('template-parts/part', 'chev-btn',
+													array(
+														'link' => $itc_button_link,
+														'bg-color' => 'primary',
+														'title-color' => 'white',
+														'chev-width' => '9'
+													),
+												);?>
+											</div>
+										<?php endif; ?>
 									</div>
 								</div>
 							</div>
 						</section>
 					<?php endif;?>
-							
-					<footer class="article-footer">
-						 <?php wp_link_pages(); ?>
-					</footer> <!-- end article footer -->
 						
 				</article><!-- #post-<?php the_ID(); ?> -->
 		

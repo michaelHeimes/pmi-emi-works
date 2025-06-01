@@ -1,6 +1,27 @@
 .weight-semibold {
 	font-weight: 500;
 }
+.line-height-1 {
+	line-height: 1;
+}
 .font-header {
 	font-family: $header-font-family;
+}
+.color-white {
+	color: $white;
+}
+.color-light-blue {
+	color: $color-light-blue;
+}
+.color-light-gray {
+	color: $light-gray;
+}
+.color-text-light-gray {
+	color: $color-text-light-gray;
+}
+.color-link-blue {
+	color: $color-link-blue;
+}
+.uppercase {
+	text-transform: uppercase;
 }

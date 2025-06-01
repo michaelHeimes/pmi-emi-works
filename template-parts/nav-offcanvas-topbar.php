@@ -6,12 +6,12 @@
  */
  $logo = get_field('header_logo', 'option');
  $pre_header_links = get_field('pre-header_links', 'options') ?? null;
- $pre_header_social_links = get_field('pre-header_social_links', 'option') ?? null;
+ $global_social_links = get_field(' global_social_links', 'option') ?? null;
 ?>
 
 <div class="top-bar-wrap grid-container fluid">
 
-	<div class="top-bar fixed show-for-tablet">
+	<div class="top-bar fixed show-for-large">
 	
 		<div class="top-bar-left float-left">
 			
@@ -43,18 +43,12 @@
 			</ul>
 						
 		</div>
-		<div class="top-bar-right show-for-tablet">
+		<div class="top-bar-right show-for-large">
 			<div class="grid-x align-right">
 				<div class="cell shrink">
-
+				<li><a id="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
 				</div>
 			</div>
-		</div>
-		<div class="menu-toggle-wrap top-bar-right float-right hide-for-tablet">
-			<ul class="menu">
-				<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-				<li><a id="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
-			</ul>
 		</div>
 	</div>
 	
@@ -85,16 +79,16 @@
 					<?php 
 					$image = get_field('header_logo', 'option');
 					if( !empty( $image ) ): ?>
-						<?=wp_get_attachment_image( $image['id'], 'full', false, [ 'class' => 'style-svg' ] );?>
+						<?=wp_get_attachment_image( $image['id'], 'full' );?>
 					<?php endif; ?>
 				</a></li>
 			</ul>
 						
 		</div>
-		<div class="top-bar-right show-for-tablet">
+		<div class="top-bar-right">
 			<div class="grid-x align-right">
 				<div class="cell shrink">
-					<?php if($pre_header_links || $pre_header_social_links): ?>
+					<?php if($pre_header_links || $global_social_links): ?>
 						<div class="pre-header grid-x grid-padding-x align-right align-middle">
 							<div class="cell shrink">
 								<div class="inner">
@@ -104,12 +98,13 @@
 												<?php foreach($pre_header_links as $pre_header_link):
 													$icon = $pre_header_link['icon'] ?? null;
 													$link = $pre_header_link['link'] ?? null;
+													$classes = $pre_header_link['classes'] ?? null;
 													if ($link) :
 														$link_url = $link['url'];
 														$link_title = $link['title'];
 														$link_target = $link['target'] ? $link['target'] : '_self';
 												?>
-													<li>
+													<li class="<?=esc_attr($classes);?>">
 														<a class="font-header color-light-gray grid-x align-middle" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 															<?php if($icon) {
 																echo wp_get_attachment_image( $icon['id'], 'full', false, [ 'class' => 'style-svg' ] );
@@ -121,74 +116,28 @@
 												<?php endif; endforeach;?>
 											</ul>
 										<?php endif;?>
-										<?php if($pre_header_social_links):?>
-											<ul class="pre-header-social-links cell shrink grid-x grid-padding-x menu horizontal">
-												<?php foreach($pre_header_social_links as $pre_header_social_link):
-													$icon = $pre_header_social_link['icon'] ?? null;
-													$link = $pre_header_social_link['link'] ?? null;
-													if ($link) :
-														$link_url = $link['url'];
-														$link_title = $link['title'];
-														$link_target = $link['target'] ? $link['target'] : '_self';
-												?>
-													<li>
-														<a class="font-header color-light-gray grid-x align-middle" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-															<?php if($icon) {
-																echo wp_get_attachment_image( $icon['id'], 'full', false, [ 'class' => 'style-svg' ] );
-															};?>
-															<span class="show-for-sr"><?php echo esc_html( $link_title ); ?></span>
-														</a>
 										
-													</li>
-												<?php endif; endforeach;?>
-											</ul>
-										<?php endif;?>
+										<?php get_template_part('template-parts/part', 'social-links',
+											array(
+												'classes' => 'show-for-large',
+											),
+										);?>
+										
+										<ul class="menu cell shrink hide-for-large">
+											<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
+											<li><a class="menu-toggle top-row-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
+										</ul>
+										
 									</div>
 								</div>
 							</div>
 						</div>
 					<?php endif;?>
 						
-					<?php trailhead_top_nav();?>
-					
-				</div>
-			</div>
-		</div>
-		<div class="menu-toggle-wrap top-bar-right float-right grid-x hide-for-tablet">
-			<?php if( $global_phone_number ):
-				$link = $global_phone_number;
-				$link_url = $link['url'];
-				$link_title = $link['title'];
-				$link_target = $link['target'] ? $link['target'] : '_self';	
-			?>
-				<div class="cell shrink top-bar-mobile-phone hide-for-tablet">
-					<a class="header-phone color-yellow p" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-				</div>
-			<?php endif;?>
-			<ul class="menu">
-				<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-				<li><a class="menu-toggle top-row-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="top-bar bottom-bar">
-		<div class="cell small-12 grid-container hide-for-tablet">
-			<div class="grid-x grid-padding-x align-justify">
-				<?php if( $global_phone_number ):
-					$link = $global_phone_number;
-					$link_url = $link['url'];
-					$link_title = $link['title'];
-					$link_target = $link['target'] ? $link['target'] : '_self';	
-				?>
-					<div class="cell shrink">
-						<a class="header-phone color-yellow p" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					<div class="show-for-large">
+						<?php trailhead_top_nav();?>
 					</div>
-				<?php endif;?>
-				<div class="menu-toggle-wrap bottom-row-toggle">
-					<ul class="menu">
-						<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-						<li><a class="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
-					</ul>
+					
 				</div>
 			</div>
 		</div>
