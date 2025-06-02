@@ -117,6 +117,23 @@
                     "parent_repeater": "field_682e62298cf7c"
                 }
             ]
+        },
+        {
+            "key": "field_683dcb7611e85",
+            "label": "Get Info Link",
+            "name": "get_info_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -137,5 +154,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748804505
+    "modified": 1748880258
 }

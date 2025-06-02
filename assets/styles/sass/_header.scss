@@ -31,67 +31,12 @@ header.site-header {
 		padding-left: 0;
 		padding-right: 0;
 	}
-	a.menu-toggle {
-		padding: 0;
-		width: 36px;
-		height: 36px;
-		position: relative;
-		&.top-row-toggle {
-			display: none !important;
-			@media screen and (min-width: 375px) {
-				display: block !important;
-			}
-		}
-		span {
-			position: absolute;
-			left: 7.5px;
-			right: 0;
-			width: 22px;
-			height: 4px;
-			background-color: $color-link-blue;
-			transition: all .3s ease;
-			
-			&:nth-child(1) {
-				top: 8px;
-			}
-	
-			&:nth-child(2) {
-				top: 16.5px;
-			}
-			
-			&:nth-child(3) {
-				bottom: 7px;
-			}
-								
-		}
-		
-		&[aria-expanded="true"] {
-			span {
-				&:nth-child(1) {
-					top: 4px;
-					transform: translate(0px, 12px) rotate(-45deg);
-				}
-		
-				&:nth-child(2) {
-					top: 16px;
-					left: 50%;
-					right: 100%;
-					width: 0;
-				}
-				
-				&:nth-child(3) {
-					bottom: 4px;
-					transform: translate(0px, -12px) rotate(45deg);
-				}
-			}				
-		}
-		
-	}
 	.top-bar {
 		.logo {
 			max-width: 170px;
-			margin: 37px 0;
+			margin: 24px 0;
 			@include breakpoint(xxlarge) {
+				margin: 37px 0;
 				max-width: 220px;
 			}
 			a {
@@ -128,10 +73,10 @@ header.site-header {
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;
-			padding: 0 0 0 calc($smallGutter * .5);
+			//height: 100%;
+			padding: 0 calc($smallGutter * .5);
 			@include breakpoint(medium) {
-				height: auto;
+				height: 100%;
 				padding: 0 0 0 calc($mediumGutter * .5);
 			}
 			@include breakpoint(tablet) {
@@ -142,14 +87,18 @@ header.site-header {
 				align-items: center;
 			}
 			> div {
+				height: 100%;
 				position: relative;
 			}
 			.pre-header {
-				margin-right: calc(-#{$smallGutter * 0.5});
+				// margin-right: calc(-#{$smallGutter * 0.5});
 				overflow: hidden;
 				padding-bottom: 9px;
 				@include breakpoint(medium) {
-					margin-right: calc(-#{$mediumGutter * 0.5});
+					// margin-right: calc(-#{$mediumGutter * 0.5});
+				}
+				@include breakpoint(large) {
+					margin-right: 0;
 				}
 				> .cell {
 					padding-right: 0;
@@ -163,22 +112,6 @@ header.site-header {
 						border-radius: 0 0 0 30px;
 						padding: 0.25rem 1.5rem 0.25rem 1.7rem;
 						filter: drop-shadow(0px 3px 6px get-color(primary));
-					}
-					.pre-header-links {
-						a {
-							display: flex !important;
-							&:hover,
-							&:focus {
-								color: $color-link-blue;
-								svg path {
-									fill: $color-link-blue;
-								}
-							}
-							svg, 
-							img {
-								margin-right: 12px;
-							}
-						}
 					}
 				}
 			}
@@ -299,25 +232,105 @@ header.site-header {
 	
 }
 
+.pre-header-links {
+	a {
+		display: flex !important;
+		&:hover,
+		&:focus {
+			color: $color-link-blue;
+			svg path {
+				fill: $color-link-blue;
+			}
+		}
+		svg, 
+		img {
+			margin-right: 12px;
+		}
+	}
+}
+
+a.menu-toggle {
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	&.top-row-toggle {
+		display: none !important;
+		@media screen and (min-width: 375px) {
+			display: block !important;
+		}
+	}
+	span {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 40px;
+		height: 8px;
+		background-color: $color-link-blue;
+		transition: all .3s ease;
+		
+		&:nth-child(1) {
+			top: 2px;
+			border-top-right-radius: 8px;
+		}
+
+		&:nth-child(2) {
+			top: 16px;
+		}
+		
+		&:nth-child(3) {
+			bottom: 2px;
+			border-bottom-left-radius: 8px;
+		}
+							
+	}
+	
+	&.close {
+		span {
+			border-radius: 0;
+			height: 6px;
+			&:nth-child(1) {
+				top: 2px;
+				transform: translate(0px, 15px) rotate(-45deg);
+			}
+	
+			&:nth-child(2) {
+				top: 16px;
+				left: 50%;
+				right: 100%;
+				width: 0;
+			}
+			
+			&:nth-child(3) {
+				bottom: 2px;
+				transform: translate(0px, -15px) rotate(45deg);
+			}
+		}				
+	}
+	
+}
+
 .off-canvas-wrapper {
+	.pre-header-links {
+		justify-content: center;
+	}
 	.off-canvas.position-right {
 	}
 	.off-canvas-content.is-open-right.has-transition-push {
-		transform: translate(0, 70px);
+		transform: translateX(0);
 	}
 	.off-canvas.position-right {
 		width: 100%;
-		max-width: 320px;
-		max-height: calc(100vh - 70px);
-		padding-bottom: 3rem;
-		transform: translate(100%, 70px);
+		max-width: 481px;
+		max-height: 100vh;
+		padding: 1.45rem .5rem 3rem 0;
+		transform: translateX(100%);
 		z-index: 999999;
 		@media screen and (max-width: 374px) {
-			top: 41px;
-			max-height: calc(100vh - 112px);
+			max-height: 100vh;
 		}
 		&.is-open {
-			transform: translate(0, 70px);
+			transform: translateX(0);
 		}
 		.inner {
 			position: relative;
@@ -336,37 +349,96 @@ header.site-header {
 				}
 			}
 		}
+		.close-btn-wrap {
+			padding-right: 1.25rem;
+			padding-bottom: 1.8rem;
+		}
 		ul#offcanvas-nav {
-			padding-bottom: 32px;
+			padding-bottom: 57px;
 			> li {
-				text-shadow: 1px 2px 0px rgba(0,0,0,0.75);
+				margin-bottom: 2px;
+				&.home-link {
+					display: none;
+				}
+				> a {
+					display: inline-block;
+					&:hover,
+					&:focus {
+						color: $white;
+					}
+				}
+				&.active a {
+					color: $white;
+				}
+				&:has(>button[aria-expanded="true"]) > a {
+					color: $white;
+				}
 			}
 			li {
+				a {
+					font-size: rem-calc(20);
+					font-family: $header-font-family;
+					margin: 0;
+					color: $color-link-blue;
+					font-weight: 600;
+					padding: 1rem 1.72rem;
+					transition: color .25s ease;
+					&:hover,
+					&:focus {
+						//color: $medium-gray;
+					}
+					br {
+						display: none;
+					}
+				}
 				&.is-accordion-submenu-parent {
 					button {
-						padding-right: 1.1rem;
+						padding-right: 3.25rem;
 						&:after {
 							border: 0;
-							content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="13.585" viewBox="0 0 22 13.585"><path d="M19.415 0 11 8.397 2.585 0 0 2.585l11 11 11-11Z" fill="%23fff"/></svg>');
+							background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="13.585" viewBox="0 0 22 13.585"><path d="M19.415 0 11 8.397 2.585 0 0 2.585l11 11 11-11Z" fill="%234DA5FC"/></svg>');
+							background-repeat: no-repeat;
+							background-size: contain;
+							background-position: center;
 							display: block;
-							width: auto;
-							height: auto;
+							width: 22px;
+							flex: 0 0 22px;
+							height: 17px;
 							transition: all .3s ease;
 							transform-origin: center;
-							margin-top: 12px;
+							margin-top: 20px;
 						}
+						&:hover,
+						&:focus,
 						&[aria-expanded="true"] {
 							&:after {
-								content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="13.585" viewBox="0 0 22 13.585"><path d="M19.415 0 11 8.397 2.585 0 0 2.585l11 11 11-11Z" fill="%23F5CE1F"/></svg>');
+								background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="13.585" viewBox="0 0 22 13.585"><path d="M19.415 0 11 8.397 2.585 0 0 2.585l11 11 11-11Z" fill="%23fff"/></svg>');
+								background-repeat: no-repeat;
+								background-size: contain;
+								background-position: center;
 							}
 						}
 					}
 					.submenu {
+						background-color: $color-navy-blue;
 						li {
-							text-shadow: 0px 0px 0px rgba(0,0,0,0.75);
-							&:not(:hover):not(:focus):not(.current-menu-item) {
+							a {
+								color: $color-link-blue;
+								span {
+									display: block;
+									&.subtitle {
+										font-size: rem-calc(15);
+										line-height: 1.2;
+										padding-top: 2px;
+									}
+								}
+							}
+							&:hover,
+							&:focus,
+							&.current-menu-item {
 								a {
-									color: $black;
+									background-color: #313131;
+									color: $white;
 								}	
 							}
 						}
@@ -374,19 +446,6 @@ header.site-header {
 							
 						}
 					}
-				}
-			}
-			a {
-				@extend .h6;
-				margin: 0;
-				color: $white;
-				font-weight: bold;
-				font-family: $header-font-family;
-				text-transform: uppercase;
-				transition: color .25s ease;
-				&:hover,
-				&:focus {
-					//color: $medium-gray;
 				}
 			}
 		}
@@ -402,6 +461,9 @@ header.site-header {
 				width: 100%;
 				max-width: rem-calc(255);
 			}
+		}
+		.get-info-wrap {
+			padding-top: 52px;
 		}
 	}
 }

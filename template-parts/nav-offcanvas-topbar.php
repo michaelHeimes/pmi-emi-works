@@ -6,7 +6,8 @@
  */
  $logo = get_field('header_logo', 'option');
  $pre_header_links = get_field('pre-header_links', 'options') ?? null;
- $global_social_links = get_field(' global_social_links', 'option') ?? null;
+ $global_social_links = get_field('global_social_links', 'option') ?? null;
+ $get_info_link = get_field('get_info_link', 'option') ?? null;
 ?>
 
 <div class="top-bar-wrap grid-container fluid">
@@ -43,13 +44,7 @@
 			</ul>
 						
 		</div>
-		<div class="top-bar-right show-for-large">
-			<div class="grid-x align-right">
-				<div class="cell shrink">
-				<li><a id="menu-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
-				</div>
-			</div>
-		</div>
+
 	</div>
 	
 	<div class="top-bar load relative">
@@ -134,8 +129,20 @@
 						</div>
 					<?php endif;?>
 						
-					<div class="show-for-large">
-						<?php trailhead_top_nav();?>
+					<div class="show-for-large grid-x grid-padding-x align-middle">
+						<div class="cell auto">
+							<?php trailhead_top_nav();?>
+						</div>
+						<div class="cell shrink">
+							<?php get_template_part('template-parts/part', 'chev-btn',
+								array(
+									'link' =>  $get_info_link,
+									'bg-color' => 'link-blue',
+									'title-color' => 'white',
+									'chev-width' => '9'
+								),
+							);?>
+						</div>
 					</div>
 					
 				</div>
