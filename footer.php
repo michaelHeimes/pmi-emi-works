@@ -23,15 +23,13 @@
 							<div class="grid-x grid-padding-x align-center">
 								<div class="cell small-12 xlarge-10">
 									<div class="grid-x grid-padding-x">
-										<div class="cell small-12 medium-6 tablet-4">
+										<div class="footer-col cell small-12 tablet-4">
 											<?php 
 											$image = $logo['id'] ?? null;
 											$size = 'full';
 											if( $image ) :?>
-												<div>
-													<div class="logo">
-														<?=wp_get_attachment_image( $image, $size );?>
-													</div>
+												<div class="logo">
+													<?=wp_get_attachment_image( $image, $size );?>
 												</div>
 											<?php endif;?>
 											<?php
@@ -40,7 +38,7 @@
 												$map_link = $office['map_link'] ?? null;
 												if( $title || $address || $map_link ):
 											?>
-												<div class="address">
+												<div class="address-row">
 													<?php if( $title ):?>
 														<h3 class="h5 color-white weight-semibold"><?=wp_kses_post($title);?></h3>
 													<?php endif;?>
@@ -64,7 +62,7 @@
 												$address =  $mailing_address['address'] ?? null;
 												if( $title || $address ):
 											?>
-												<div class="address mailing-address">
+												<div class="address-row mailing-address">
 													<?php if( $title ):?>
 														<h3 class="color-white"><?=wp_kses_post($title);?></h3>
 													<?php endif;?>
@@ -80,7 +78,7 @@
 												$labels_links =  $contact_support['labels_links'] ?? null;
 												if( $title || $labels_links ):
 											?>
-												<div class="address contact-cupport">
+												<div class="address-row contact-support">
 													<?php if( $title ):?>
 														<h3 class="color-white"><?=wp_kses_post($title);?></h3>
 													<?php endif;?>
@@ -108,12 +106,14 @@
 													<?php endif;?>
 												</div>
 											<?php endif;?>
+											<div class="menu social">
 											<?php get_template_part('template-parts/part', 'social-links');?>
+											</div>
 										</div>
-										<div class="footer-col cell small-6 tablet-4">
+										<div class="footer-col cell small-12 medium-6 tablet-4">
 											<?php trailhead_footer_links_left();?>
 										</div>
-										<div class="footer-col cell small-6 tablet-4">
+										<div class="footer-col cell small-12 medium-6 tablet-4">
 											<?php trailhead_footer_links_right();?>
 										</div>
 									</div>

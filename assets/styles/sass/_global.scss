@@ -35,6 +35,12 @@ svg {
 }
 
 .btns-group {
+	> .cell {
+		margin-bottom: $smallGutter;
+		@include breakpoint(medium) {
+			margin-bottom: $mediumGutter;
+		}
+	}
 	@media (max-width: 460px) {
 		> .cell {
 			width: 100%;
@@ -191,7 +197,16 @@ POSTS & CONTENT STYLES
 		display: block; 
 		clear: both; 
 	}
-			
+	.alignleft,
+	.alignright {
+		@media screen and (max-width: 768px) {
+			float: none;
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin: .5em auto 1em;
+		}
+	}
 	video, object {
 		max-width: 100%;
 		height: auto;

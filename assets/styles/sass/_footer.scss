@@ -1,30 +1,28 @@
 .footer-cta {
-	padding-top: 4.55rem;
-	padding-top: clamp(4.55rem, 4.055rem + 2.476vw, 6.5rem);
-	@include breakpoint(medium) {
-		padding-top: 6.5rem;
-		padding-top: clamp(4.55rem, 4.055rem + 2.476vw, 6.5rem);
-	}
+	padding-top: clamp(5.5rem, 3.695rem + 7.7vw, 10.625rem);
+	padding-bottom: clamp(4.688rem, 2.993rem + 7.23vw, 9.5rem);
 	h2 {
-		margin-bottom: 1.55em;
-	}
-	hr {
-		margin-top: 4.681rem;
-		margin-top: clamp(4.681rem, 4.172rem + 2.548vw, 6.688rem);
-		@include breakpoint(medium) {
-			margin-top: 6.688rem;
-			margin-top: clamp(4.681rem, 4.172rem + 2.548vw, 6.688rem);
-		}
+		margin-bottom: clamp(2.813rem, 1.778rem + 4.413vw, 5.75rem);
 	}
 }
 
 footer#colophon {
 	background-color: $color-navy-blue; 
-	a {
+	a:not(.social-link) {
 		color: $color-link-blue;
+		padding: 0 4px;
 	}
 	.logo {
 		max-width: 170px;
+		margin-bottom: clamp(1.125rem, 0.707rem + 1.784vw, 2.313rem);
+		@include breakpoint(small down) {
+			width: 100%;
+			max-width: none;
+			text-align: center;
+			img {
+				max-width: 170px;
+			}
+		}
 		@include breakpoint(tablet) {
 			max-width: 220px;
 		}
@@ -33,7 +31,18 @@ footer#colophon {
 			filter: drop-shadow(0px 3px 16px #000);
 		}
 	}
-	.menu {
+	h3 {
+		@extend .h5;
+		margin: 0 0 .3em;
+		color: $white;
+	}
+	.address-row {
+		padding-bottom: clamp(0.938rem, 0.585rem + 1.502vw, 1.938rem);
+		&.contact-support {
+			padding-bottom: 11px;
+		}
+	}
+	.footer-menu {
 		> li > a {
 			@extend .h5;
 			color: $white;
@@ -41,27 +50,38 @@ footer#colophon {
 			margin: 0;
 		}
 		.sub-menu {
+			list-style: none;
 			margin: 0;
+			padding: 10px 0;
 			a {
 				font-size: rem-calc(15);
 				line-height: .933333;
 				color: $color-link-blue;	
 			}
+			> li {
+				margin-bottom: clamp(0.625rem, 0.405rem + 0.939vw, 1.25rem);
+			}
 		}
 	}
+	.global-social-links {
+		@include breakpoint(small down) {
+			justify-content: center;
+			margin: 0;
+		}
+	}
+	.social-link > svg {
+		width: 40px;
+		height: auto;
+	}
 	.footer-info {
-		padding-top: 5.031rem;
 		padding-top: clamp(5.031rem, 4.484rem + 2.738vw, 7.188rem);
-		padding-bottom: 1.925rem;
 		padding-bottom: clamp(1.925rem, 1.715rem + 1.048vw, 2.75rem);
 		@include breakpoint(medium) {
-			padding-top: 7.188rem;
 			padding-top: clamp(5.031rem, 4.484rem + 2.738vw, 7.188rem);
-			padding-bottom: 2.75rem;
 			padding-bottom: clamp(1.925rem, 1.715rem + 1.048vw, 2.75rem);
 		}
 		.footer-col {
-			margin-bottom: 1.5rem;
+			margin-bottom: 4rem;
 		}
 		p,
 		.p {

@@ -132,7 +132,6 @@
            if (window.innerWidth <= 899) return;
        
            const toggles = document.querySelectorAll('.menu-toggle');
-           console.log(toggles);
            toggles.forEach(toggle => {
                if (toggle.getAttribute('aria-expanded') === 'true') {
                toggle.click();

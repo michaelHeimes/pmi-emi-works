@@ -13,7 +13,7 @@ if($global_social_links):
 			$link_target = $link['target'] ? $link['target'] : '_self';
 	?>
 		<li>
-			<a class="font-header color-light-gray grid-x align-middle" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+			<a class="social-link color-light-gray grid-x align-middle" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 				<?php if($icon) {
 					echo wp_get_attachment_image( $icon['id'], 'full', false, [ 'class' => 'style-svg' ] );
 				};?>

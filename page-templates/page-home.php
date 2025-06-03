@@ -117,11 +117,11 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 						</header><!-- .entry-header -->
 					<?php endif;?>
 				
-					<section class="entry-content" itemprop="text">
+					<section itemprop="text">
 						<div class="intro-cta">
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
-									<div class="cell small-12 large-10 xlarge-8">
+									<div class="entry-content cell small-12 large-10 xlarge-8">
 										<?php the_content(); ?>
 									</div>
 									<?php if($val_prop_background_image || $val_prop_left_text_top_line || $val_prop_left_text_bottom_line || $val_prop_right_text_top_line || $val_prop_right_text_bottom_line):?>
@@ -147,7 +147,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 															</h2>
 														</div>
 													<?php endif;?>
-													<div class="cell small-12 tablet-2">
+													<div class="svg-wrap cell small-12 tablet-2">
 														<div class="grid-x align-center">
 															<svg xmlns="http://www.w3.org/2000/svg" width="85.795" height="59.536" viewBox="0 0 85.795 59.536"><defs><filter id="a" x="0" y="0" width="43.649" height="59.536" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity=".4"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter><filter id="b" x="20.23" y="0" width="43.649" height="59.536" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur-2"/><feFlood flood-opacity=".4"/><feComposite operator="in" in2="blur-2"/><feComposite in="SourceGraphic"/></filter><filter id="c" x="42.147" y="0" width="43.649" height="59.536" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur-3"/><feFlood flood-opacity=".4"/><feComposite operator="in" in2="blur-3"/><feComposite in="SourceGraphic"/></filter></defs><g data-name="three-chevs"><g filter="url(#a)" transform="translate(-.005 -.002)"><path data-name="ic_chevron_right_24px" d="M13.881 6 9 10.881l15.853 15.887L9 42.656l4.881 4.881 20.768-20.769Z" fill="#79b9f8"/></g><g filter="url(#b)" transform="translate(-.005 -.002)"><path data-name="ic_chevron_right_24px" d="m34.111 6-4.881 4.881 15.853 15.887L29.23 42.656l4.881 4.881 20.768-20.769Z" fill="#96c8f8"/></g><g filter="url(#c)" transform="translate(-.005 -.002)"><path data-name="ic_chevron_right_24px" d="m56.031 6-4.881 4.881 15.853 15.887L51.15 42.656l4.881 4.881 20.768-20.769Z" fill="#c8e3fd"/></g></g></svg>
 														</div>
@@ -194,7 +194,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 													$image = $card['image']	?? null;
 													$link = $card['link'] ?? null;
 												?>
-													<div class="cell small-12 medium-6 tablet-4 large-3">
+													<div class="cell small-6 medium-4 tablet-3 large-3">
 														<?php if( $link ): 
 															$link_url = $link['url'];
 															$link_title = $link['title'];
@@ -275,7 +275,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 											</h2>
 										<?php endif;?>
 										<?php if( $itc_cards ):?>
-											<div class="grid-x grid-padding-x align-center small-up-1 medium-up-2 tablet-up-3 large-up-4">
+											<div class="it-cards grid-x grid-padding-x align-center small-up-1 medium-up-2 tablet-up-3 large-up-4">
 												<?php foreach($itc_cards as $card):
 													$icon = $card['icon'] ?? null;
 													$title = $card['title'] ?? null;

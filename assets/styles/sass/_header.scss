@@ -1,8 +1,6 @@
 .has-scrolled {
 	header.site-header .top-bar.fixed {
 		transform: translateY(0);
-		padding-top: 25px;
-		padding-bottom: 25px;
 	}
 }
 header.site-header {
@@ -21,6 +19,11 @@ header.site-header {
 	@include breakpoint(small down) {
 		.top-bar .top-bar-left, .top-bar .top-bar-right {
 			flex: 0 0 auto;
+		}
+	}
+	.pre-header-links {
+		@media screen and (max-width: 449px) {
+			display: none;
 		}
 	}
 	a.header-phone {
@@ -63,9 +66,13 @@ header.site-header {
 			}
 			transform: translateY(-100%);
 			transition: transform .5s ease;
-			.logo img {
-				max-width: 250px;
-				max-height: 55px;
+			.logo {
+				max-width: 170px;
+				margin: 24px 0;
+				@include breakpoint(xxlarge) {
+					margin: 24px 0;
+					max-width: 180px;
+				}
 			}
 		}
 		&.load {

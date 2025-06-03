@@ -42,7 +42,18 @@
 					<?php endif; ?>
 				</a></li>
 			</ul>
-						
+		</div>
+		<div class="top-bar-right">
+			<div class="grid-x align-right">
+				<?php get_template_part('template-parts/part', 'chev-btn',
+					array(
+						'link' =>  $get_info_link,
+						'bg-color' => 'link-blue',
+						'title-color' => 'white',
+						'chev-width' => '9'
+					),
+				);?>
+			</div>
 		</div>
 
 	</div>
