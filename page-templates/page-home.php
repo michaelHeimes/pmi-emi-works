@@ -36,7 +36,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
 					<?php if( $slides ):?>
-						<header class="entry-header page-banner hero-banner style-hero-slider position-relative">
+						<header class="entry-header page-banner hero-banner style-home-hero-slider position-relative">
 							<?php if( !empty( $slides ) ):?>
 								<div class="hero-slider" data-delay="<?= esc_attr( $slider_transition_delay );?>">
 									<div class="swiper-wrapper">
@@ -281,7 +281,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 													$title = $card['title'] ?? null;
 												?>
 													<div class="it-card cell">
-														<div class="card-inner text-center">
+														<div class="card-inner text-center h-100">
 															<?php if( $icon ):?>
 																<div class="icon-wrap">
 																	<?php echo wp_get_attachment_image( $icon['id'], 'medium' );?>

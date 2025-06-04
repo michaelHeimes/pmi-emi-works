@@ -17,12 +17,12 @@
 			object-fit: cover;	
 		}	
 }
-.uppercase {
-	display: uppercase;	
-}
 .z-1 {
 	z-index: 1;
 }
 .bg-navy {
 	background-color: $color-navy-blue;
+}
+.h-100 {
+	height: 100%;
 }

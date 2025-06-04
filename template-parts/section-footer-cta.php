@@ -20,6 +20,7 @@ $button_links = get_field('button_links', 'option') ?? null;
 				<?php get_template_part('template-parts/part', 'button-group',
 					array(
 						'button_links' => $button_links,
+						'alignment' => 'align-center'
 					),
 				);?>
 			</div>

@@ -1,8 +1,9 @@
 <?php
+$alignment = $args['alignment'] ?? null;
 $button_links = $args['button_links'] ?? null;
 if($button_links):
 ?>	
-<div class="btns-group grid-x grid-padding-x align-center">
+<div class="btns-group grid-x grid-padding-x <?=$alignment;?>">
 	<?php foreach($button_links as $button_link):
 		$style = $button_link['style'] ?? null;
 		$add_phone_icon = $button_link['add_phone_icon'] ?? null;

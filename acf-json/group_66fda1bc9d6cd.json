@@ -1,6 +1,6 @@
 {
     "key": "group_66fda1bc9d6cd",
-    "title": "MASTER: Hero Slider",
+    "title": "MASTER: Home Hero Slider",
     "fields": [
         {
             "key": "field_66fda1bce6a75",
@@ -212,5 +212,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1747920374
+    "modified": 1749049536
 }

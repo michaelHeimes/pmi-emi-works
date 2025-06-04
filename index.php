@@ -13,13 +13,13 @@
  */
 
 get_header();
+$posts_page_id = get_option('page_for_posts'); // Retrieve the ID of the posts page
 ?>
 
 	<main id="primary" class="site-main">
 		<div class="grid-container">
-			<div class="grid-x grid-padding-x">
-				<div class="cell small-12">
-
+			<div class="grid-x grid-padding-x align-center">
+				<div class="cell small-12 tablet-11 xlarge-10 xxlarge-9">
 					<?php
 					if ( have_posts() ) :
 			
@@ -30,21 +30,32 @@ get_header();
 							</header>
 							<?php
 						endif;
+						
+						if( is_home() && !empty(get_post_field( 'post_content', $posts_page_id )) ):?>
+							<div class="intro entry-content">
+								<?=get_post_field( 'post_content', $posts_page_id );?>
+							</div>
+						<?php endif;
 			
 						/* Start the Loop */
+						echo '<div class="posts-wrap">';
 						while ( have_posts() ) :
-							the_post();
-			
-							/*
-				 			* Include the Post-Type-specific template for the content.
-				 			* If you want to override this in a child theme, then include a file
-				 			* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 			*/
-							get_template_part( 'template-parts/content', get_post_type() );
-			
+								the_post();
+				
+								/*
+								* Include the Post-Type-specific template for the content.
+								* If you want to override this in a child theme, then include a file
+								* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+								*/
+								get_template_part( 'template-parts/loop', 'post' );
 						endwhile;
+						echo '</div>';
 			
-						the_posts_navigation();
+						echo '<div class="grid-x grid-padding-x align-center">';
+							echo '<div class="inner cell small-12 medium-10 tablet-4 position-relative font-header uppercase">';
+								trailhead_page_navi();
+							echo '</div>';
+						echo '</div>';
 			
 					else :
 			
@@ -52,6 +63,8 @@ get_header();
 			
 					endif;
 					?>
+					
+					<?php get_template_part('template-parts/section', 'post-footer-nav');?>
 					
 				</div>
 			</div>

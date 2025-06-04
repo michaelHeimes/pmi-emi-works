@@ -71,6 +71,23 @@ function trailhead_excerpt_more($more) {
 return '<a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'trailhead') . get_the_title($post->ID).'">'. __('... Read more &raquo;', 'trailhead') .'</a>';
 }
 
+
+// custom excerpt or trimmed
+function get_custom_excerpt_or_trimmed_content($post = null, $word_limit = 50) {
+	$post = get_post($post); // Ensure we're working with a WP_Post object
+
+	if (has_excerpt($post)) {
+		return get_the_excerpt($post);
+	}
+
+	// Strip shortcodes and tags, then trim to word count
+	$content = strip_shortcodes($post->post_content);
+	$content = wp_strip_all_tags($content);
+	$trimmed = wp_trim_words($content, $word_limit, '...');
+
+	return $trimmed;
+}
+
 //  Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead
 function remove_sticky_class($classes) {
 	if(in_array('sticky', $classes)) {

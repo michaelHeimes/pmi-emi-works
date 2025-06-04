@@ -32,7 +32,7 @@
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.tabs.js
 
 // Accordian
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.accordion.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.accordion.js
 //@prepros-prepend vendor/foundation/js/plugins/foundation.accordionMenu.js
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.responsiveAccordionTabs.js
 
@@ -185,8 +185,6 @@
         if(bannerSlider) {
             const slides = bannerSlider.querySelectorAll('.swiper-slide');
             
-            if( slides.length < 2 ) return;
-            
             const delay = bannerSlider.getAttribute('data-delay');
             
             function pauseAndRestartAllVideos() {
@@ -215,7 +213,7 @@
                 }
               }
             }
-            
+
             if( slides.length > 1 ) {
             
                 const swiper = new Swiper('.page-banner .hero-slider', {
@@ -249,7 +247,8 @@
                     }
                 });
                 
-                
+            } else {
+                bannerSlider.style.opacity = 1; 
             }
         }
         

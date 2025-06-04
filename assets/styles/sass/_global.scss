@@ -35,11 +35,9 @@ svg {
 }
 
 .btns-group {
-	> .cell {
-		margin-bottom: $smallGutter;
-		@include breakpoint(medium) {
-			margin-bottom: $mediumGutter;
-		}
+	row-gap: $smallGutter;
+	@include breakpoint(medium) {
+		row-gap: $mediumGutter;
 	}
 	@media (max-width: 460px) {
 		> .cell {
@@ -307,7 +305,20 @@ IMAGE GALLERY STYLES
 PAGE NAVI STYLES
 *********************/
 .page-navigation {
-	margin-top: 1rem;
+	margin-bottom: clamp(3.125rem, 2.421rem + 3.005vw, 5.125rem);
+	a,
+	span.current {
+		display: inline-block;
+		padding: .3rem;
+		margin: 1rem;	
+		font-weight: 700;
+	}
+	a {
+		color: $color-link-blue;
+	}
+	span.current {
+		color: $color-navy-blue;
+	}
 }
 
 /*********************

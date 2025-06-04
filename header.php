@@ -39,5 +39,5 @@
 				<?php get_template_part( 'template-parts/content', 'offcanvas' ); ?>
 				
 					<div class="off-canvas-content" data-off-canvas-content>
-						<div id="page" class="site">
+						<div id="page" class="site relative">
 	

@@ -76,7 +76,6 @@ header.site-header {
 			}
 		}
 		&.load {
-			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -237,6 +236,12 @@ header.site-header {
 	
 	}
 	
+}
+
+.page-template-page-home {
+	header.site-header .top-bar.load {
+		position: absolute;
+	}
 }
 
 .pre-header-links {

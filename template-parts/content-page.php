@@ -6,16 +6,19 @@
  *
  * @package trailhead
  */
+$fields = get_fields();
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+    <?php get_template_part('template-parts/section', 'default-hero-slider');?>
 		
-	<div class="entry-content">
+	<div class="entry-content main-content">
         <div class="grid-container">
-            <div class="grid-x grid-padding-x">
-                <div class="cell small-12">
-		            <?php the_content();?>
+            <div class="grid-x grid-padding-x align-center">
+                <div class="cell small-12 tablet-11 xlarge-10 xxlarge-9">
+                    <?php the_content();?>
                 </div>
             </div>
         </div>

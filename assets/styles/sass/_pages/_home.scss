@@ -2,6 +2,18 @@
 	.intro-cta {
 		background-image: url(../images/background-lines.png);
 		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		h1,
+		.h1,
+		h2,
+		.h2,
+		h3,
+		.h3,
+		h4,
+		.h4 {
+			margin-bottom: 1.15em;
+		}
 		.entry-content {
 			padding-top: clamp(2.375rem, 1.451rem + 3.944vw, 5rem);
 			padding-bottom: clamp(4.5rem, 2.761rem + 7.418vw, 9.438rem);
@@ -150,6 +162,9 @@
 		background-color: #E5E5E5;
 		padding-top: clamp(4.75rem, 3.011rem + 7.418vw, 9.688rem);
 		padding-bottom: clamp(3.563rem, 2.198rem + 5.822vw, 7.438rem);
+		h2 {
+			margin-bottom: 1.15em;
+		}
 		.it-cards {
 			padding-top: clamp(0.875rem, 0.567rem + 1.315vw, 1.75rem);
 			padding-bottom: clamp(1.875rem, 1.215rem + 2.817vw, 3.75rem);

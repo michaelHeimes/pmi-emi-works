@@ -1,11 +1,32 @@
 {
-    "key": "group_67eb367532202",
-    "title": "MASTER: Media Slider",
+    "key": "group_6840619abb0cc",
+    "title": "MASTER: Default Hero Slider",
     "fields": [
         {
-            "key": "field_67eb367536769",
+            "key": "field_68406203d0b8c",
+            "label": "Heading and Text",
+            "name": "hero_slider_heading_and_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6840619ac1ef3",
             "label": "Slider Transition Delay (in seconds)",
-            "name": "media_slider_transition_delay",
+            "name": "hero_slider_transition_delay",
             "aria-label": "",
             "type": "number",
             "instructions": "",
@@ -26,30 +47,9 @@
             "append": ""
         },
         {
-            "key": "field_67ec54f244636",
-            "label": "Autoplay",
-            "name": "media_slider_autoplay",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Check to autoplay",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_67eb367536771",
+            "key": "field_6840619ac1efa",
             "label": "Slides",
-            "name": "media_slides",
+            "name": "hero_slides",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -69,7 +69,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_67eb367539bfc",
+                    "key": "field_6840619ac3bc4",
                     "label": "Media Type",
                     "name": "media_type",
                     "aria-label": "",
@@ -78,7 +78,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "48",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -91,27 +91,19 @@
                     "allow_null": 0,
                     "allow_in_bindings": 1,
                     "layout": "horizontal",
-                    "parent_repeater": "field_67eb367536771"
+                    "parent_repeater": "field_6840619ac1efa"
                 },
                 {
-                    "key": "field_67eb367539c01",
+                    "key": "field_6840619ac3bca",
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "When the media type is video, this is used for the poster image.",
                     "required": 1,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_67eb367539bfc",
-                                "operator": "==",
-                                "value": "image"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -126,34 +118,37 @@
                     "mime_types": "",
                     "allow_in_bindings": 1,
                     "preview_size": "thumbnail",
-                    "parent_repeater": "field_67eb367536771"
+                    "parent_repeater": "field_6840619ac1efa"
                 },
                 {
-                    "key": "field_67eb367539c04",
-                    "label": "Video",
-                    "name": "video",
+                    "key": "field_6840619ac3bd5",
+                    "label": "Video File",
+                    "name": "video_file",
                     "aria-label": "",
-                    "type": "oembed",
+                    "type": "file",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_67eb367539bfc",
+                                "field": "field_6840619ac3bc4",
                                 "operator": "==",
                                 "value": "video"
                             }
                         ]
                     ],
                     "wrapper": {
-                        "width": "50",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
-                    "width": "",
-                    "height": "",
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
                     "allow_in_bindings": 1,
-                    "parent_repeater": "field_67eb367536771"
+                    "parent_repeater": "field_6840619ac1efa"
                 }
             ]
         }
@@ -176,5 +171,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748006671
+    "modified": 1749054919
 }
