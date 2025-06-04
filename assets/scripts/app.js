@@ -253,6 +253,56 @@
         }
         
     }
+    
+   _app.media_slider = function() {
+      const mediaSliders = document.querySelectorAll('.media-slider');
+      if( mediaSliders.length < 1 ) return;
+                      
+      mediaSliders.forEach(function (mediaSlider) {
+          
+      const sliderSlides = mediaSlider.querySelectorAll('.swiper-slide');
+         if( sliderSlides.length < 2 ) return;
+            
+         const autoplay = mediaSlider.getAttribute('data-autoplay');
+         const delay = mediaSlider.getAttribute('data-delay');
+         const thumbnails = mediaSlider.querySelectorAll('.media-slider-thumbnails .thumb');
+
+         
+         const swiperOptions = {
+            loop: true,
+            slidesPerView: 1,
+            speed: 500,
+            spaceBetween: 0,
+         };
+   
+         // Only add autoplay if autoplay is exactly 1
+         if (autoplay === '1') {
+   
+            swiperOptions.autoplay = {
+               delay: delay + '000',
+               disableOnInteraction: false,
+            };
+         }
+         
+         const swiper = new Swiper(mediaSlider, swiperOptions);
+         
+         // Thumbnail click navigation
+           thumbnails.forEach((thumb, index) => {
+             thumb.addEventListener('click', () => {
+               swiper.slideToLoop(index); // Loop index safe navigation
+             });
+           });
+         
+           // Set initial active thumb
+           if (thumbnails.length > 0) {
+             thumbnails[0].classList.add('active');
+           }
+ 
+      });    
+      
+
+      
+   }
             
     _app.init = function() {
         
@@ -266,6 +316,7 @@
         _app.mobile_takeover_nav();
         _app.body_scrolled();
         _app.banner_slider();
+        _app.media_slider();
     }
     
     

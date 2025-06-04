@@ -48,7 +48,7 @@ $mediumGutter: map-get($grid-margin-gutters, "medium");
 @include foundation-accordion;
 //@include foundation-media-object;
 //@include foundation-orbit;
-// @include foundation-responsive-embed;
+@include foundation-responsive-embed;
 //@include foundation-tabs;
 //@include foundation-thumbnail;
 // Menu-based containers
