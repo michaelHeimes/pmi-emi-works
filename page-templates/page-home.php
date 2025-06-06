@@ -66,7 +66,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 												</div>
 												<?php if( $title_line_one || $title_line_two || $button_link ):?>
 													<div class="content relative grid-x align-center align-bottom">
-														<div class="cell small-12 large-10 xlarge-8">
+														<div class="cell small-12 large-10 xxlarge-8">
 															<div class="grid-container">
 																<div class="grid-x">
 																	<div class="cell small-12 medium-8">
@@ -103,7 +103,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 									</div>
 									<div class="grid-container pagination-container">
 										<div class="grid-x grid-padding-x align-center">
-											<div class="cell small-12 large-10 xlarge-8">
+											<div class="cell small-12 large-10 xxlarge-8">
 												<div class="grid-x grid-padding-x align-right">
 													<div class="cell small-12 medium-4 medium-offset-8 relative">
 														<div class="swiper-pagination"></div>
@@ -121,7 +121,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 						<div class="intro-cta">
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
-									<div class="entry-content cell small-12 large-10 xlarge-8">
+									<div class="entry-content cell small-12 large-10 xxlarge-8">
 										<?php the_content(); ?>
 									</div>
 									<?php if($val_prop_background_image || $val_prop_left_text_top_line || $val_prop_left_text_bottom_line || $val_prop_right_text_top_line || $val_prop_right_text_bottom_line):?>

@@ -10,8 +10,8 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-		<div class="grid-container">
+	<main id="primary" class="site-main main-content relative">
+		<div class="grid-container relative">
 			<div class="grid-x grid-padding-x align-center">
 				<div class="cell small-12 tablet-11 xlarge-10 xxlarge-9">
 					<div class="intro entry-content">
@@ -65,5 +65,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

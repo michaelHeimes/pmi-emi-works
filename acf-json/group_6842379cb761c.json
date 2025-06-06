@@ -1,11 +1,11 @@
 {
-    "key": "group_683f7367ed864",
-    "title": "PAGE: Default \/ Post Hero",
+    "key": "group_6842379cb761c",
+    "title": "PAGE: Machine Detail",
     "fields": [
         {
-            "key": "field_68406404dbd74",
-            "label": "Hero Slider",
-            "name": "clone-hero_slider",
+            "key": "field_6842379dcf9b2",
+            "label": "Hero",
+            "name": "clone-hero",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -17,7 +17,7 @@
                 "id": ""
             },
             "clone": [
-                "group_6840619abb0cc"
+                "group_6842374c0d2de"
             ],
             "display": "seamless",
             "layout": "block",
@@ -28,26 +28,9 @@
     "location": [
         [
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            },
-            {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
-            },
-            {
-                "param": "page_type",
-                "operator": "!=",
-                "value": "posts_page"
+                "value": "page-templates\/page-machine-detail.php"
             }
         ]
     ],
@@ -60,5 +43,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1749169841
+    "modified": 1749170141
 }

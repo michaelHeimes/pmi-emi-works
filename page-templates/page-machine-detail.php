@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Machines / Materials Archive
+ * Template name: Machine Detail
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,12 +9,14 @@
 
 get_header();
 ?>
-	<div class="content main-content">
-		<div class="inner-content">
+	<?php get_template_part('template-parts/section', 'full-width-hero-slider');?>
+	
+	<div class="content main-content relative">
+		<div class="inner-content relative">
 
-			<main id="primary" class="site-main relative">
+			<main id="primary" class="site-main">
 		
-				<article id="post-<?php the_ID(); ?>" <?php post_class('relative'); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
 					<section itemprop="text">
 						<div class="grid-container">

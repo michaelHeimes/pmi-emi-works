@@ -1,0 +1,29 @@
+.media-slider {
+	.media-slider-thumbnails {
+		.swiper-slide {
+			&.swiper-slide-thumb-active {
+				.thumb {
+					cursor: default;
+				}
+			}
+		}
+	}
+	.thumb {
+		cursor: pointer;
+	}
+	.swiper-btn {
+		&:after {
+			display: none;
+		}
+	}
+	.swiper-button-next, 
+	.swiper-button-prev {
+		position: static;
+		cursor: pointer;	
+		height: auto;
+		margin: 0;
+	}
+	.arrows-thumbs {
+		padding-top: 42px;
+	}
+}

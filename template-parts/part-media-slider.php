@@ -3,7 +3,7 @@ $media_slider_autoplay = $args['media_slider_autoplay'] ?? null;
 $media_slider_transition_delay = $args['media_slider_transition_delay'] ?? null;
 $media_slides = $args['media_slides'] ?? null;
 ?>
-<div class="module block media-slider overflow-hidden position-relative" data-autoplay="<?=esc_attr($media_slider_autoplay);?>" data-delay="<?= esc_attr( $media_slider_transition_delay );?>">
+<div class="media-slider overflow-hidden position-relative" data-autoplay="<?=esc_attr($media_slider_autoplay);?>" data-delay="<?= esc_attr( $media_slider_transition_delay );?>">
 	<div class="swiper-wrapper">
 		<?php foreach($media_slides as $slide):
 			$type = $slide['media_type'];
@@ -54,13 +54,35 @@ $media_slides = $args['media_slides'] ?? null;
 			</div>
 		<?php endforeach;?>
 	</div>
-	<div class="media-slider-thumbnails">
-		<?php $i = 0; foreach($media_slides as $slide):
-			$image = $slide['image'];
-		?>
-		<div class="thumb" data-slide="<?=esc_attr($i);?>">
-			<?=wp_get_attachment_image( $image['id'], 'thumbnail', false, [ 'class' => '' ] );?>
+	<div class="arrows-thumbs relative">
+		<div class="grid-x grid-padding-x align-middle">
+			<?php if( count($media_slides) > 1 ):?>
+				<div class="cell shrink swiper-btn swiper-button-prev">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20.267" height="32.82" viewBox="0 0 20.267 32.82"><path d="m16.41 0 3.856 3.856L7.74 16.41l12.527 12.554-3.857 3.856L0 16.41Z" fill="#4da5fc"/></svg>
+				</div>
+			<?php endif;?>
+			<div class="cell auto">		
+				<div class="overflow-hidden">
+					<div class="media-slider-thumbnails">
+						<div class="swiper-wrapper">
+							<?php $i = 0; foreach($media_slides as $slide):
+								$image = $slide['image'];
+							?>
+							<div class="swiper-slide">
+								<div class="thumb" data-slide="<?=esc_attr($i);?>">
+									<?=wp_get_attachment_image( $image['id'], 'thumbnail', false, [ 'class' => '' ] );?>
+								</div>
+							</div>
+							<?php $i++; endforeach;?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<?php if( count($media_slides) > 1 ):?>
+				<div class="cell shrink swiper-btn swiper-button-next">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20.267" height="32.82" viewBox="0 0 20.267 32.82"><path d="M3.856 0 0 3.856 12.526 16.41 0 28.964l3.856 3.856 16.41-16.41Z" fill="#4da5fc"/></svg>
+				</div>
+			<?php endif;?>
 		</div>
-		<?php $i++; endforeach;?>
 	</div>
 </div>

@@ -1,47 +1,18 @@
 {
-    "key": "group_67eb367532202",
-    "title": "MASTER: Media Slider",
+    "key": "group_6842374c0d2de",
+    "title": "MASTER: Full-width Hero Slider",
     "fields": [
         {
-            "key": "field_67ec54f244636",
-            "label": "Autoplay",
-            "name": "media_slider_autoplay",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "Check to autoplay",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_67eb367536769",
+            "key": "field_6842374c13efb",
             "label": "Slider Transition Delay (in seconds)",
-            "name": "media_slider_transition_delay",
+            "name": "hero_slider_transition_delay",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67ec54f244636",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -55,9 +26,9 @@
             "append": ""
         },
         {
-            "key": "field_67eb367536771",
+            "key": "field_6842374c13f02",
             "label": "Slides",
-            "name": "media_slides",
+            "name": "hero_slides",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -77,7 +48,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_67eb367539bfc",
+                    "key": "field_6842374c16476",
                     "label": "Media Type",
                     "name": "media_type",
                     "aria-label": "",
@@ -86,32 +57,32 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "48",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
                     "choices": {
                         "image": "Image",
-                        "video": "Video"
+                        "video": "Looping Video"
                     },
                     "default_value": "",
                     "return_format": "value",
                     "allow_null": 0,
                     "allow_in_bindings": 1,
                     "layout": "horizontal",
-                    "parent_repeater": "field_67eb367536771"
+                    "parent_repeater": "field_6842374c13f02"
                 },
                 {
-                    "key": "field_67eb367539c01",
+                    "key": "field_6842374c16480",
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
-                    "instructions": "When the media type is video, this is used for the poster image and the thumbnail.",
+                    "instructions": "When the media type is video, this is used for the poster image.",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -126,34 +97,59 @@
                     "mime_types": "",
                     "allow_in_bindings": 1,
                     "preview_size": "thumbnail",
-                    "parent_repeater": "field_67eb367536771"
+                    "parent_repeater": "field_6842374c13f02"
                 },
                 {
-                    "key": "field_67eb367539c04",
-                    "label": "Video",
-                    "name": "video",
+                    "key": "field_6842374c16484",
+                    "label": "Video File",
+                    "name": "video_file",
                     "aria-label": "",
-                    "type": "oembed",
+                    "type": "file",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_67eb367539bfc",
+                                "field": "field_6842374c16476",
                                 "operator": "==",
                                 "value": "video"
                             }
                         ]
                     ],
                     "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 1,
+                    "parent_repeater": "field_6842374c13f02"
+                },
+                {
+                    "key": "field_6842374c16487",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "width": "",
-                    "height": "",
-                    "allow_in_bindings": 1,
-                    "parent_repeater": "field_67eb367536771"
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6842374c13f02"
                 }
             ]
         }
@@ -176,5 +172,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1749164827
+    "modified": 1749170051
 }

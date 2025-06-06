@@ -1,0 +1,37 @@
+.block.product-profile {
+	padding-bottom: clamp(1.125rem, 0.905rem + 0.939vw, 1.75rem);
+	@include breakpoint(large) {
+		width: calc(116.666666% + 40px);
+		margin-left: calc(-8.33333% - 20px);
+	}
+	@include breakpoint(xxlarge) {
+		width: calc(122% + 20px);
+		margin-left: calc(-11% - 10px);
+	}
+	.inner {
+		background-color: #F7F7F7;
+		border: 8px solid $white;
+		border-radius: 200px 0 200px 0;
+		border-radius: clamp(6.25rem, 4.049rem + 9.39vw, 12.5rem) 0 clamp(6.25rem, 4.049rem + 9.39vw, 12.5rem) 0;
+		overflow: hidden;
+		box-shadow: 0px 0px 10px 0px $color-link-blue;
+		padding: 30px 65px;
+		.left {
+			padding-top: 40px;
+			.left-inner {
+				max-width: 615px;
+			}
+			.ip-profiles {
+				padding-top: clamp(1.75rem, 1.486rem + 1.127vw, 2.5rem);
+			}
+		}
+		.right {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			.btns-group {
+				padding-top: 10px;
+				gap: 29px;
+			}
+		}
+	}
+}
