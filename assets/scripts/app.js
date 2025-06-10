@@ -59,7 +59,7 @@
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.orbit.js
 
 // Modals
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.reveal.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.reveal.js
 
 // Form UI element
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.slider.js
@@ -274,7 +274,6 @@
                spaceBetween: 16,
                slideToClickedSlide: true,
                watchSlidesProgress: true,
-               loop: true,
                navigation: {
                   nextEl: mediaSlider.querySelector('.swiper-button-next'),
                   prevEl: mediaSlider.querySelector('.swiper-button-prev'),

@@ -102,7 +102,7 @@ button,
 		display: inline-flex;
 		align-items: center;
 	}
-	&:not(.no-bg) {
+	&:not(.no-bg):not(.close-button) {
 		svg {
 			margin-left: rem-calc(20);
 			display: inline-block;

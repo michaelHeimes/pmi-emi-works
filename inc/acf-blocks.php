@@ -26,6 +26,16 @@ function my_acf_init_block_types() {
         ));
         
         acf_register_block_type(array(
+            'name'              => 'media-slider',
+            'title'             => __('Block: Media Slider'),
+            'description'       => __('Block: Media Slider'),
+            'render_template'   => 'template-parts/blocks/media-slider.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'keywords'          => array( 'custom', 'block', 'media', 'slider', 'pmi' ),
+        ));
+        
+        acf_register_block_type(array(
             'name'              => 'product-profile',
             'title'             => __('Block: Product Profile'),
             'description'       => __('Block: Product Profile'),

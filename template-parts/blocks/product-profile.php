@@ -84,12 +84,13 @@ $button_links = get_field('button_links') ?? null;
                                 <?php endif;?>
                             </div>
                         <?php endif;?>
-                        <?php if( $media_type == 'media-slider' && $media_slides ) {
+                        <?php if( $media_slides ) {
                             get_template_part('template-parts/part', 'media-slider',
                                 array(
                                     'media_slider_autoplay' => $media_slider_autoplay,
                                     'media_slider_transition_delay' => $media_slider_transition_delay,
                                     'media_slides' => $media_slides,
+                                    'id' => $id,
                                 ),
                             );
                         }?>

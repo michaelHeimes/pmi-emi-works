@@ -1,4 +1,16 @@
 .media-slider {
+	.swiper-slide.no-swipe {
+		height: auto;
+	}
+	.v-modal-trigger {
+		cursor: pointer;
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
 	.media-slider-thumbnails {
 		.swiper-slide {
 			&.swiper-slide-thumb-active {
@@ -25,5 +37,13 @@
 	}
 	.arrows-thumbs {
 		padding-top: 42px;
+	}
+}
+.msv-reveal {
+	.close-button {
+		padding: 1rem;
+		margin-top: -1rem;
+		margin-right: -1rem;
+		cursor: pointer;
 	}
 }
