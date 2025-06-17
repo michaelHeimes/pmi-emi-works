@@ -235,27 +235,14 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 											$link = $it_cta_cards_cta_link;
 										?>
 											<div class="cta-link text-center relative">
-												<?php
-													$link_url = $link['url'];
-													$link_title = $link['title'];
-													$link_target = $link['target'] ? $link['target'] : '_self';
-											
-													// Split title into words and wrap the last word
-													$title_words = explode(' ', $link_title);
-													if (count($title_words) > 1) {
-														$last_word = array_pop($title_words);
-														$title_html = implode(' ', $title_words) . ' <span class="inline-icon-wrap">' . esc_html($last_word) . '
-															<svg xmlns="http://www.w3.org/2000/svg" width="8.645" height="14" viewBox="0 0 8.645 14"><path d="M1.645 0 0 1.645 5.343 7 0 12.355 1.645 14l7-7Z" fill="#fff"/></svg>
-														</span>';
-													} else {
-														$title_html = '<span class="inline-icon-wrap">' . esc_html($link_title) . '
-															<svg xmlns="http://www.w3.org/2000/svg" width="8.645" height="14" viewBox="0 0 8.645 14"><path d="M1.645 0 0 1.645 5.343 7 0 12.355 1.645 14l7-7Z" fill="#fff"/></svg>
-														</span>';
-													}
-											
-													// Output the actual link (this was missing)
-													echo '<a href="' . esc_url($link_url) . '" target="' . esc_attr($link_target) . '" class="cta-link-text font-header weight-semibold color-text-light-gray">' . $title_html . '</a>';
-												?>
+												<?php get_template_part('template-parts/part', 'chev-btn',
+													array(
+														'link' => $link,
+														'classes' => 'no-btn font-22',
+														'title-color' => 'white',
+														'chev-width' => '9'
+													),
+												);?>
 											</div>
 										<?php endif;?>
 									</div>

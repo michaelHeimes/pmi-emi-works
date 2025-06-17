@@ -1,0 +1,42 @@
+{
+    "key": "group_6848957d26c54",
+    "title": "GLOBAL: Materials Template",
+    "fields": [
+        {
+            "key": "field_6848957d44213",
+            "label": "See All Machines Link",
+            "name": "see_all_machines_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "This is the link that appears at the bottom of Materials pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1749588106
+}

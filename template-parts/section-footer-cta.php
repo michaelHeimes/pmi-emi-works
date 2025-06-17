@@ -7,9 +7,8 @@ $button_links = get_field('button_links', 'option') ?? null;
 <section class="footer-cta has-object-fit">
 	<?php 
 	$image = $footer_cta_background_image['id'] ?? null;
-	$size = 'full';
 	if( $image ) {
-		echo wp_get_attachment_image( $image, $size, false, ['class' => 'img-fill'] );
+		echo wp_get_attachment_image( $image, 'full', false, ['class' => 'img-fill'] );
 	}?>
 	<div class="grid-container relative">
 		<div class="grid-x grid-padding-x align-center">

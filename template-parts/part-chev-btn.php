@@ -3,6 +3,7 @@ $link = $args['link'] ?? null;
 $bg_color = $args['bg-color'] ?? null;
 $title_color = $args['title-color'] ?? null;
 $chev_width = $args['chev-width'] ?? null;
+$classes = $args['classes'] ?? null;
 
 if( $link ):
 
@@ -24,7 +25,7 @@ if (count($title_words) > 1) {
 }
 ?>
 
-<a class="button chev-btn grid-x align-middle bg-<?=$bg_color;?> color-<?=$title_color;?>" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+<a class="button chev-btn grid-x align-middle bg-<?=$bg_color;?> color-<?=$title_color;?> <?=$classes;?>" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 	<span class="weight-semibold"><?php echo $title_html; ?></span>
 </a>
 

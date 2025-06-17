@@ -3,6 +3,9 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
+a:not(.button) {
+	transition: color .25s ease;
+}
 a:hover, a:focus {
   color: $color-link-blue;
 }
@@ -39,7 +42,7 @@ svg {
 	@include breakpoint(medium) {
 		row-gap: $mediumGutter;
 	}
-	@media (max-width: 460px) {
+	@media (max-width: 550px) {
 		> .cell {
 			width: 100%;
 			text-align: center;
@@ -48,6 +51,8 @@ svg {
 				white-space: nowrap;
 				margin-left: auto;
 				margin-right: auto;
+				width: 100%;
+				justify-content: center;
 			}
 		}
 	}
@@ -80,13 +85,17 @@ button,
 	&.has-icon {
 		padding: 0.65em 2.216em;
 	}
-	&.no-bg {
+	&.no-bg,
+	&.no-btn {
+		padding: 0;
 		background-color: transparent;
 		color: get-color('primary');
-		svg {
-			margin-right: rem-calc(12);
-			path {
-				transition: .25s ease;
+		&.icon-left {
+			svg {
+				margin-right: rem-calc(12);
+				path {
+					transition: .25s ease;
+				}
 			}
 		}
 		&:hover,
@@ -96,13 +105,60 @@ button,
 				fill: $color-link-blue;
 			}
 		}
+		&.color-white {
+			color: $white;
+			svg path {
+				fill: $white;
+			}
+			&:hover,
+			&:focus {
+				color: get-color('primary');
+				svg path {
+					fill: get-color('primary');
+				}
+			}
+		}
+		&.color-primary {
+			color: get-color('primary');
+			svg path {
+				fill: get-color('primary');
+			}
+			&:hover,
+			&:focus {
+				color: $color-link-blue;
+				svg path {
+					fill: $color-link-blue;
+				}
+			}
+		}
+	}
+	&.font-22 {
+		font-size: rem-calc(22);
+		svg {
+			display: inline-block;
+			vertical-align: middle;
+			width: auto;
+			margin-left: 0.25em;
+			path {
+				transition: all .25s ease;
+			}
+		}
+
 	}
 	.inline-icon-wrap {
 		white-space: nowrap;
 		display: inline-flex;
 		align-items: center;
 	}
-	&:not(.no-bg):not(.close-button) {
+	&:not(.no-bg):not(.close-button):not(.no-btn):not(.submenu-toggle) {
+		&:hover,
+		&:focus {
+			background-color: $color-link-blue;
+			color: $white;
+			svg path {
+				fill: $white;
+			}
+		}
 		svg {
 			margin-left: rem-calc(20);
 			display: inline-block;
@@ -123,7 +179,11 @@ button,
 			background: $color-link-blue;
 			&:hover,
 			&:focus {
-				background: get-color('primary');
+				background-color: $white;
+				color: $color-link-blue;
+				svg path {
+					fill: $color-link-blue;
+				}
 			}
 		}
 		&.color-link-blue {
@@ -141,14 +201,14 @@ button,
 			svg path {
 				fill: $white;
 			}
-			&:hover,
-			&:focus {
-				background-color: $color-link-blue;
-				color: $color-text-light-gray;
-				svg path {
-					fill: $color-text-light-gray;
-				}
-			}
+			// &:hover,
+			// &:focus {
+			// 	background-color: $color-link-blue;
+			// 	color: $color-text-light-gray;
+			// 	svg path {
+			// 		fill: $color-text-light-gray;
+			// 	}
+			// }
 		}
 	}
 }
@@ -194,6 +254,7 @@ POSTS & CONTENT STYLES
 		margin-left: auto; 
 		display: block; 
 		clear: both; 
+		text-align: center;
 	}
 	.alignleft,
 	.alignright {

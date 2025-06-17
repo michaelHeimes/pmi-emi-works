@@ -40,7 +40,7 @@
 											?>
 												<div class="address-row">
 													<?php if( $title ):?>
-														<h3 class="h5 color-white weight-semibold"><?=wp_kses_post($title);?></h3>
+														<h3 class="color-white weight-semibold"><?=wp_kses_post($title);?></h3>
 													<?php endif;?>
 													<?php if( $address ):?>
 														<div class="address color-light-blue">

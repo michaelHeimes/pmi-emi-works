@@ -85,6 +85,7 @@ $mediumGutter: map-get($grid-margin-gutters, "medium");
 @import "typography";
 @import "header";
 @import "footer";
+@import "forms";
 
 @import "_parts/page-banner";
 @import "_parts/footer-cta";
@@ -98,3 +99,4 @@ $mediumGutter: map-get($grid-margin-gutters, "medium");
 @import "_pages/default";
 @import "_pages/blog";
 @import "_pages/machine";
+@import "_pages/material";

@@ -404,8 +404,11 @@ a.menu-toggle {
 					}
 				}
 				&.is-accordion-submenu-parent {
-					button {
-						padding-right: 3.25rem;
+					padding-right: 5rem;
+					button.submenu-toggle {
+						height: 50px;
+						width: 72px;
+						padding-right: .5rem;
 						&:after {
 							border: 0;
 							background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="13.585" viewBox="0 0 22 13.585"><path d="M19.415 0 11 8.397 2.585 0 0 2.585l11 11 11-11Z" fill="%234DA5FC"/></svg>');
@@ -419,6 +422,7 @@ a.menu-toggle {
 							transition: all .3s ease;
 							transform-origin: center;
 							margin-top: 20px;
+							transform-origin: center;
 						}
 						&:hover,
 						&:focus,

@@ -32,7 +32,7 @@ footer#colophon {
 		}
 	}
 	h3 {
-		@extend .h5;
+		font-size: rem-calc(20);
 		margin: 0 0 .3em;
 		color: $white;
 	}
@@ -43,11 +43,16 @@ footer#colophon {
 		}
 	}
 	.footer-menu {
-		> li > a {
-			@extend .h5;
-			color: $white;
-			font-weight: 600;
-			margin: 0;
+		> li {
+			&:not(.menu-item-has-children) {
+				margin-bottom: 1.78rem;
+			}
+			> a {
+				font-size: rem-calc(20);
+				color: $white;
+				font-weight: 600;
+				margin: 0 0 .1rem;
+			}
 		}
 		.sub-menu {
 			list-style: none;

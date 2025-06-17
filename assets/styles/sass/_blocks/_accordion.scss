@@ -21,32 +21,40 @@ ul.accordion {
 			border-bottom-left-radius: 3px;
 			border-bottom-right-radius: 3px;
 		}
-		.accordion-title::before {
-			position: absolute;
-			top: 50%;
-			right: 1.8rem;
-			margin-top: -0.4em;
-			width: 24px;
-			height: 24px;
-			content: '';
-			background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.364 24h-1.275V13.909H0v-3.82h10.089V0h3.822v10.089H24v3.82H13.911V24Z" fill="%23313131"/></svg>');
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
+		.accordion-title{
+			&:before {
+				position: absolute;
+				top: 50%;
+				right: 1.8rem;
+				margin-top: -0.4em;
+				width: 24px;
+				height: 24px;
+				content: '';
+				background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.364 24h-1.275V13.909H0v-3.82h10.089V0h3.822v10.089H24v3.82H13.911V24Z" fill="%23313131"/></svg>');
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				transition: background-image .25s ease;
+			}
+			&:hover,
+			&:active {
+				color: $color-link-blue;
+				&:before {
+					background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.364 24h-1.275V13.909H0v-3.82h10.089V0h3.822v10.089H24v3.82H13.911V24Z" fill="%234DA5FC"/></svg>');
+				}
+			}
 		}
 		&.is-active {
-			// border-color: $white;
-			// color: $white;
-			// a,
-			// p,
-			// ul,
-			// ol {
-			// 	color: $white;
-			// }
 			.accordion-title {
 				background-color: $white;
 				&::before {
-					background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="3.994" viewBox="0 0 24 3.994"><path d="M13.345 3.994H0V2h24v1.994Zm0-2H0V0h24v1.994Z" fill="%2309090a"/></svg>')
+					background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="3.994" viewBox="0 0 24 3.994"><path d="M13.345 3.994H0V2h24v1.994Zm0-2H0V0h24v1.994Z" fill="%2309090a"/></svg>');
+				}
+				&:hover,
+				&:active {
+					&:before {
+						background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="3.994" viewBox="0 0 24 3.994"><path d="M13.345 3.994H0V2h24v1.994Zm0-2H0V0h24v1.994Z" fill="%234DA5FC"/></svg>');
+					}
 				}
 			}
 			.accordion-content {

@@ -36,9 +36,9 @@ $button_links = get_field('button_links') ?? null;
 
 <section id="<?php echo esc_attr($id); ?>" class="module block <?php echo esc_attr($className); ?>">
     <div class="inner overflow-hidden">
-        <div class="grid-x grid-padding-x align-middle">
+        <div class="grid-x grid-padding-x">
             <?php if( $image || $profiles || $media_slides ):?>
-                <div class="left cell small-12 medium-6 large-7">
+                <div class="left cell small-12 tablet-6 large-7">
                     <div class="left-inner">
                         <?php if( $media_type == 'image' && $image ):?>
                             <div class="single-image">
@@ -53,32 +53,32 @@ $button_links = get_field('button_links') ?? null;
                         <?php if( $media_type == 'image-profiles' && $profiles ):?>
                             <div class="ip-profiles grid-x grid-padding-x align-center">
                                 <?php if( $profiles && in_array('round', $profiles) ):?>
-                                    <div class="cell shrink">
+                                    <div class="cell small-2 large-shrink">
                                         <img src="<?=get_template_directory_uri();?>/assets/images/profile-round-img.svg" alt="Image of a round profile">
                                     </div>
                                 <?php endif;?>
                                 <?php if( $profiles && in_array('square', $profiles) ):?>
-                                    <div class="cell shrink">
+                                    <div class="cell small-2 large-shrink">
                                         <img src="<?=get_template_directory_uri();?>/assets/images/profile-square-img.svg" alt="Image of a square profile">
                                     </div>
                                 <?php endif;?>
                                 <?php if( $profiles && in_array('rectangle', $profiles) ):?>
-                                    <div class="cell shrink">
+                                    <div class="cell small-2 large-shrink">
                                         <img src="<?=get_template_directory_uri();?>/assets/images/profile-rectangle-img.svg" alt="Image of a rectangle profile">
                                     </div>
                                 <?php endif;?>
                                 <?php if( $profiles && in_array('channel', $profiles) ):?>
-                                    <div class="cell shrink">
+                                    <div class="cell small-2 large-shrink">
                                         <img src="<?=get_template_directory_uri();?>/assets/images/profile-channel-img.svg" alt="Image of a channel profile">
                                     </div>
                                 <?php endif;?>
                                 <?php if( $profiles && in_array('angle', $profiles) ):?>
-                                    <div class="cell shrink">
+                                    <div class="cell small-2 large-shrink">
                                         <img src="<?=get_template_directory_uri();?>/assets/images/profile-angle-img.svg" alt="Image of an angle profile">
                                     </div>
                                 <?php endif;?>
                                 <?php if( $profiles && in_array('bar', $profiles) ):?>
-                                    <div class="cell shrink">
+                                    <div class="cell small-2 large-shrink">
                                         <img src="<?=get_template_directory_uri();?>/assets/images/profile-bar-img.svg" alt="Image of an bar profile">
                                     </div>
                                 <?php endif;?>
@@ -98,7 +98,7 @@ $button_links = get_field('button_links') ?? null;
                 </div>
             <?php endif;?>
             <?php if( $copy || $button_links ):?>
-                <div class="right cell small-12 medium-6 large-5">
+                <div class="right cell small-12 tablet-6 large-5">
                     <?php if( $copy ):?>
                         <div class="copy-wrap entry-content">
                             <?=wp_kses_post($copy);?>

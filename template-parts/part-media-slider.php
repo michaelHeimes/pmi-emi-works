@@ -23,7 +23,7 @@ $media_slides = $args['media_slides'] ?? null;
 				<?php if( $type == 'video' ):?>
 					<div  class="img-wrap has-object-fit v-modal-trigger" data-open="<?=$id;?>-modal-<?=$i;?>">
 						<?=wp_get_attachment_image( $image['id'], 'full', false, [ 'class' => '' ] );?>
-						<svg xmlns="http://www.w3.org/2000/svg" width="134" height="134" viewBox="0 0 134 134"><g data-name="Group 417"><g data-name="Ellipse 1" fill="#1e1e38" stroke="#707070"><circle cx="67" cy="67" r="67" stroke="none"/><circle cx="67" cy="67" r="66.5" fill="none"/></g><path data-name="Polygon 1" d="M87.453 62.664a5 5 0 0 1 0 8.671L55.491 89.7A5 5 0 0 1 48 85.361V48.639a5 5 0 0 1 7.491-4.339Z" fill="#4da5fc"/></g></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="134" height="134" viewBox="0 0 134 134"><g data-name="Group 417"><g data-name="play-icon-bg" fill="#1e1e38" stroke="#707070"><circle cx="67" cy="67" r="67" stroke="none"/><circle cx="67" cy="67" r="66.5" fill="none"/></g><path data-name="play-icon-polygon" d="M87.453 62.664a5 5 0 0 1 0 8.671L55.491 89.7A5 5 0 0 1 48 85.361V48.639a5 5 0 0 1 7.491-4.339Z" fill="#4da5fc"/></g></svg>
 					</div>
 					<div id="<?=$id;?>-modal-<?=$i;?>" class="reveal large msv-reveal" data-reveal data-reset-on-close="true">
 						<div class="grid-x align-right">
