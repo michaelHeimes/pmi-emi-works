@@ -321,28 +321,67 @@
    };
    
    _app.val_prop_slider = function () {
-      const valPropSlider = document.querySelector('.value-proposition');
-      const nextBtn = valPropSlider.querySelector('.swiper-button-next');
-      console.log(nextBtn);
       
-      if( !valPropSlider ) return;
+      const valPropSliderSection = document.querySelector('.value-proposition-section');
+      const valPropImageSliderMobile = document.querySelector('.value-proposition-image-slider-mobile');
+      const valPropImageSliderDesktop = document.querySelector('.value-proposition-image-slider-desktop');
+      const valPropTextSliderMobile = document.querySelector('.value-proposition-text-slider-mobile');
+      const valPropTextSliderDesktop = document.querySelector('.value-proposition-text-slider-desktop');
+      const nextBtn = valPropSliderSection.querySelector('.swiper-button-next');
       
-      const swiper = new Swiper(valPropSlider , {
+      if( !valPropSliderSection ) return;
+      
+      const valPropImageSwiperMobile = new Swiper(valPropImageSliderMobile, {
          loop: true,
          slidesPerView: 1,
          speed: 500,
          spaceBetween: 0,
+         slideToClickedSlide: false,
          navigation: {
            nextEl: nextBtn,
          },
-         breakpoints: {
-            640: {
-               slidesPerView: 2,
-               spaceBetween: 16,
-            },
+      });
+      
+      const valPropImageSwiperDesktop = new Swiper(valPropImageSliderDesktop , {
+         loop: true,
+         slidesPerView: 1,
+         speed: 500,
+         spaceBetween: 0,
+         slideToClickedSlide: false,
+         navigation: {
+           nextEl: nextBtn,
          },
       });
       
+      const valPropTextSwiperMobile = new Swiper(valPropTextSliderMobile, {
+         loop: true,
+         slidesPerView: 2,
+         speed: 500,
+         spaceBetween: 0,
+         slideToClickedSlide: false,
+         effect: "fade",
+         fadeEffect: {
+            crossFade: true,
+         },
+         navigation: {
+           nextEl: nextBtn,
+         },
+      });
+      
+      const valPropTextSwiperDesktop = new Swiper(valPropTextSliderDesktop, {
+         loop: true,
+         slidesPerView: 2,
+         speed: 500,
+         spaceBetween: 0,
+         slideToClickedSlide: false,
+         effect: "fade",
+         fadeEffect: {
+            crossFade: true,
+         },
+         navigation: {
+           nextEl: nextBtn,
+         },
+      });
       
    }
    

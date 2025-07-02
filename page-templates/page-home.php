@@ -15,12 +15,6 @@ $slides = $fields['hero_slides'] ?? null;
 
 $val_prop_slider_sets = $fields['val_prop_slider_sets'] ?? null;
 
-$val_prop_background_image = $fields['val_prop_background_image'] ?? null;
-$val_prop_left_text_top_line = $fields['val_prop_left_text_top_line'] ?? null;
-$val_prop_left_text_bottom_line = $fields['val_prop_left_text_bottom_line'] ?? null;
-$val_prop_right_text_top_line = $fields['val_prop_right_text_top_line'] ?? null;
-$val_prop_right_text_bottom_line = $fields['val_prop_right_text_bottom_line'] ?? null;
-
 $it_cta_cards_background_image = $fields['it_cta_cards_background_image'] ?? null;
 $it_cta_cards_heading = $fields['it_cta_cards_heading'] ?? null;
 $it_cta_cards_cards = $fields['it_cta_cards_cards'] ?? null;
@@ -128,103 +122,159 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 									</div>
 									
 									<?php if( $val_prop_slider_sets ):?>
-										<div class="value-proposition cell small-12">
-											<div class="swiper-wrapper">
-												<?php foreach($val_prop_slider_sets as $set):
-													$left = $set['left'] ?? null;
-													$right = $set['right'] ?? null;	
-													if( $left && $right ):
-												?>
-													
-													<?php if( $left ):
-														$background_image = $left['background_image'] ?? null;
-														$text_top_line = $left['text_top_line'] ?? null;
-														$text_bottom_line = $left['text_bottom_line'] ?? null;
-													?>
-														<div class="swiper-slide">
-															<?php if( $text_top_line ):?>
-																<div class="color-link-blue">
-																	<?=esc_html($text_top_line);?>
+										<div class="value-proposition-section cell small-12">
+											<div class="value-proposition relative">
+												<div class="value-proposition-image-slider-mobile hide-for-tablet">
+													<div class="swiper-wrapper">
+														<?php foreach($val_prop_slider_sets as $set):
+															$left = $set['left'] ?? null;
+															$right = $set['right'] ?? null;	
+															if( $left && $right ):
+														?>
+															<?php if( $left ):
+																$background_image = $left['background_image'] ?? null;
+															?>
+																<div class="swiper-slide has-object-fit height-control">
+																	<?php if( $background_image  ) {
+																		echo wp_get_attachment_image( $background_image['id'], 'large', false, ['class' => 'img-fill'] );
+																	};?>
 																</div>
 															<?php endif;?>
-															<?php if( $text_bottom_line ):?>
-																<div class="color-text-light-gray">
-																	<?=esc_html($text_bottom_line);?>
+															
+															<?php if( $right ):
+																$background_image = $right['background_image'] ?? null;
+															?>
+																<div class="swiper-slide has-object-fit height-control">
+																	<?php if( $background_image  ) {
+																		echo wp_get_attachment_image( $background_image['id'], 'large', false, ['class' => 'img-fill'] );
+																	};?>
 																</div>
 															<?php endif;?>
-														</div>
-													<?php endif;?>
-													
-													<?php if( $right ):
-														$background_image =$right['background_image'] ?? null;
-														$text_top_line = $right['text_top_line'] ?? null;
-														$text_bottom_line = $right['text_bottom_line'] ?? null;
-													?>
-														<div class="swiper-slide">
-															<?php if( $text_top_line ):?>
-																<div class="color-link-blue">
-																	<?=esc_html($text_top_line);?>
-																</div>
-															<?php endif;?>
-															<?php if( $text_bottom_line ):?>
-																<div class="color-text-light-gray">
-																	<?=esc_html($text_bottom_line);?>
-																</div>
-															<?php endif;?>
-														</div>
-													<?php endif;?>
-													
-												<?php endif; endforeach;?>
-											</div>
-											<div class="swiper-button-next">Next</div>
-										</div>
-									<?php endif;?>
-									
-									
-									<?php if($val_prop_background_image || $val_prop_left_text_top_line || $val_prop_left_text_bottom_line || $val_prop_right_text_top_line || $val_prop_right_text_bottom_line):?>
-										<div class="value-proposition cell small-12">
-											<div class="inner relative has-object-fit">
-												<?php if($val_prop_background_image) {
-													echo wp_get_attachment_image( $val_prop_background_image['id'], 'full', false, ['class' => 'img-fill'] );
-												}?>
-												<div class="grid-x grid-padding-x align-middle align-center relative">
-													<?php if( $val_prop_left_text_top_line || $val_prop_left_text_bottom_line ):?>
-														<div class="cell small-12 tablet-5">
-															<h2 class="text-center">
-																<?php if( $val_prop_left_text_top_line ):?>
-																	<div class="color-link-blue">
-																		<?=esc_html($val_prop_left_text_top_line);?>
-																	</div>
-																<?php endif;?>
-																<?php if( $val_prop_left_text_bottom_line ):?>
-																	<div class="color-text-light-gray">
-																		<?=esc_html($val_prop_left_text_bottom_line);?>
-																	</div>
-																<?php endif;?>
-															</h2>
-														</div>
-													<?php endif;?>
-													<div class="svg-wrap cell small-12 tablet-2">
-														<div class="grid-x align-center">
-															<svg xmlns="http://www.w3.org/2000/svg" width="85.795" height="59.536" viewBox="0 0 85.795 59.536"><defs><filter id="a" x="0" y="0" width="43.649" height="59.536" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity=".4"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter><filter id="b" x="20.23" y="0" width="43.649" height="59.536" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur-2"/><feFlood flood-opacity=".4"/><feComposite operator="in" in2="blur-2"/><feComposite in="SourceGraphic"/></filter><filter id="c" x="42.147" y="0" width="43.649" height="59.536" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur-3"/><feFlood flood-opacity=".4"/><feComposite operator="in" in2="blur-3"/><feComposite in="SourceGraphic"/></filter></defs><g data-name="three-chevs"><g filter="url(#a)" transform="translate(-.005 -.002)"><path data-name="ic_chevron_right_24px" d="M13.881 6 9 10.881l15.853 15.887L9 42.656l4.881 4.881 20.768-20.769Z" fill="#79b9f8"/></g><g filter="url(#b)" transform="translate(-.005 -.002)"><path data-name="ic_chevron_right_24px" d="m34.111 6-4.881 4.881 15.853 15.887L29.23 42.656l4.881 4.881 20.768-20.769Z" fill="#96c8f8"/></g><g filter="url(#c)" transform="translate(-.005 -.002)"><path data-name="ic_chevron_right_24px" d="m56.031 6-4.881 4.881 15.853 15.887L51.15 42.656l4.881 4.881 20.768-20.769Z" fill="#c8e3fd"/></g></g></svg>
-														</div>
+														<?php endif; endforeach;?>
 													</div>
-													<?php if( $val_prop_right_text_top_line || $val_prop_right_text_bottom_line ):?>
-														<div class="cell small-12 tablet-5">
-															<h2 class="text-center">
-																<?php if( $val_prop_right_text_top_line ):?>
-																	<div class="color-link-blue">
-																		<?=esc_html($val_prop_right_text_top_line);?>
-																	</div>
-																<?php endif;?>
-																<?php if( $val_prop_right_text_bottom_line ):?>
-																	<div class="color-text-light-gray">
-																		<?=esc_html($val_prop_right_text_bottom_line);?>
-																	</div>
-																<?php endif;?>
-															</h2>
-														</div>
-													<?php endif;?>
+												</div>
+												<div class="value-proposition-image-slider-desktop show-for-tablet">
+													<div class="swiper-wrapper">
+														<?php foreach($val_prop_slider_sets as $set):
+															$desktop_background_image = $set['desktop_background_image'] ?? null;
+															if( $desktop_background_image ):
+														?>
+
+															<div class="swiper-slide has-object-fit">
+																<?php if( $desktop_background_image   ) {
+																	echo wp_get_attachment_image( $desktop_background_image ['id'], 'large', false, ['class' => 'img-fill'] );
+																};?>
+															</div>
+
+														<?php endif; endforeach;?>
+													</div>
+												</div>
+												<div class="value-proposition-text-slider-mobile hide-for-tablet">
+													<div class="swiper-wrapper">
+														<?php foreach($val_prop_slider_sets as $set):
+															$left = $set['left'] ?? null;
+															$right = $set['right'] ?? null;	
+															if( $left && $right ):
+														?>
+															
+															<?php if( $left ):
+																$text_top_line = $left['text_top_line'] ?? null;
+																$text_bottom_line = $left['text_bottom_line'] ?? null;
+															?>
+																<div class="swiper-slide text-center height-control">
+																	<h2>
+																		<?php if( $text_top_line ):?>
+																			<div class="color-link-blue">
+																				<?=esc_html($text_top_line);?>
+																			</div>
+																		<?php endif;?>
+																		<?php if( $text_bottom_line ):?>
+																			<div class="color-text-light-gray">
+																				<?=esc_html($text_bottom_line);?>
+																			</div>
+																		<?php endif;?>
+																	</h2>
+																</div>
+															<?php endif;?>
+															
+															<?php if( $right ):
+																$text_top_line = $right['text_top_line'] ?? null;
+																$text_bottom_line = $right['text_bottom_line'] ?? null;
+															?>
+																<div class="swiper-slide text-center height-control">
+																	<h2>
+																		<?php if( $text_top_line ):?>
+																			<div class="color-link-blue">
+																				<?=esc_html($text_top_line);?>
+																			</div>
+																		<?php endif;?>
+																		<?php if( $text_bottom_line ):?>
+																			<div class="color-text-light-gray">
+																				<?=esc_html($text_bottom_line);?>
+																			</div>
+																		<?php endif;?>
+																	</h2>
+																</div>
+															<?php endif;?>
+															
+														<?php endif; endforeach;?>
+													</div>
+												</div>
+													<div class="value-proposition-text-slider-desktop show-for-tablet">
+													<div class="swiper-wrapper">
+														<?php foreach($val_prop_slider_sets as $set):
+															$left = $set['left'] ?? null;
+															$right = $set['right'] ?? null;	
+															if( $left && $right ):
+														?>
+															<div class="swiper-slide text-center">
+																<div class="grid-x align-middle">
+																	<?php if( $left ):
+																		$text_top_line = $left['text_top_line'] ?? null;
+																		$text_bottom_line = $left['text_bottom_line'] ?? null;
+																	?>	
+																		<div class="cell small-6 height-control">
+																			<h2>
+																				<?php if( $text_top_line ):?>
+																					<div class="color-link-blue">
+																						<?=esc_html($text_top_line);?>
+																					</div>
+																				<?php endif;?>
+																				<?php if( $text_bottom_line ):?>
+																					<div class="color-text-light-gray">
+																						<?=esc_html($text_bottom_line);?>
+																					</div>
+																				<?php endif;?>
+																			</h2>
+																		</div>
+																	<?php endif;?>
+																	
+																	<?php if( $right ):
+																		$text_top_line = $right['text_top_line'] ?? null;
+																		$text_bottom_line = $right['text_bottom_line'] ?? null;
+																	?>
+																		<div class="cell small-6 height-control">
+																			<h2>
+																				<?php if( $text_top_line ):?>
+																					<div class="color-link-blue">
+																						<?=esc_html($text_top_line);?>
+																					</div>
+																				<?php endif;?>
+																				<?php if( $text_bottom_line ):?>
+																					<div class="color-text-light-gray">
+																						<?=esc_html($text_bottom_line);?>
+																					</div>
+																				<?php endif;?>
+																			</h2>
+																		</div>
+																	<?php endif;?>
+																</div>
+															</div>
+														<?php endif; endforeach;?>
+													</div>
+												</div>
+												<div class="swiper-button-next">
+													<svg xmlns="http://www.w3.org/2000/svg" width="85.795" height="59.536" viewBox="0 0 85.795 59.536"><defs><filter id="a" x="0" y="0" width="43.649" height="59.536" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity=".4"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter><filter id="b" x="20.23" y="0" width="43.649" height="59.536" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur-2"/><feFlood flood-opacity=".4"/><feComposite operator="in" in2="blur-2"/><feComposite in="SourceGraphic"/></filter><filter id="c" x="42.147" y="0" width="43.649" height="59.536" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="blur-3"/><feFlood flood-opacity=".4"/><feComposite operator="in" in2="blur-3"/><feComposite in="SourceGraphic"/></filter></defs><g data-name="three-chevs"><g filter="url(#a)" transform="translate(-.005 -.002)"><path data-name="ic_chevron_right_24px" d="M13.881 6 9 10.881l15.853 15.887L9 42.656l4.881 4.881 20.768-20.769Z" fill="#79b9f8"/></g><g filter="url(#b)" transform="translate(-.005 -.002)"><path data-name="ic_chevron_right_24px" d="m34.111 6-4.881 4.881 15.853 15.887L29.23 42.656l4.881 4.881 20.768-20.769Z" fill="#96c8f8"/></g><g filter="url(#c)" transform="translate(-.005 -.002)"><path data-name="ic_chevron_right_24px" d="m56.031 6-4.881 4.881 15.853 15.887L51.15 42.656l4.881 4.881 20.768-20.769Z" fill="#c8e3fd"/></g></g></svg>
 												</div>
 											</div>
 										</div>

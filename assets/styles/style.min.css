@@ -8512,7 +8512,7 @@ html.is-reveal-open body {
   }
 }
 
-.show-for-sr, .gform_wrapper.gravity-theme p.gform_required_legend,
+.show-for-sr, .page-template-page-home .intro-cta .value-proposition-section .swiper-button-next:after, .gform_wrapper.gravity-theme p.gform_required_legend,
 .show-on-focus {
   position: absolute !important;
   width: 1px !important;
@@ -10454,6 +10454,9 @@ header.site-header .top-bar.load {
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   padding: 0 16px;
 }
 @media print, screen and (min-width: 40em) {
@@ -10468,13 +10471,6 @@ header.site-header .top-bar.load {
         -ms-flex-align: start;
             align-items: flex-start;
     padding: 0 0 20px 1rem;
-  }
-}
-@media screen and (min-width: 75em) {
-  header.site-header .top-bar.load {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 header.site-header .top-bar.load > div {
@@ -11658,33 +11654,93 @@ ul.accordion .page-template-page-home .intro-cta .accordion-item > a.accordion-t
   padding-top: clamp(2.375rem, 1.451rem + 3.944vw, 5rem);
   padding-bottom: clamp(4.5rem, 2.761rem + 7.418vw, 9.438rem);
 }
-.page-template-page-home .intro-cta .value-proposition {
+.page-template-page-home .intro-cta .value-proposition-section {
   padding-bottom: clamp(4.5rem, 2.783rem + 7.324vw, 9.375rem);
 }
-.page-template-page-home .intro-cta .value-proposition h2 {
+.page-template-page-home .intro-cta .value-proposition-section .value-proposition {
+  overflow: hidden;
+  border-radius: 0 200px 0 200px;
+  border-radius: 0 clamp(6.25rem, 4.049rem + 9.39vw, 12.5rem) 0 clamp(6.25rem, 4.049rem + 9.39vw, 12.5rem);
+  overflow: hidden;
+  background-color: #4DA5FC;
+  -webkit-box-shadow: 0px 0px 10px 0px #4DA5FC;
+          box-shadow: 0px 0px 10px 0px #4DA5FC;
+}
+.page-template-page-home .intro-cta .value-proposition-section .value-proposition .value-proposition-image-slider-mobile,
+.page-template-page-home .intro-cta .value-proposition-section .value-proposition .value-proposition-image-slider-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-mobile .height-control,
+.page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-desktop .height-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 387px;
+}
+.page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-mobile h2,
+.page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-desktop h2 {
+  margin: 0;
   line-height: 0.895;
   font-weight: 600;
   font-size: clamp(2.813rem, 2.727rem + 0.364vw, 3rem);
 }
-@media print, screen and (min-width: 56.25em) {
-  .page-template-page-home .intro-cta .value-proposition .h2 {
-    margin-bottom: 0;
-  }
+.page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-desktop h2 {
+  padding: 0 60px;
 }
-.page-template-page-home .intro-cta .value-proposition .swiper-button-next {
-  position: static;
+.page-template-page-home .intro-cta .value-proposition-section .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
-.page-template-page-home .intro-cta .value-proposition .svg-wrap {
+.page-template-page-home .intro-cta .value-proposition-section .swiper-button-next [data-name=three-chevs] g path {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.page-template-page-home .intro-cta .value-proposition-section .swiper-button-next [data-name=three-chevs] g:nth-child(1) path {
+  -webkit-animation: fillAnim 2s infinite;
+          animation: fillAnim 2s infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.page-template-page-home .intro-cta .value-proposition-section .swiper-button-next [data-name=three-chevs] g:nth-child(2) path {
+  -webkit-animation: fillAnim 2s infinite;
+          animation: fillAnim 2s infinite;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.page-template-page-home .intro-cta .value-proposition-section .swiper-button-next [data-name=three-chevs] g:nth-child(3) path {
+  -webkit-animation: fillAnim 2s infinite;
+          animation: fillAnim 2s infinite;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.page-template-page-home .intro-cta .value-proposition-section .svg-wrap {
   margin-bottom: 1.5rem;
 }
 @media print, screen and (max-width: 56.24875em) {
-  .page-template-page-home .intro-cta .value-proposition .svg-wrap {
+  .page-template-page-home .intro-cta .value-proposition-section .svg-wrap {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
     margin-bottom: 2.25rem;
   }
 }
-.page-template-page-home .intro-cta .value-proposition .inner {
+.page-template-page-home .intro-cta .value-proposition-section .inner {
   border-radius: 0 200px 0 200px;
   border-radius: 0 clamp(6.25rem, 4.049rem + 9.39vw, 12.5rem) 0 clamp(6.25rem, 4.049rem + 9.39vw, 12.5rem);
   overflow: hidden;
@@ -11693,33 +11749,33 @@ ul.accordion .page-template-page-home .intro-cta .accordion-item > a.accordion-t
           box-shadow: 0px 0px 10px 0px #4DA5FC;
   padding: 0 40px;
 }
-.page-template-page-home .intro-cta .value-proposition .inner > .grid-x {
+.page-template-page-home .intro-cta .value-proposition-section .inner > .grid-x {
   padding-top: 50px;
   padding-bottom: 50px;
   min-height: 24.25rem;
 }
 @media print, screen and (max-width: 69.99875em) {
-  .page-template-page-home .intro-cta .value-proposition .inner > .grid-x {
+  .page-template-page-home .intro-cta .value-proposition-section .inner > .grid-x {
     padding-top: 84px;
   }
 }
-.page-template-page-home .intro-cta .value-proposition .inner [data-name=three-chevs] g path {
+.page-template-page-home .intro-cta .value-proposition-section .inner [data-name=three-chevs] g path {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.page-template-page-home .intro-cta .value-proposition .inner [data-name=three-chevs] g:nth-child(1) path {
+.page-template-page-home .intro-cta .value-proposition-section .inner [data-name=three-chevs] g:nth-child(1) path {
   -webkit-animation: fillAnim 2s infinite;
           animation: fillAnim 2s infinite;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
-.page-template-page-home .intro-cta .value-proposition .inner [data-name=three-chevs] g:nth-child(2) path {
+.page-template-page-home .intro-cta .value-proposition-section .inner [data-name=three-chevs] g:nth-child(2) path {
   -webkit-animation: fillAnim 2s infinite;
           animation: fillAnim 2s infinite;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
-.page-template-page-home .intro-cta .value-proposition .inner [data-name=three-chevs] g:nth-child(3) path {
+.page-template-page-home .intro-cta .value-proposition-section .inner [data-name=three-chevs] g:nth-child(3) path {
   -webkit-animation: fillAnim 2s infinite;
           animation: fillAnim 2s infinite;
   -webkit-animation-delay: 0.2s;
