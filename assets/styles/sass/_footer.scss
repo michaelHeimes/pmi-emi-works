@@ -1,11 +1,3 @@
-.footer-cta {
-	padding-top: clamp(5.5rem, 3.695rem + 7.7vw, 10.625rem);
-	padding-bottom: clamp(4.688rem, 2.993rem + 7.23vw, 9.5rem);
-	h2 {
-		margin-bottom: clamp(2.813rem, 1.778rem + 4.413vw, 5.75rem);
-	}
-}
-
 footer#colophon {
 	background-color: $color-navy-blue; 
 	a:not(.social-link) {
@@ -31,13 +23,17 @@ footer#colophon {
 			filter: drop-shadow(0px 3px 16px #000);
 		}
 	}
-	h3 {
+	h3,
+	.footer-menu > li > a {
+		@extend .h3;
+		font-weight: 500;
 		font-size: rem-calc(20);
 		margin: 0 0 .3em;
 		color: $white;
 	}
 	.address-row {
-		padding-bottom: clamp(0.938rem, 0.585rem + 1.502vw, 1.938rem);
+		font-size: rem-calc(15);
+		padding-bottom: 1.938rem;
 		&.contact-support {
 			padding-bottom: 11px;
 		}
@@ -45,12 +41,12 @@ footer#colophon {
 	.footer-menu {
 		> li {
 			&:not(.menu-item-has-children) {
-				margin-bottom: 1.78rem;
+				margin-bottom: .5rem;
+				@include breakpoint(medium) {
+					margin-bottom: 1.78rem;
+				}
 			}
 			> a {
-				font-size: rem-calc(20);
-				color: $white;
-				font-weight: 600;
 				margin: 0 0 .1rem;
 			}
 		}
@@ -86,7 +82,9 @@ footer#colophon {
 			padding-bottom: clamp(1.925rem, 1.715rem + 1.048vw, 2.75rem);
 		}
 		.footer-col {
-			margin-bottom: 4rem;
+			@include breakpoint(medium) {
+				margin-bottom: 4rem;
+			}
 		}
 		p,
 		.p {

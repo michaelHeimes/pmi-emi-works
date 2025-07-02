@@ -60,7 +60,7 @@
 	
 	<div class="top-bar load relative">
 	
-		<div class="top-bar-left float-left">
+		<div class="top-bar-left float-left grid-x align-middle">
 			
 			<div class="site-branding show-for-sr">
 				<?php

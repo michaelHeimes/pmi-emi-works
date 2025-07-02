@@ -98,30 +98,32 @@ $button_links = get_field('button_links') ?? null;
                 </div>
             <?php endif;?>
             <?php if( $copy || $button_links ):?>
-                <div class="right cell small-12 tablet-6 large-5">
-                    <?php if( $copy ):?>
-                        <div class="copy-wrap entry-content">
-                            <?=wp_kses_post($copy);?>
-                        </div>
-                    <?php endif;?>
-                    <?php if( $button_links ):?>
-                        <div class="btns-group grid-x">
-                            <?php foreach($button_links as $link):
-                                $link = $link['link'] ?? null;
-                                if( $link  ):
-                            ?>  
-                                <div class="cell shrink">
-                                    <?php get_template_part('template-parts/part', 'chev-btn',
-                                        array(
-                                            'link' =>  $link,
-                                            'title-color' => 'white',
-                                            'chev-width' => '9'
-                                        ),
-                                    );?>
-                                </div>
-                            <?php endif; endforeach;?>
-                        </div>
-                    <?php endif;?>
+                <div class="right cell small-12 tablet-6 large-5 grid-x align-middle">
+                    <div>
+                        <?php if( $copy ):?>
+                            <div class="copy-wrap">
+                                <?=wp_kses_post($copy);?>
+                            </div>
+                        <?php endif;?>
+                        <?php if( $button_links ):?>
+                            <div class="btns-group grid-x">
+                                <?php foreach($button_links as $link):
+                                    $link = $link['link'] ?? null;
+                                    if( $link  ):
+                                ?>  
+                                    <div class="cell shrink">
+                                        <?php get_template_part('template-parts/part', 'chev-btn',
+                                            array(
+                                                'link' =>  $link,
+                                                'title-color' => 'white',
+                                                'chev-width' => '9'
+                                            ),
+                                        );?>
+                                    </div>
+                                <?php endif; endforeach;?>
+                            </div>
+                        <?php endif;?>
+                    </div>
                 </div>
             <?php endif;?>
         </div>

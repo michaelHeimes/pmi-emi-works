@@ -78,7 +78,7 @@ $foundation-palette: (
 $light-gray: #E2E2E2;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #000;
+$black: #2C2C2C;
 $white: #fff;
 $body-background: $white;
 $body-font-color: $black;
@@ -113,7 +113,7 @@ $breakpoints: (
   "tablet": 900px,
   "large": 1120px,
   "xlarge": 1200px,
-  "xxlarge": 1440px,
+  "xxlarge": 1460px,
 );
 $breakpoints-hidpi: (
   "hidpi-1": 1,
@@ -145,7 +145,7 @@ $header-font-family: 'Titillium Web', Helvetica, Roboto, Arial, sans-serif;;
 $header-font-weight: 700;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: #10101F;
 $header-lineheight: 1.125;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
@@ -297,7 +297,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 
 $button-font-family: $header-font-family;
 $button-font-weight: null;
-$button-padding: 0.85em 1.1488em;
+$button-padding: 0.7276em 0.6755em;
 $button-margin: 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -310,7 +310,7 @@ $button-hollow-border-width: 1px;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
-  default: 1.25rem,
+  default: 1.375rem,
   large: 1.25rem,
 );
 $button-palette: $foundation-palette;

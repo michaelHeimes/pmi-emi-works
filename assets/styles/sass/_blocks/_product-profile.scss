@@ -39,6 +39,31 @@
 					margin-top: 0;
 				}
 			}
+			.copy-wrap {
+				h2 {
+					margin: 0 0 .3em;
+				}
+				p {
+					font-size: rem-calc(20);
+					font-weight: 500;	
+					line-height: 1.65;
+					&:has( + ul ),
+					&:has( + ol ) {
+						margin-bottom: 0;
+					}
+				}
+				ul {
+					line-height: 2;
+					padding-left: 0;
+					margin-top: 0;
+					margin-left: 8px;
+					margin-bottom: 14px;
+					padding-top: 6px;
+					li {
+						margin-bottom: 0;
+					}
+				}
+			}
 			.btns-group {
 				padding-top: 10px;
 				gap: 29px;

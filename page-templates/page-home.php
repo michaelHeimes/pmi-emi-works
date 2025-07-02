@@ -13,6 +13,8 @@ $fields = get_fields();
 $slider_transition_delay = $fields['hero_slider_transition_delay'] ?? null;
 $slides = $fields['hero_slides'] ?? null;
 
+$val_prop_slider_sets = $fields['val_prop_slider_sets'] ?? null;
+
 $val_prop_background_image = $fields['val_prop_background_image'] ?? null;
 $val_prop_left_text_top_line = $fields['val_prop_left_text_top_line'] ?? null;
 $val_prop_left_text_bottom_line = $fields['val_prop_left_text_bottom_line'] ?? null;
@@ -124,6 +126,61 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 									<div class="entry-content cell small-12 large-10 xxlarge-8">
 										<?php the_content(); ?>
 									</div>
+									
+									<?php if( $val_prop_slider_sets ):?>
+										<div class="value-proposition cell small-12">
+											<div class="swiper-wrapper">
+												<?php foreach($val_prop_slider_sets as $set):
+													$left = $set['left'] ?? null;
+													$right = $set['right'] ?? null;	
+													if( $left && $right ):
+												?>
+													
+													<?php if( $left ):
+														$background_image = $left['background_image'] ?? null;
+														$text_top_line = $left['text_top_line'] ?? null;
+														$text_bottom_line = $left['text_bottom_line'] ?? null;
+													?>
+														<div class="swiper-slide">
+															<?php if( $text_top_line ):?>
+																<div class="color-link-blue">
+																	<?=esc_html($text_top_line);?>
+																</div>
+															<?php endif;?>
+															<?php if( $text_bottom_line ):?>
+																<div class="color-text-light-gray">
+																	<?=esc_html($text_bottom_line);?>
+																</div>
+															<?php endif;?>
+														</div>
+													<?php endif;?>
+													
+													<?php if( $right ):
+														$background_image =$right['background_image'] ?? null;
+														$text_top_line = $right['text_top_line'] ?? null;
+														$text_bottom_line = $right['text_bottom_line'] ?? null;
+													?>
+														<div class="swiper-slide">
+															<?php if( $text_top_line ):?>
+																<div class="color-link-blue">
+																	<?=esc_html($text_top_line);?>
+																</div>
+															<?php endif;?>
+															<?php if( $text_bottom_line ):?>
+																<div class="color-text-light-gray">
+																	<?=esc_html($text_bottom_line);?>
+																</div>
+															<?php endif;?>
+														</div>
+													<?php endif;?>
+													
+												<?php endif; endforeach;?>
+											</div>
+											<div class="swiper-button-next">Next</div>
+										</div>
+									<?php endif;?>
+									
+									
 									<?php if($val_prop_background_image || $val_prop_left_text_top_line || $val_prop_left_text_bottom_line || $val_prop_right_text_top_line || $val_prop_right_text_bottom_line):?>
 										<div class="value-proposition cell small-12">
 											<div class="inner relative has-object-fit">
@@ -194,7 +251,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 													$image = $card['image']	?? null;
 													$link = $card['link'] ?? null;
 												?>
-													<div class="cell small-6 medium-4 tablet-3 large-3">
+													<div class="cell shrink">
 														<?php if( $link ): 
 															$link_url = $link['url'];
 															$link_title = $link['title'];
@@ -239,7 +296,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 													array(
 														'link' => $link,
 														'classes' => 'no-btn font-22',
-														'title-color' => 'white',
+														'title-color' => 'link-blue',
 														'chev-width' => '9'
 													),
 												);?>
@@ -262,26 +319,28 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 											</h2>
 										<?php endif;?>
 										<?php if( $itc_cards ):?>
-											<div class="it-cards grid-x grid-padding-x align-center small-up-1 medium-up-2 tablet-up-3 large-up-4">
-												<?php foreach($itc_cards as $card):
-													$icon = $card['icon'] ?? null;
-													$title = $card['title'] ?? null;
-												?>
-													<div class="it-card cell">
-														<div class="card-inner text-center h-100">
-															<?php if( $icon ):?>
-																<div class="icon-wrap">
-																	<?php echo wp_get_attachment_image( $icon['id'], 'medium' );?>
-																</div>
-															<?php endif;?>
-															<?php if( $title ):?>
-																<div class="title font-header weight-semibold">
-																	<?=wp_kses_post($title);?>
-																</div>
-															<?php endif;?>
+											<div class="it-cards-wrap">
+												<div class="it-cards grid-x grid-padding-x align-center small-up-1 medium-up-2 tablet-up-3 xxlarge-up-4">
+													<?php foreach($itc_cards as $card):
+														$icon = $card['icon'] ?? null;
+														$title = $card['title'] ?? null;
+													?>
+														<div class="it-card cell">
+															<div class="card-inner text-center h-100">
+																<?php if( $icon ):?>
+																	<div class="icon-wrap">
+																		<?php echo wp_get_attachment_image( $icon['id'], 'medium' );?>
+																	</div>
+																<?php endif;?>
+																<?php if( $title ):?>
+																	<div class="title font-header weight-semibold">
+																		<?=wp_kses_post($title);?>
+																	</div>
+																<?php endif;?>
+															</div>
 														</div>
-													</div>
-												<?php endforeach;?>
+													<?php endforeach;?>
+												</div>
 											</div>
 										<?php endif;?>
 										<?php if( $itc_button_link ): ?>

@@ -12,6 +12,10 @@
 		width: 100%;
 		z-index: 2;
 	}
+	h1,
+	.h1 {
+		color: $white;
+	}
 	&.style-home-hero-slider,
 	&.style-full-width-hero-slider {
 		h1,
@@ -57,8 +61,9 @@
 			}
 			span {
 				display: block;
+				font-size: clamp(2rem, 1.602rem + 1.697vw, 2.875rem);
 				&:nth-child(2) {
-					font-size: 1.39em;
+					font-size: clamp(2.813rem, 2.273rem + 2.303vw, 4rem);
 				}
 			}
 		}
@@ -103,9 +108,19 @@
 				padding-top: 10rem;
 				padding-bottom: 10rem;
 			}
+			h1,
+			.h1 {
+				margin-top: 0 !important;	
+				@include breakpoint(small down) {
+					margin-bottom: 0 !important;	
+				}
+			}
 			p {
 				font-size: clamp(1.25rem, 1.074rem + 0.751vw, 1.75rem);
 				font-weight: 600;
+				@include breakpoint(small down) {
+					display: none;
+				}
 			}
 		}
 	}

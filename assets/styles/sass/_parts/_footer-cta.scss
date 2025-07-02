@@ -1,7 +1,9 @@
 .footer-cta {
-	background-color: #242424;
-	img {
-		mix-blend-mode: overlay;
+	padding-top: clamp(5.5rem, 3.695rem + 7.7vw, 10.625rem);
+	padding-bottom: clamp(4.688rem, 2.993rem + 7.23vw, 9.5rem);
+	h2 {
+		margin-bottom: clamp(2.813rem, 1.778rem + 4.413vw, 5.75rem);
+		text-shadow: 0px 3px 6px rgba(0,0,0,.69);
 	}
 	.btns-group {
 		a {

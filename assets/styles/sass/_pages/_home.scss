@@ -1,4 +1,7 @@
 .page-template-page-home {
+	h2 {
+		font-size: clamp(2.612rem, 2.55rem + 0.267vw, 2.75rem);
+	}
 	.intro-cta {
 		background-image: url(../images/background-lines.png);
 		background-size: cover;
@@ -14,6 +17,13 @@
 		.h4 {
 			margin-bottom: 1.15em;
 		}
+		.btns-group {
+			column-gap: 20px;
+			row-gap: 40px;
+			@include breakpoint(medium) {
+				column-gap: 30px;
+			}
+		}
 		.entry-content {
 			padding-top: clamp(2.375rem, 1.451rem + 3.944vw, 5rem);
 			padding-bottom: clamp(4.5rem, 2.761rem + 7.418vw, 9.438rem);
@@ -22,13 +32,17 @@
 			padding-bottom: clamp(4.5rem, 2.783rem + 7.324vw, 9.375rem);
 			h2 {
 				line-height: .895;
+				font-weight: 600;
+				font-size: clamp(2.813rem, 2.727rem + 0.364vw, 3rem);
 			}
 			.h2 {
 				@include breakpoint(tablet) {
 					margin-bottom: 0;
 				}
 			}
-			
+			.swiper-button-next {
+				position: static;
+			}
 			.svg-wrap {
 				margin-bottom: rem-calc(24);
 				@include breakpoint(medium down) {
@@ -74,14 +88,10 @@
 		}	
 	}
 	.image-title-cta-cards {
-		background-color: #003B8E;
 		padding-top: clamp(3.125rem, 1.717rem + 6.009vw, 7.125rem);
 		padding-bottom: clamp(4rem, 2.504rem + 6.385vw, 8.25rem);
 		h2 {
 			margin-bottom: clamp(2.875rem, 1.555rem + 5.634vw, 6.625rem);
-		}
-		> img {
-			mix-blend-mode: soft-light;
 		}
 		.cards {
 			padding-bottom: clamp(1.563rem, 1.012rem + 2.347vw, 3.125rem);
@@ -95,7 +105,7 @@
 					padding: 7px;
 					border-radius: 60px 0 60px 0;
 					overflow: hidden;
-					box-shadow: 0px 3px 2px 0px rgba(0,0,0,1);
+					filter: drop-shadow(0px 3px 2px #000000);
 					.img-wrap {
 						padding-top: 90.893%;
 						border-radius: 58px 0 0 0;
@@ -148,22 +158,28 @@
 						transition: all .25s ease;
 					}
 				}
-				&:hover,
-				&:focus {
-					color: $color-navy-blue;
-					svg path {
-						fill: $color-navy-blue;
-					}
-				}
 			}
 		}
 	}
 	.icon-title-cards {
-		background-color: #E5E5E5;
+		background-image: linear-gradient(-0.11deg, #e5e5e5 0%, #f4f4f4 48.3%, #e5e5e5 100%);
 		padding-top: clamp(4.75rem, 3.011rem + 7.418vw, 9.688rem);
 		padding-bottom: clamp(3.563rem, 2.198rem + 5.822vw, 7.438rem);
 		h2 {
 			margin-bottom: 1.15em;
+		}
+		.it-cards-wrap {
+			max-width: 270px;
+			margin-left: auto;
+			margin-right: auto;
+			@include breakpoint(medium) {
+				max-width: 550px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			@include breakpoint(tablet) {
+				max-width: 100%;
+			}
 		}
 		.it-cards {
 			padding-top: clamp(0.875rem, 0.567rem + 1.315vw, 1.75rem);

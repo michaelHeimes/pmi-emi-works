@@ -34,6 +34,12 @@ header.site-header {
 		padding-left: 0;
 		padding-right: 0;
 	}
+	.top-bar-right {
+		a.button {
+			font-size: rem-calc(18);
+			padding: 0.85em 1.239em;
+		}
+	}
 	.top-bar {
 		.logo {
 			max-width: 170px;
@@ -96,12 +102,17 @@ header.site-header {
 				height: 100%;
 				position: relative;
 			}
+			.top-bar-left,
+			.top-bar-right {
+				@include breakpoint(small down) {
+					display: flex;
+					align-items: center;
+				}
+			}
 			.pre-header {
-				// margin-right: calc(-#{$smallGutter * 0.5});
 				overflow: hidden;
-				padding-bottom: 9px;
 				@include breakpoint(medium) {
-					// margin-right: calc(-#{$mediumGutter * 0.5});
+					padding-bottom: 9px;
 				}
 				@include breakpoint(large) {
 					margin-right: 0;
@@ -197,7 +208,7 @@ header.site-header {
 				&.menu-item-has-children {
 					
 					ul.submenu {
-						background: rgba(#0F0F1E, .89);
+						background: rgba(#0F0F1E, .69);
 						border-radius: 0 20px 0 20px;
 						filter: drop-shadow(0px 3px 6px get-color(primary));
 						li {
@@ -241,6 +252,7 @@ header.site-header {
 .page-template-page-home {
 	header.site-header .top-bar.load {
 		position: absolute;
+		height: 100%;
 	}
 }
 
@@ -404,7 +416,9 @@ a.menu-toggle {
 					}
 				}
 				&.is-accordion-submenu-parent {
-					padding-right: 5rem;
+					> a {
+						padding-right: 5rem;
+					}
 					button.submenu-toggle {
 						height: 50px;
 						width: 72px;

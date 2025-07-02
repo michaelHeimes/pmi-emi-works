@@ -39,10 +39,12 @@ svg {
 
 .btns-group {
 	row-gap: $smallGutter;
+	column-gap: 14px;
 	@include breakpoint(medium) {
 		row-gap: $mediumGutter;
+		column-gap: 20px;
 	}
-	@media (max-width: 550px) {
+	@media (max-width: 459px) {
 		> .cell {
 			width: 100%;
 			text-align: center;
@@ -51,8 +53,6 @@ svg {
 				white-space: nowrap;
 				margin-left: auto;
 				margin-right: auto;
-				width: 100%;
-				justify-content: center;
 			}
 		}
 	}
@@ -115,6 +115,19 @@ button,
 				color: get-color('primary');
 				svg path {
 					fill: get-color('primary');
+				}
+			}
+		}
+		&.color-link-blue {
+			color: $color-link-blue;
+			svg path {
+				fill: $color-link-blue;
+			}
+			&:hover,
+			&:focus {
+				color: $white;
+				svg path {
+					fill: $white;
 				}
 			}
 		}
