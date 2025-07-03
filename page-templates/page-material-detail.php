@@ -84,10 +84,8 @@ $see_all_machines_link = get_field('see_all_machines_link', 'option') ?? null;
 											<?php endif;?>
 											<?php if( $related_machines ):
 												$wrapper_class = ' three-or-more';
-												$card_classes = 'cell small-12 medium-6 large-3';	
 												if( $related_machines_count <=2 ) {
 													$wrapper_class = ' two-or-less';
-													$card_classes = 'cell small-12 text-center';
 												}
 											?>
 												<div class="grid-x grid-padding-x align-center cards<?=$wrapper_class;?>">
@@ -97,7 +95,7 @@ $see_all_machines_link = get_field('see_all_machines_link', 'option') ?? null;
 														$description = $related_machine['description'] ?? null;	
 														$link = $related_machine['link'] ?? null;	
 													?>
-														<article id="post-<?php the_ID(); ?>" <?php post_class($card_classes); ?>>
+														<article id="post-<?php the_ID(); ?>" <?php post_class('cell'); ?>>
 															<div class="card-inner text-left">
 																<div class="grid-x grid-padding-x">
 																	<?php if( $image ):?>

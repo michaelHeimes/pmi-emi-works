@@ -291,7 +291,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 							};?>
 							<div class="grid-container relative">
 								<div class="grid-x grid-padding-x align-center">
-									<div class="cell small-12 large-10">
+									<div class="cards-title cell small-12">
 										<?php if( $it_cta_cards_heading  ):?>
 											<h2 class="text-center color-text-light-gray line-height-1"><?=wp_kses_post($it_cta_cards_heading);?></h2>
 										<?php endif;?>

@@ -152,6 +152,19 @@
 		}
 	}
 	.related-machines {
+		.two-or-less {
+			flex-direction: column;
+			align-items: center;
+			> .cell {
+				max-width: 758px;
+			}
+		}
+		.three-or-more {
+			justify-content: center;
+			> .cell {
+				max-width: 364px
+			}
+		}
 		.chev-svg-wrap {
 			margin-bottom: clamp(2.5rem, 1.994rem + 2.16vw, 3.938rem);
 		}

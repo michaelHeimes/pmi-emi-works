@@ -154,6 +154,11 @@
 	.image-title-cta-cards {
 		padding-top: clamp(3.125rem, 1.717rem + 6.009vw, 7.125rem);
 		padding-bottom: clamp(4rem, 2.504rem + 6.385vw, 8.25rem);
+		.cards-title {
+			max-width: 1240px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		h2 {
 			margin-bottom: clamp(2.875rem, 1.555rem + 5.634vw, 6.625rem);
 		}

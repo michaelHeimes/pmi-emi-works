@@ -6,6 +6,7 @@
 		text-shadow: 0px 3px 6px rgba(0,0,0,.69);
 	}
 	.btns-group {
+		row-gap: 40px;
 		a {
 			color: $white;
 			svg path {

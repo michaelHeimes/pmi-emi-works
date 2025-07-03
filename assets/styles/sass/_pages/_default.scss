@@ -274,6 +274,7 @@ body.page-template-page-machine-detail {
 body.error404 {
 	.entry-content {
 		padding-top: 4rem;
+		padding-bottom: clamp(12.206rem, 10.498rem + 8.541vw, 17.438rem);
 		> * {
 			margin-top: 0 !important;
 		}
