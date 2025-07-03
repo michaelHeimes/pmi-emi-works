@@ -144,6 +144,12 @@ button,
 				}
 			}
 		}
+		&.bg-primary {
+			background-color: $color-link-blue;
+		}
+		&.bg-link-blue {
+			background-color: $color-link-blue;
+		}
 	}
 	&.font-22 {
 		font-size: rem-calc(22);

@@ -9661,6 +9661,16 @@ button.no-bg.color-primary:hover svg path, button.no-bg.color-primary:focus svg 
 .button.no-btn.color-primary:focus svg path {
   fill: #4DA5FC;
 }
+button.no-bg.bg-primary, button.no-btn.bg-primary,
+.button.no-bg.bg-primary,
+.button.no-btn.bg-primary {
+  background-color: #4DA5FC;
+}
+button.no-bg.bg-link-blue, button.no-btn.bg-link-blue,
+.button.no-bg.bg-link-blue,
+.button.no-btn.bg-link-blue {
+  background-color: #4DA5FC;
+}
 button.font-22,
 .button.font-22 {
   font-size: 1.375rem;
@@ -11329,12 +11339,6 @@ footer#colophon .site-info p {
 .footer-cta .btns-group a svg path {
   fill: #fff;
 }
-.footer-cta .btns-group a.chev-btn {
-  background-color: #4DA5FC;
-}
-.footer-cta .btns-group a.chev-btn:hover, .footer-cta .btns-group a.chev-btn:focus {
-  background-color: #0032A0;
-}
 
 .post-footer-nav {
   padding-bottom: 4.375rem;
@@ -11685,28 +11689,48 @@ ul.accordion .page-template-page-home .intro-cta .accordion-item > a.accordion-t
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   min-height: 387px;
+}
+@media print, screen and (min-width: 56.25em) {
+  .page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-mobile .height-control,
+  .page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-desktop .height-control {
+    padding-top: 60px;
+  }
 }
 .page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-mobile h2,
 .page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-desktop h2 {
   margin: 0;
+  padding: 150px 0;
   line-height: 0.895;
   font-weight: 600;
   font-size: clamp(2.813rem, 2.727rem + 0.364vw, 3rem);
+}
+@media print, screen and (min-width: 56.25em) {
+  .page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-mobile h2,
+  .page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-desktop h2 {
+    padding: 0;
+  }
 }
 .page-template-page-home .intro-cta .value-proposition-section .value-proposition-text-slider-desktop h2 {
   padding: 0 60px;
 }
 .page-template-page-home .intro-cta .value-proposition-section .swiper-button-next {
   position: absolute;
-  top: 50%;
+  margin: 0;
+  top: calc(100% - 150px);
   left: 50%;
   height: auto;
   width: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+@media print, screen and (min-width: 56.25em) {
+  .page-template-page-home .intro-cta .value-proposition-section .swiper-button-next {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 .page-template-page-home .intro-cta .value-proposition-section .swiper-button-next [data-name=three-chevs] g path {
   -webkit-transition: 0.3s ease;

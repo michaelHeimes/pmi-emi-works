@@ -104,8 +104,8 @@
                     },
                     "choices": {
                         "transparent": "Transparent Background",
-                        "mint-border": "Mint Border",
-                        "mint": "Mint Background"
+                        "blue-background": "Blue Background",
+                        "link-blue-background": "Link Blue Background"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -115,9 +115,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_65344f8cbc85d",
                     "create_options": 0,
-                    "save_options": 0
+                    "save_options": 0,
+                    "parent_repeater": "field_65344f8cbc85d"
                 },
                 {
                     "key": "field_672a8601e19fd",
@@ -187,5 +187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1750859294
+    "modified": 1751547355
 }

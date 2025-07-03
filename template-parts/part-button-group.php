@@ -23,11 +23,18 @@ if($button_links):
 					<?php endif; ?>
 					<span><?php echo esc_html( $link_title ); ?></span>
 				</a>
-			<?php else:?>
+			<?php else:
+				if ($style == 'blue-background') {
+					$bg_color = 'primary'; 
+				}
+				if ($style == 'link-blue-background') {
+					$bg_color = 'link-blue';
+				}
+			?>
 				<?php get_template_part('template-parts/part', 'chev-btn',
 					array(
 						'link' => $link,
-						'bg-color' => 'primary',
+						'bg-color' => $bg_color,
 						'title-color' => 'white',
 						'chev-width' => '9'
 					),

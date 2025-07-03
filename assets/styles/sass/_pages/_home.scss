@@ -52,15 +52,21 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					padding-top: 30px;
-					padding-bottom: 30px;
+					padding-bottom: 60px;
 					min-height: 387px;
+					@include breakpoint(tablet) {
+						padding-top: 60px;
+					}
 				}
 				h2 {
 					margin: 0;
+					padding: 150px 0;
 					line-height: .895;
 					font-weight: 600;
 					font-size: clamp(2.813rem, 2.727rem + 0.364vw, 3rem);
+					@include breakpoint(tablet) {
+						padding: 0;
+					}
 				}
 			}
 			.value-proposition-text-slider-desktop {
@@ -70,13 +76,18 @@
 			}
 			.swiper-button-next {
 				position: absolute;
-				top: 50%;
+				margin: 0;
+				top: calc(100% - 150px);
 				left: 50%;
 				height: auto;
 				width: auto;
 				transform: translate(-50%, -50%);
 				&:after {
 					@extend .show-for-sr;
+				}
+				@include breakpoint(tablet) {
+					top: 50%;
+					transform: translate(-50%, -50%);
 				}
 				[data-name="three-chevs"] g path {
 					transition: .3s ease;

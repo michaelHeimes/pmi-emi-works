@@ -11,13 +11,6 @@
 			svg path {
 				fill: $white;
 			}
-			&.chev-btn {
-				background-color: $color-link-blue;
-				&:hover,
-				&:focus {
-					background-color: get-color('primary');
-				}
-			}
 		}
 	}
 }
