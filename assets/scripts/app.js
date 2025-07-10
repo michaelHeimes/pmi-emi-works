@@ -323,13 +323,15 @@
    _app.val_prop_slider = function () {
       
       const valPropSliderSection = document.querySelector('.value-proposition-section');
+      
+      if( !valPropSliderSection ) return;
+      
       const valPropImageSliderMobile = document.querySelector('.value-proposition-image-slider-mobile');
       const valPropImageSliderDesktop = document.querySelector('.value-proposition-image-slider-desktop');
       const valPropTextSliderMobile = document.querySelector('.value-proposition-text-slider-mobile');
       const valPropTextSliderDesktop = document.querySelector('.value-proposition-text-slider-desktop');
       const nextBtn = valPropSliderSection.querySelector('.swiper-button-next');
       
-      if( !valPropSliderSection ) return;
       
       const valPropImageSwiperMobile = new Swiper(valPropImageSliderMobile, {
          loop: true,

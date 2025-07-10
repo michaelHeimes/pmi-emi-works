@@ -10569,7 +10569,7 @@ header.site-header .top-bar .main-nav > li.home-link.active a:after {
 }
 header.site-header .top-bar .main-nav > li.is-active > a {
   color: #E2E2E2;
-  background: #0F0F1E;
+  background: rgba(15, 15, 30, 0.69);
   border-color: #466C99;
   position: relative;
   z-index: 2;

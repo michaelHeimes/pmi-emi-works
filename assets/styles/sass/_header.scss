@@ -189,7 +189,7 @@ header.site-header {
 				&.is-active {
 					> a {
 						color: $light-gray;
-						background: #0F0F1E;
+						background: rgba(#0F0F1E, .69);
 						border-color: #466C99;
 						position: relative;
 						z-index: 2;
