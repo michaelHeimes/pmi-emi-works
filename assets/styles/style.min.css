@@ -11325,6 +11325,10 @@ footer#colophon .site-info p {
   height: 100%;
 }
 
+body:not(.home) .page-banner .hero-slider .swiper-wrapper {
+  min-height: 42.067vw;
+}
+
 .footer-cta {
   padding-top: clamp(5.5rem, 3.695rem + 7.7vw, 10.625rem);
   padding-bottom: clamp(4.688rem, 2.993rem + 7.23vw, 9.5rem);
