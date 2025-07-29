@@ -11233,14 +11233,14 @@ footer#colophon .site-info p {
   overflow: hidden;
 }
 .page-banner.style-default-hero-slider .content {
-  min-height: clamp(0rem, -19.3rem + 82.347vw, 54.813rem);
+  min-height: clamp(0rem, -19.233rem + 82.062vw, 42.313rem);
   padding-top: clamp(3.75rem, 3.31rem + 1.878vw, 5rem);
   padding-bottom: clamp(3.75rem, 3.31rem + 1.878vw, 5rem);
 }
 @media print, screen and (min-width: 40em) {
   .page-banner.style-default-hero-slider .content {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 }
 .page-banner.style-default-hero-slider .content h1,
