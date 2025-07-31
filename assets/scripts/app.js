@@ -215,37 +215,36 @@
             }
 
             if( slides.length > 1 ) {
-            
-                const swiper = new Swiper('.page-banner .hero-slider', {
-                    loop: true,
-                    slidesPerView: 1,
-                    speed: 500,
-                    spaceBetween: 0,
-                    effect: "fade",
-                    autoplay: {
+               const swiper = new Swiper('.page-banner .hero-slider', {
+                  loop: true,
+                  slidesPerView: 1,
+                  speed: 500,
+                  spaceBetween: 0,
+                  effect: "fade",
+                  autoplay: {
                         delay: delay + '000',
                         disableOnInteraction: false,
-                    },
-                    pagination: {
+                  },
+                  pagination: {
                         el: ".swiper-pagination",
                         clickable: true,
-                    },
-                    on: {
+                  },
+                  on: {
                         init: function () {
-                          // Play the video in the first slide on initialization
-                          playVideoInActiveSlide();
+                        // Play the video in the first slide on initialization
+                        playVideoInActiveSlide();
                         },
-                    
+                  
                         // Listen for the transitionStart event
                         transitionStart: function () {
-                          // Pause and restart all videos in slides
-                          pauseAndRestartAllVideos();
-                    
-                          // Play the video in the active slide
-                          playVideoInActiveSlide();
+                        // Pause and restart all videos in slides
+                        pauseAndRestartAllVideos();
+                  
+                        // Play the video in the active slide
+                        playVideoInActiveSlide();
                         }
-                    }
-                });
+                  }
+               });
                 
             } else {
                 bannerSlider.style.opacity = 1; 

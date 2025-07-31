@@ -59,7 +59,7 @@ ul.accordion {
 			}
 			.accordion-content {
 				border-top-color: $white !important;
-				padding: 0 clamp(1.875rem, 1.655rem + 0.939vw, 2.5rem);
+				padding: 0 clamp(1.875rem, 1.655rem + 0.939vw, 2.5rem) clamp(1.875rem, 1.655rem + 0.939vw, 2.5rem);
 			}
 		}
 	}

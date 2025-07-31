@@ -78,9 +78,17 @@
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
-                    "instructions": "When the media type is video, this is used for the poster image.",
+                    "instructions": "",
                     "required": 1,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66fda20ce6a77",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "33",
                         "class": "",
@@ -212,5 +220,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1749049536
+    "modified": 1753899211
 }

@@ -26,7 +26,7 @@ $slides = $fields['hero_slides'] ?? null;
 									$poster_url = $slide['image']['url'] ?? null;
 								?>
 									<div class="video-wrap has-object-fit">
-										<video class="img-fill" width="1600" preload="none" height="900" muted loop playsinline preload="auto" poster="<?=esc_url($poster_url);?>">
+										<video class="img-fill" width="1600" preload="none" height="900" muted loop playsinline preload="auto" poster="">
 										<source src="<?= esc_url( $slide['video_file']['url'] );?>" type="video/mp4" />
 										</video>
 									</div>
@@ -36,7 +36,7 @@ $slides = $fields['hero_slides'] ?? null;
 								<div class="content relative grid-x align-center align-middle">
 									<div class="grid-container">
 										<div class="grid-x grid-padding-x align-center">
-											<div class="cell small-12 xlarge-10">
+											<div class="cell small-12 tablet-10 xlarge-8 xxlarge-7">
 												<?php if( $title ):?>
 													<div class="h1 text-center">
 														<?=wp_kses_post($title);?>

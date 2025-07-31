@@ -27,7 +27,7 @@ $slides = get_field('hero_slides') ?? null;
 												$poster_url = $slide['image']['url'] ?? null;
 											?>
 												<div class="video-wrap has-object-fit">
-													<video class="img-fill" width="1600" preload="none" height="900" muted loop playsinline preload="auto" poster="<?=esc_url($poster_url);?>">
+													<video class="img-fill" width="1600" preload="none" height="900" muted loop playsinline preload="auto" poster="">
 													<source src="<?= esc_url( $slide['video_file']['url'] );?>" type="video/mp4" />
 													</video>
 												</div>

@@ -11523,9 +11523,6 @@ body:not(.home) .page-banner .hero-slider .swiper-wrapper {
   -webkit-box-shadow: 0px 0px 10px 0px #4DA5FC;
           box-shadow: 0px 0px 10px 0px #4DA5FC;
 }
-.block.product-profile .inner .left {
-  padding-top: 40px;
-}
 .block.product-profile .inner .left .left-inner {
   max-width: 615px;
 }
@@ -11625,7 +11622,7 @@ ul.accordion .accordion-item.is-active .accordion-title:hover:before, ul.accordi
 }
 ul.accordion .accordion-item.is-active .accordion-content {
   border-top-color: #fff !important;
-  padding: 0 clamp(1.875rem, 1.655rem + 0.939vw, 2.5rem);
+  padding: 0 clamp(1.875rem, 1.655rem + 0.939vw, 2.5rem) clamp(1.875rem, 1.655rem + 0.939vw, 2.5rem);
 }
 ul.accordion .accordion-content > *:first-child {
   margin-top: 0;

@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.1' );
+	define( '_S_VERSION', '1.0.0' );
 }
 
 /**
@@ -281,3 +281,6 @@ require_once(get_template_directory().'/inc/image-sizes.php');
 
 // Gravity Forms
 require_once(get_template_directory().'/inc/gravity-forms.php');
+
+// Shortcodes
+require_once(get_template_directory().'/inc/shortcodes.php');

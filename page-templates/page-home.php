@@ -54,7 +54,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 														$poster_url = $slide['image']['url'] ?? null;
 													?>
 														<div class="video-wrap has-object-fit">
-															<video class="img-fill" width="1600" preload="none" height="900" muted loop playsinline preload="auto" poster="<?=esc_url($poster_url);?>">
+															<video class="img-fill" width="1600" height="900" muted loop playsinline preload="auto" poster="">
 															<source src="<?= esc_url( $slide['video_file']['url'] );?>" type="video/mp4" />
 															</video>
 														</div>
@@ -133,6 +133,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 														?>
 															<?php if( $left ):
 																$background_image = $left['background_image'] ?? null;
+																var_dump($background_image);
 															?>
 																<div class="swiper-slide has-object-fit height-control">
 																	<?php if( $background_image  ) {
