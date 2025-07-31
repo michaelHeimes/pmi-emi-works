@@ -2,7 +2,8 @@
 	.swiper-slide.no-swipe {
 		height: auto;
 	}
-	.v-modal-trigger {
+	.v-modal-trigger,
+	.arrows-thumbs .thumb {
 		cursor: pointer;
 		svg {
 			position: absolute;
@@ -52,6 +53,9 @@
 	}
 	.arrows-thumbs {
 		padding-top: 42px;
+		.thumb {
+			
+		}
 	}
 }
 .msv-reveal {

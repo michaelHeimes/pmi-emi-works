@@ -10554,6 +10554,11 @@ header.site-header .top-bar .main-nav > li > a {
   border-radius: 20px 20px 0 0;
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
 }
+@media screen and (max-width: 1240px) {
+  header.site-header .top-bar .main-nav > li.home-link {
+    display: none;
+  }
+}
 header.site-header .top-bar .main-nav > li.home-link a {
   font-size: 0;
 }
@@ -11143,6 +11148,7 @@ footer#colophon .site-info p {
 .page-banner.style-full-width-hero-slider .h1 {
   color: #fff;
   margin-bottom: 0;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.69);
 }
 .page-banner.style-home-hero-slider .content, .page-banner.style-full-width-hero-slider .content {
   z-index: 1;
@@ -11176,7 +11182,6 @@ footer#colophon .site-info p {
 .page-banner.style-home-hero-slider h1,
 .page-banner.style-home-hero-slider .h1 {
   line-height: 1.01;
-  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.69);
   text-align: center;
 }
 @media print, screen and (min-width: 40em) {
@@ -11435,10 +11440,12 @@ body:not(.home) .page-banner .hero-slider .swiper-wrapper {
 .media-slider .swiper-slide.no-swipe {
   height: auto;
 }
-.media-slider .v-modal-trigger {
+.media-slider .v-modal-trigger,
+.media-slider .arrows-thumbs .thumb {
   cursor: pointer;
 }
-.media-slider .v-modal-trigger svg {
+.media-slider .v-modal-trigger svg,
+.media-slider .arrows-thumbs .thumb svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11446,14 +11453,20 @@ body:not(.home) .page-banner .hero-slider .swiper-wrapper {
           transform: translate(-50%, -50%);
 }
 .media-slider .v-modal-trigger svg path,
-.media-slider .v-modal-trigger svg g {
+.media-slider .v-modal-trigger svg g,
+.media-slider .arrows-thumbs .thumb svg path,
+.media-slider .arrows-thumbs .thumb svg g {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-.media-slider .v-modal-trigger:hover svg g[data-name=play-icon-bg], .media-slider .v-modal-trigger:focus svg g[data-name=play-icon-bg] {
+.media-slider .v-modal-trigger:hover svg g[data-name=play-icon-bg], .media-slider .v-modal-trigger:focus svg g[data-name=play-icon-bg],
+.media-slider .arrows-thumbs .thumb:hover svg g[data-name=play-icon-bg],
+.media-slider .arrows-thumbs .thumb:focus svg g[data-name=play-icon-bg] {
   fill: #4DA5FC;
 }
-.media-slider .v-modal-trigger:hover svg path[data-name=play-icon-polygon], .media-slider .v-modal-trigger:focus svg path[data-name=play-icon-polygon] {
+.media-slider .v-modal-trigger:hover svg path[data-name=play-icon-polygon], .media-slider .v-modal-trigger:focus svg path[data-name=play-icon-polygon],
+.media-slider .arrows-thumbs .thumb:hover svg path[data-name=play-icon-polygon],
+.media-slider .arrows-thumbs .thumb:focus svg path[data-name=play-icon-polygon] {
   fill: #1E1E38;
 }
 .media-slider .media-slider-thumbnails .swiper-slide.swiper-slide-thumb-active .thumb {
@@ -11475,7 +11488,6 @@ body:not(.home) .page-banner .hero-slider .swiper-wrapper {
 .media-slider .arrows-thumbs {
   padding-top: 42px;
 }
-
 .msv-reveal .close-button {
   padding: 1rem;
   margin-top: -1rem;
@@ -11522,6 +11534,9 @@ body:not(.home) .page-banner .hero-slider .swiper-wrapper {
 .block.product-profile .inner:hover {
   -webkit-box-shadow: 0px 0px 10px 0px #4DA5FC;
           box-shadow: 0px 0px 10px 0px #4DA5FC;
+}
+.block.product-profile .inner .left {
+  padding-top: 40px;
 }
 .block.product-profile .inner .left .left-inner {
   max-width: 615px;

@@ -162,6 +162,9 @@ header.site-header {
 				}
 				
 				&.home-link {
+					@media screen and (max-width: 1240px) {
+						display: none;
+					}
 					a {
 						font-size: 0;
 						&:after {

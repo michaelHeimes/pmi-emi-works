@@ -90,10 +90,14 @@ $media_slides = $args['media_slides'] ?? null;
 						<div class="swiper-wrapper">
 							<?php $i = 0; foreach($media_slides as $slide):
 								$image = $slide['image'] ?? null;
+								$type = $slide['media_type'] ?? null;
 							?>
 							<div class="swiper-slide">
 								<div class="thumb" data-slide="<?=esc_attr($i);?>">
 									<?=wp_get_attachment_image( $image['id'], 'thumbnail', false, [ 'class' => '' ] );?>
+									<?php if( $type == 'video' ):?>
+										<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 134 134"><g data-name="Group 417"><g data-name="play-icon-bg" fill="#1e1e38" stroke="#707070"><circle cx="67" cy="67" r="67" stroke="none"/><circle cx="67" cy="67" r="66.5" fill="none"/></g><path data-name="play-icon-polygon" d="M87.453 62.664a5 5 0 0 1 0 8.671L55.491 89.7A5 5 0 0 1 48 85.361V48.639a5 5 0 0 1 7.491-4.339Z" fill="#4da5fc"/></g></svg>
+									<?php endif;?>
 								</div>
 							</div>
 							<?php $i++; endforeach;?>

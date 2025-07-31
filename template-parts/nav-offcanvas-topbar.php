@@ -12,7 +12,7 @@
 
 <div class="top-bar-wrap grid-container fluid">
 
-	<div class="top-bar fixed show-for-large">
+	<div class="top-bar fixed show-for-xlarge">
 	
 		<div class="top-bar-left float-left">
 			
@@ -125,11 +125,11 @@
 										
 										<?php get_template_part('template-parts/part', 'social-links',
 											array(
-												'classes' => 'show-for-large',
+												'classes' => 'show-for-xlarge',
 											),
 										);?>
 										
-										<ul class="menu cell shrink hide-for-large">
+										<ul class="menu cell shrink hide-for-xlarge">
 											<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
 											<li><a class="menu-toggle top-row-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
 										</ul>
@@ -140,7 +140,7 @@
 						</div>
 					<?php endif;?>
 						
-					<div class="show-for-large grid-x grid-padding-x align-middle">
+					<div class="show-for-xlarge grid-x grid-padding-x align-middle">
 						<div class="cell auto">
 							<?php trailhead_top_nav();?>
 						</div>
