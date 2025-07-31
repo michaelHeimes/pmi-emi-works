@@ -162,7 +162,7 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 
 															<div class="swiper-slide has-object-fit">
 																<?php if( $desktop_background_image   ) {
-																	echo wp_get_attachment_image( $desktop_background_image ['id'], 'large', false, ['class' => 'img-fill'] );
+																	echo wp_get_attachment_image( $desktop_background_image ['id'], 'full', false, ['class' => 'img-fill'] );
 																};?>
 															</div>
 
