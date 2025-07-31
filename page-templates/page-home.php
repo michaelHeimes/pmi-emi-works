@@ -133,7 +133,6 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 														?>
 															<?php if( $left ):
 																$background_image = $left['background_image'] ?? null;
-																var_dump($background_image);
 															?>
 																<div class="swiper-slide has-object-fit height-control">
 																	<?php if( $background_image  ) {
