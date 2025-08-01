@@ -1,0 +1,39 @@
+.page-menu-block {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+	.page-menu-block-inner.grid-x.grid-padding-x {
+		margin-left: -#{$smallGutter * .25};
+		margin-right: -#{$smallGutter * .25};
+		@include breakpoint(medium) {
+			margin-left: -#{$mediumGutter * .25};
+			margin-right: -#{$mediumGutter * .25};
+		}
+		> .cell {
+			padding-left: calc($smallGutter * .25);
+			padding-right: calc($smallGutter * .25);
+			@include breakpoint(medium) {
+				padding-left: calc($mediumGutter * .25);
+				padding-right: calc($mediumGutter * .25);
+			}
+		}
+	}
+	
+	a.button.current-page {
+		background-color: $color-link-blue;
+	}
+	
+	.page-menu-block-title {
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0;
+		display: none;
+		color: #848383;
+		i {
+			font-size: 30px;
+		}
+	}
+
+}

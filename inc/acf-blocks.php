@@ -13,6 +13,7 @@ function my_acf_init_block_types() {
             'category'          => 'formatting',
             'icon'              => 'block-default',
             'keywords'          => array( 'custom', 'block', 'accordion', 'pmi' ),
+            'mode' => 'edit',
         ));
         
         acf_register_block_type(array(
@@ -23,6 +24,7 @@ function my_acf_init_block_types() {
             'category'          => 'formatting',
             'icon'              => 'block-default',
             'keywords'          => array( 'custom', 'block', 'button', 'buttons', 'group', 'pmi' ),
+            'mode' => 'edit',
         ));
         
         acf_register_block_type(array(
@@ -33,6 +35,7 @@ function my_acf_init_block_types() {
             'category'          => 'formatting',
             'icon'              => 'block-default',
             'keywords'          => array( 'custom', 'block', 'media', 'slider', 'pmi' ),
+            'mode' => 'edit',
         ));
         
         acf_register_block_type(array(
@@ -43,7 +46,28 @@ function my_acf_init_block_types() {
             'category'          => 'formatting',
             'icon'              => 'block-default',
             'keywords'          => array( 'custom', 'block', 'product', 'profile', 'pmi' ),
+            'mode' => 'edit',
+        ));
+        
+        acf_register_block_type(array(
+            'name'              => 'video-block',
+            'title'             => __('Video Block'),
+            'description'       => __('Video Block'),
+            'render_template'   => 'template-parts/blocks/video-block.php',
+            'category'          => 'formatting',
+            'keywords'          => array( 'custom', 'block', 'video', 'gallery', 'pmi' ),
+            'mode' => 'edit',
         ));
 
+        acf_register_block_type(array(
+            'name'              => 'page-menu',
+            'title'             => __('Page Menu Block'),
+            'description'       => __('Page Menu Block'),
+            'render_template'   => 'template-parts/blocks/page-menu.php',
+            'category'          => 'formatting',
+            'keywords'          => array( 'custom', 'block', 'page', 'menu', 'pmi' ),
+            'mode' => 'edit',
+        ));
+        
     }
 }

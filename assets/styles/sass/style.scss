@@ -77,6 +77,9 @@ $mediumGutter: map-get($grid-margin-gutters, "medium");
 // Import Swiper
 @import "./css/vendor/swiper-bundle.min.css";
 
+// Magnific Popups
+@import "./css/vendor/magnific-popup.css";
+
 /*--------------------------------------------------------------
 # Custom Styles
 --------------------------------------------------------------*/
@@ -94,6 +97,8 @@ $mediumGutter: map-get($grid-margin-gutters, "medium");
 
 @import "_blocks/product-profile";
 @import "_blocks/accordion";
+@import "_blocks/page-menu";
+@import "_blocks/video";
 
 @import "_pages/home";
 @import "_pages/default";
