@@ -27,8 +27,8 @@
 		.content {
 			z-index: 1;
 			width: 100%;
-			padding-top: clamp(4.5rem, -8.66rem + 56.15vw, 41.875rem);
-			padding-bottom: clamp(1.625rem, -1.5rem + 13.333vw, 10.5rem);
+			padding-top: clamp(4.5rem, 2rem + 10.667vw, 10rem);
+			padding-bottom: clamp(4.5rem, 2rem + 10.667vw, 10rem);
 			@include breakpoint(medium) {
 				padding-top: 10rem;
 				padding-bottom: 10rem;
@@ -70,8 +70,8 @@
 		.content {
 			z-index: 1;
 			width: 100%;
-			padding-top: clamp(4.5rem, -8.66rem + 56.15vw, 41.875rem);
-			padding-bottom: clamp(1.625rem, -1.5rem + 13.333vw, 10.5rem);
+			padding-top: clamp(4.5rem, 2rem + 10.667vw, 10rem);
+			padding-bottom: clamp(4.5rem, 2rem + 10.667vw, 10rem);
 			@include breakpoint(medium) {
 				padding-top: 10rem;
 				padding-bottom: 10rem;

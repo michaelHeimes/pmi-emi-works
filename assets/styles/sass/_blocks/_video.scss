@@ -11,14 +11,16 @@
 		.img-wrap {
 			padding-top: 55.788%;
 		}
-		h3.h5 {
-			margin: .4em 0 0;
+		p {
+			margin: .3em 0 0;
+			line-height: 1.25;
 			transition: color .25s ease;
 		}
 		a {
+			color: $black;
 			&:hover,
 			&:active {
-				h3.h5 {
+				p {
 					color: $color-link-blue;
 				}
 			}
@@ -47,6 +49,10 @@
 .mfp-wrap.mfp-gallery.mfp-close-btn-in.mfp-auto-cursor.mfp-ready,
 .mfp-bg.mfp-ready {
 	z-index: 999999;
+}
+.mfp-bg {
+	background: rgba(0, 0, 0, 0.8);
+	opacity: 1;
 }
 .mfp-iframe-holder,
 .mfp-inline-holder {

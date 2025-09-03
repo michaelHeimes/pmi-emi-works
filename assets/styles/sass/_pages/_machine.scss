@@ -1,5 +1,5 @@
 .page-template-page-machine {
-	.entry-content > *:first-child  {
+	.entry-content > *:first-child:not(.wp-block-heading)  {
 		margin-top: 0 !important;
 	} 
 }

@@ -21,7 +21,13 @@
 			box-shadow: 0px 0px 10px 0px $color-link-blue;
 		}
 		.left {
-			padding-top: 40px;
+			padding-top: 10px;
+			@media (min-width: 740px) {
+				padding-top: 20px;
+			}
+			@include breakpoint(tablet) {
+				padding-top: 40px;
+			}
 			.left-inner {
 				max-width: 615px;
 				.ip-profiles > .cell {

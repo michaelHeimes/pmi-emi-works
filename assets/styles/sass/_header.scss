@@ -86,9 +86,10 @@ header.site-header {
 			left: 0;
 			width: 100%;
 			//height: 100%;
-			align-items: baseline;
+			align-items: center;
 			padding: 0 calc($smallGutter * .5);
 			@include breakpoint(medium) {
+				align-items: normal;
 				height: 100%;
 				padding: 0 0 0 calc($mediumGutter * .5);
 			}
@@ -192,7 +193,7 @@ header.site-header {
 				&.is-active {
 					> a {
 						color: $light-gray;
-						background: rgba(#0F0F1E, .69);
+						background: #1E1E38;
 						border-color: #466C99;
 						position: relative;
 						z-index: 2;
@@ -203,7 +204,7 @@ header.site-header {
 							left: 0;
 							width: 100%;
 							height: 1px;
-							background: #0F0F1E;
+							background: #1E1E38;
 							z-index: 2;
 						}
 					}
@@ -212,7 +213,6 @@ header.site-header {
 				&.menu-item-has-children {
 					
 					ul.submenu {
-						background: rgba(#0F0F1E, .69);
 						border-radius: 0 20px 0 20px;
 						filter: drop-shadow(0px 3px 6px get-color(primary));
 						li {

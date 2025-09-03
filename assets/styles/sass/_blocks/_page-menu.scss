@@ -12,7 +12,9 @@
 		> .cell {
 			padding-left: calc($smallGutter * .25);
 			padding-right: calc($smallGutter * .25);
+			margin-bottom: #{$smallGutter * .5};
 			@include breakpoint(medium) {
+				margin-bottom: #{$mediumGutter * .5};
 				padding-left: calc($mediumGutter * .25);
 				padding-right: calc($mediumGutter * .25);
 			}

@@ -10,9 +10,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main main-content">
 		<?php get_template_part('template-parts/section', 'default-hero-slider');?>
-		<div class="grid-container">
+		<div class="grid-container relative">
 			<div class="grid-x grid-padding-x align-center">
 				<div class="cell small-12 tablet-11 xlarge-10 xxlarge-9">
 					<?php

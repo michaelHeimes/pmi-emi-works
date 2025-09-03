@@ -29,7 +29,7 @@ echo '<div class="video-block grid-x grid-padding-x small-up-1 medium-up-2 table
 		<div class="img-wrap has-object-fit">
 			<img src="<?php echo $thumb_url; ?>" class="img-fill" />
 		</div>
-		<h3 class="video-title h5"><?php echo $video_title;?></h3>
+		<p class="video-title"><?php echo $video_title;?></p>
 	</a>
 
 	<?php 
@@ -43,7 +43,7 @@ echo '<div class="video-block grid-x grid-padding-x small-up-1 medium-up-2 table
 			<img src="<?php echo $thumb_url; ?>" class="img-fill" />
 		</div>
 		<?php if($video_title):?>
-			<h3 class="video-title h5"><?php echo $video_title;?></h3>
+			<p class="video-title"><?php echo $video_title;?></p>
 		<?php endif;?>
 	</a>
 

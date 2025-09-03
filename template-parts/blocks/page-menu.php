@@ -11,7 +11,7 @@ if ( have_rows('page_menu') ){
 			echo '<div class="cell shrink"><a class="current-page button small bg-primary color-white" href="' . $link['url'] . '">' . $link['title'] . '</a></div>';
 		}
 		else {
-			echo '<div class="cell shrink"><a class="button small bg-primary color-white" href="' . $link['url'] . '">' . $link['title'] . '</a></div>';
+			echo '<div class="cell shrink"><a class="button small outline-primary" href="' . $link['url'] . '">' . $link['title'] . '</a></div>';
 		}
 	}
 	echo '</div>';

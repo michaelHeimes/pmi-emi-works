@@ -33,8 +33,8 @@ $slides = $fields['hero_slides'] ?? null;
 								<?php endif;?>
 							</div>
 							<?php if( $title ):?>
-								<div class="content relative grid-x align-center align-middle">
-									<div class="grid-container">
+								<div class="grid-container grid-x align-center">
+									<div class="content relative grid-x align-center align-middle">
 										<div class="grid-x grid-padding-x align-center">
 											<div class="cell small-12 tablet-10 xlarge-8 xxlarge-7">
 												<?php if( $title ):?>

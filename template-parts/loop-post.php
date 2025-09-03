@@ -7,11 +7,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('relative'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 	<div class="grid-x grid-padding-x">
 		<div class="thumb-wrap cell small-12 medium-7 tablet-4">
-			<?php the_post_thumbnail('full'); ?>
+			<a href="<?=esc_url(get_the_permalink());?>" target="_self">
+				<?php the_post_thumbnail('full'); ?>
+			</a>
 		</div>
 		<div class="cell small-12 tablet-8">
 			<header class="article-header">	
-				<h1 class="entry-title single-title h4" itemprop="headline"><?php the_title(); ?></h1>
+				<a href="<?=esc_url(get_the_permalink());?>" target="_self">
+					<h1 class="entry-title single-title h4" itemprop="headline"><?php the_title(); ?></h1>
+				</a>
 			</header> <!-- end article header -->
 							
 			<section class="entry-content" itemprop="text">

@@ -29,6 +29,27 @@
             "preview_size": "thumbnail"
         },
         {
+            "key": "field_68a634d8d6f06",
+            "label": "Logo Caption",
+            "name": "logo_caption",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_67019a265bf87",
             "label": "Copyright Text",
             "name": "footer_copyright_text",
@@ -350,5 +371,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748799317
+    "modified": 1755722989
 }

@@ -22,7 +22,11 @@
 				$cat_ID = $queried_object->cat_ID ;
 				$cat_name = $queried_object->name . " ";
 			}
-			echo '<h3 class="h4">Recent ' . $cat_name . ' News & Articles</h3>';
+			if(is_category()) {
+				echo '<h3 class="h4">Recent ' . $cat_name . '</h3>';
+			} else {
+				echo '<h3 class="h4">Recent News & Articles</h3>';
+			}
 			?>
 			<ul class="menu vertical">
 				<?php

@@ -19,7 +19,7 @@
 		}
 		.btns-group {
 			column-gap: 20px;
-			row-gap: 40px;
+			row-gap: 50px;
 			@include breakpoint(medium) {
 				column-gap: 30px;
 			}

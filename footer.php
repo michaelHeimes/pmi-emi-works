@@ -12,6 +12,7 @@
  $mailing_address = get_field('mailing_address', 'option') ?? null;
  $contact_support = get_field('contact_support', 'option') ?? null;
  $logo = get_field('footer_logo', 'option');
+ $logo_caption = get_field('logo_caption', 'option');
  $copyright_text = get_field('footer_copyright_text', 'option') ?? null;
  $subfooter_links = get_field('footer_subfooter_links', 'option') ?? null;
 ?>
@@ -25,11 +26,18 @@
 									<div class="grid-x grid-padding-x">
 										<div class="footer-col cell small-12 tablet-4">
 											<?php 
-											$image = $logo['id'] ?? null;
-											$size = 'full';
-											if( $image ) :?>
-												<div class="logo">
-													<?=wp_get_attachment_image( $image, $size );?>
+											if( $logo ||  $logo_caption ) :?>
+												<div class="logo-caption-wrap">
+													<?php if( $logo ) :?>
+														<div class="logo">
+															<?=wp_get_attachment_image( $logo['id'], 'full' );?>
+														</div>
+													<?php endif;?>
+													<?php if( $logo_caption ) :?>
+														<p class="m-0 logo-caption color-white  weight-semibold">
+															<?=wp_kses_post($logo_caption);?>
+														</p>
+													<?php endif;?>
 												</div>
 											<?php endif;?>
 											<?php

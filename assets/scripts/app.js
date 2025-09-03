@@ -438,33 +438,59 @@
    }
    
    _app.magnificPopup = function() {
-      if( $('.thumb-video') ) {
-         $('.thumb-video').magnificPopup({
-            type: 'iframe',
-            gallery: {
-               enabled:true
-            },
-            iframe: {
-               markup: '<div class="mfp-iframe-scaler">'+
-                        '<div class="mfp-close"></div>'+
-                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-                        '<div class="mfp-title">Some caption</div>'+
-                     '</div>'
-            },
-            callbacks: {
-               markupParse: function(template, values, item) {
-                  values.title = item.el.attr('title');
+      
+      if ( $('.video-block').length ) {
+          $('.video-block').each(function() {
+              const $block = $(this);
+      
+              $block.find('.thumb-video').magnificPopup({
+                  type: 'iframe',
+                  gallery: {
+                      enabled: true
                   },
-               close: function () {
-                  // Call pause() here instead of load()
-                  $(".videoslide").each(function() {
-                  this.pause();
-                  this.currentTime = 0;
-               });
-               }
-            }
-         });
+                  iframe: {
+                      markup: '<div class="mfp-iframe-scaler">'+
+                                  '<div class="mfp-close"></div>'+
+                                  '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                                  '<div class="mfp-title">Some caption</div>'+
+                              '</div>'
+                  },
+                  callbacks: {
+                      markupParse: function(template, values, item) {
+                          values.title = item.el.attr('title');
+                      },
+                      close: function () {
+                          // Stop and reset all videos in this block
+                          $block.find(".videoslide").each(function() {
+                              this.pause();
+                              this.currentTime = 0;
+                          });
+                      }
+                  }
+              });
+          });
       }
+      
+      if ( $('.wp-block-gallery').length ) {
+          $('.wp-block-gallery').each(function() {
+              $(this).magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {
+                      enabled: true, // enable gallery mode
+                      navigateByImgClick: true,
+                      preload: [0,1] // preload previous and next images
+                  },
+                  image: {
+                      titleSrc: function(item) {
+                          // Use image alt or link title attribute
+                          return item.el.find('img').attr('alt') || item.el.attr('title') || '';
+                      }
+                  }
+              });
+          });
+      }
+      
    }
 
    

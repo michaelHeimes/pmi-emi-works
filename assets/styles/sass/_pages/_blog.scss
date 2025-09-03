@@ -13,6 +13,15 @@
 				margin-bottom: 2rem;
 			}
 		}
+		.entry-title {
+			transition: color .25s ease;
+		}
+		a:hover,
+		a:focus { 
+			> .entry-title {
+				color: $color-link-blue;
+			}
+		}
 		.link-wrap {
 			padding-top: clamp(0.625rem, 0.515rem + 0.469vw, 0.938rem);
 		}

@@ -417,7 +417,7 @@ $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 280px;
 $dropdownmenu-background: transparent;
-$dropdownmenu-submenu-background: rgba(#0F0F1E, .89);
+$dropdownmenu-submenu-background: $color-navy-blue;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
@@ -875,7 +875,7 @@ $tooltip-radius: $global-radius;
 
 $topbar-padding: 0;
 $topbar-background: transparent;
-$topbar-submenu-background: rgba(#0F0F1E, .89);
+$topbar-submenu-background: #1E1E38;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;

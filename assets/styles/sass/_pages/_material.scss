@@ -3,7 +3,7 @@
 		padding-top: clamp(1.125rem, 1.015rem + 0.469vw, 1.438rem);
 		padding-bottom: clamp(2.25rem, 1.766rem + 2.066vw, 3.625rem);
 		.media-slider {
-			border-radius: 207px 0 0 0;
+			border-radius: clamp(9rem, 7.21rem + 7.636vw, 12.938rem) 0 0 0;
 			overflow: hidden;
 			border: 1px solid $color-link-blue;
 			.arrows-thumbs {

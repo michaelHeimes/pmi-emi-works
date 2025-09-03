@@ -19,7 +19,7 @@
 		endif;?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content main-content">
+	<div class="entry-content">
 		<?php
 		the_content(
 			sprintf(
@@ -45,7 +45,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer entry-content main-content">
+	<footer class="entry-footer entry-content">
 		<nav class="post-navigation uppercase grid-container">
 			<div class="nav-links grid-x grid-padding-x align-center">
 				<?php
