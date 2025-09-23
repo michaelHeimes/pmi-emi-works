@@ -124,6 +124,7 @@
                         "id": ""
                     },
                     "layout": "block",
+                    "parent_repeater": "field_68647b2fd7518",
                     "sub_fields": [
                         {
                             "key": "field_683a12881e3fc",
@@ -193,8 +194,7 @@
                             "prepend": "",
                             "append": ""
                         }
-                    ],
-                    "parent_repeater": "field_68647b2fd7518"
+                    ]
                 },
                 {
                     "key": "field_68647bf9d751b",
@@ -211,6 +211,7 @@
                         "id": ""
                     },
                     "layout": "block",
+                    "parent_repeater": "field_68647b2fd7518",
                     "sub_fields": [
                         {
                             "key": "field_68647bf9d751c",
@@ -280,8 +281,7 @@
                             "prepend": "",
                             "append": ""
                         }
-                    ],
-                    "parent_repeater": "field_68647b2fd7518"
+                    ]
                 }
             ]
         },
@@ -707,5 +707,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": "2025-09-21 14:07:38"
+    "modified": 1758646806
 }
