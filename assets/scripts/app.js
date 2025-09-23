@@ -492,6 +492,12 @@
       }
       
    }
+   
+   _app._home_page_reveal = function() {
+        setTimeout(function() {
+          $('#home-alert').foundation('open');
+        }, 2000);        
+   }
 
    
             
@@ -512,6 +518,7 @@
       _app.btn_group_width();
       _app.magnificPopup();
       _app.page_menu_block();
+      _app._home_page_reveal();
    }
    
    

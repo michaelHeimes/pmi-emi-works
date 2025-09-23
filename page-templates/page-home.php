@@ -23,6 +23,11 @@ $it_cta_cards_cta_link = $fields['it_cta_cards_cta_link'] ?? null;
 $itc_heading = $fields['itc_heading'] ?? null;
 $itc_cards = $fields['itc_cards'] ?? null;
 $itc_button_link = $fields['itc_button_link'] ?? null;
+
+$alert_popup_enable = $fields['alert_popup_enable'] ?? null;
+$alert_popup_image = $fields['alert_popup_image'] ?? null;
+$alert_popup_link = $fields['alert_popup_link'] ?? null;
+
 ?>
 	<div class="content">
 		<div class="inner-content">
@@ -410,13 +415,45 @@ $itc_button_link = $fields['itc_button_link'] ?? null;
 							</div>
 						</section>
 					<?php endif;?>
-						
+					
+					<?php if($alert_popup_enable == 'true' && $alert_popup_image && $alert_popup_link):?>
+						<div class="reveal" id="home-alert" data-reveal data-overlay="true">
+							<div class="grid-x grid-padding-x align-center align-middle">
+								<div class="small-12 grid-x align-right">
+									<button class="close-button" data-close aria-label="Close modal" type="button">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+							
+								<?php 
+								$link = $alert_popup_link;
+								if( $link ): 
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									$link_target = $link['target'] ? $link['target'] : '_self';
+									?>
+									<a class="grid-x align-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+									<span class="show-for-sr"><?php echo esc_html( $link_title ); ?></span>
+								<?php endif; ?>
+								
+								<?php if($alert_popup_image) {
+									echo wp_get_attachment_image( $alert_popup_image['id'], 'large' );
+								};?>
+							  
+								<?php if( $link ):?>
+									</a>
+								<?php endif; ?>
+							</div>
+						</div>
+					<?php endif;?>
+
+					
 				</article><!-- #post-<?php the_ID(); ?> -->
 		
 			</main><!-- #main -->
 				
 		</div>
 	</div>
-
+	
 <?php
 get_footer();

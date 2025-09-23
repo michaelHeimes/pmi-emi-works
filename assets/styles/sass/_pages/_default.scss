@@ -235,10 +235,10 @@ body.single {
 				padding-left: 29px;
 				&:before {
 					position: absolute;
-					top: -14px;
+					top: -.5em;
 					left: 0;
 					content: '•';
-					font-size: 28px;
+					font-size: 1.61em;
 				}
 			}
 		}

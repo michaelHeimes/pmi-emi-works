@@ -179,6 +179,5 @@
 <?php if( !empty( get_field('before_closing_body_tag', 'option') ) ) {
 		echo get_field('before_closing_body_tag', 'option');
 }?>
-
 </body>
 </html>

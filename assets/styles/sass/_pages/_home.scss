@@ -279,6 +279,15 @@
 		}
 	}
 }
+#home-alert.reveal {
+	background-color: transparent;
+	border: 0;
+	.close-button {
+		color: $color-link-blue;
+		font-size: 3rem;
+		cursor: pointer;
+	}
+}
 @keyframes fillAnim {
   0%, 100% {
 	fill: #79b9f8;

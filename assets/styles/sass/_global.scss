@@ -170,7 +170,7 @@ button,
 		display: inline-flex;
 		align-items: center;
 	}
-	&:not(.no-bg):not(.close-button):not(.no-btn):not(.submenu-toggle) {
+	&:not(.no-bg):not(.close-button):not(.no-btn):not(.submenu-toggle):not(.mfp-close) {
 		&:hover,
 		&:focus {
 			background-color: $color-link-blue;
@@ -243,6 +243,15 @@ button,
 			// }
 		}
 	}
+}
+
+.mfp-image-holder .mfp-close {
+	right: 0;
+	cursor: pointer !important;
+}
+
+.mfp-container.mfp-image-holder.mfp-s-ready:hover {
+	cursor: default;
 }
 
 /*********************
