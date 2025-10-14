@@ -107,7 +107,7 @@ $alert_popup_link = $fields['alert_popup_link'] ?? null;
 											<div class="cell small-12 large-10 xxlarge-8">
 												<div class="grid-x grid-padding-x align-right">
 													<div class="cell small-12 medium-4 medium-offset-8 relative">
-														<div class="swiper-pagination"></div>
+														<div class="swiper-pagination hide-for-small-only"></div>
 													</div>
 												</div>
 											</div>

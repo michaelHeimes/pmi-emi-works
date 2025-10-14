@@ -1,13 +1,13 @@
 {
-    "key": "group_67196783d049b",
-    "title": "GLOBAL: Header & Footer Tags",
+    "key": "group_68ed61726abaa",
+    "title": "PAGE: Why EMI",
     "fields": [
         {
-            "key": "field_67196784dc76d",
-            "label": "Before Closing Head Tag",
-            "name": "before_closing_head_tag",
+            "key": "field_68ed6172c603b",
+            "label": "Quote Slider",
+            "name": "",
             "aria-label": "",
-            "type": "textarea",
+            "type": "accordion",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,19 +16,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
         },
         {
-            "key": "field_67196798dc76e",
-            "label": "Before Closing Body Tag",
-            "name": "before_closing_body_tag",
+            "key": "field_68ed6185c603c",
+            "label": "Quote Slider",
+            "name": "clone-quote_slider",
             "aria-label": "",
-            "type": "textarea",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -37,20 +34,21 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "clone": [
+                "group_68ed5a4a64e22"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "theme-general-settings"
+                "value": "page-templates\/page-why-emi.php"
             }
         ]
     ],
@@ -63,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748782598
+    "modified": 1760387959
 }

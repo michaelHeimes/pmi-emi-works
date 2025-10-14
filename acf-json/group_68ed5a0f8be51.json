@@ -1,9 +1,9 @@
 {
-    "key": "group_682f25238b03e",
-    "title": "PAGE: Home",
+    "key": "group_68ed5a0f8be51",
+    "title": "PAGE: Home (copy)",
     "fields": [
         {
-            "key": "field_682f252414479",
+            "key": "field_68ed5a0f8d6df",
             "label": "Hero Slider",
             "name": "",
             "aria-label": "",
@@ -21,7 +21,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_682f253f1447a",
+            "key": "field_68ed5a0f8d6e3",
             "label": "Hero Slider",
             "name": "clone-hero_slider",
             "aria-label": "",
@@ -43,7 +43,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_683a12491e3fb",
+            "key": "field_68ed5a0f8d6e5",
             "label": "Value Proposition",
             "name": "",
             "aria-label": "",
@@ -61,7 +61,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_68647b2fd7518",
+            "key": "field_68ed5a0f8d6e8",
             "label": "Slider Sets",
             "name": "val_prop_slider_sets",
             "aria-label": "",
@@ -83,7 +83,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_686598fa7bb8d",
+                    "key": "field_68ed5a0f8f9cc",
                     "label": "Desktop Background Image",
                     "name": "desktop_background_image",
                     "aria-label": "",
@@ -107,10 +107,10 @@
                     "mime_types": "",
                     "allow_in_bindings": 0,
                     "preview_size": "medium",
-                    "parent_repeater": "field_68647b2fd7518"
+                    "parent_repeater": "field_68ed5a0f8d6e8"
                 },
                 {
-                    "key": "field_68647b71d7519",
+                    "key": "field_68ed5a0f8f9cf",
                     "label": "Left",
                     "name": "left",
                     "aria-label": "",
@@ -124,9 +124,10 @@
                         "id": ""
                     },
                     "layout": "block",
+                    "parent_repeater": "field_68ed5a0f8d6e8",
                     "sub_fields": [
                         {
-                            "key": "field_683a12881e3fc",
+                            "key": "field_68ed5a0f9060e",
                             "label": "Background Image",
                             "name": "background_image",
                             "aria-label": "",
@@ -152,7 +153,7 @@
                             "preview_size": "medium"
                         },
                         {
-                            "key": "field_683a12d11e3fd",
+                            "key": "field_68ed5a0f90613",
                             "label": "Top Line",
                             "name": "text_top_line",
                             "aria-label": "",
@@ -173,7 +174,7 @@
                             "append": ""
                         },
                         {
-                            "key": "field_683a12e51e3fe",
+                            "key": "field_68ed5a0f90616",
                             "label": "Bottom Line",
                             "name": "text_bottom_line",
                             "aria-label": "",
@@ -193,11 +194,10 @@
                             "prepend": "",
                             "append": ""
                         }
-                    ],
-                    "parent_repeater": "field_68647b2fd7518"
+                    ]
                 },
                 {
-                    "key": "field_68647bf9d751b",
+                    "key": "field_68ed5a0f8f9d2",
                     "label": "Right",
                     "name": "right",
                     "aria-label": "",
@@ -211,9 +211,10 @@
                         "id": ""
                     },
                     "layout": "block",
+                    "parent_repeater": "field_68ed5a0f8d6e8",
                     "sub_fields": [
                         {
-                            "key": "field_68647bf9d751c",
+                            "key": "field_68ed5a0f924dc",
                             "label": "Background Image",
                             "name": "background_image",
                             "aria-label": "",
@@ -239,7 +240,7 @@
                             "preview_size": "medium"
                         },
                         {
-                            "key": "field_68647bf9d751d",
+                            "key": "field_68ed5a0f924df",
                             "label": "Top Line",
                             "name": "text_top_line",
                             "aria-label": "",
@@ -260,7 +261,7 @@
                             "append": ""
                         },
                         {
-                            "key": "field_68647bf9d751e",
+                            "key": "field_68ed5a0f924e2",
                             "label": "Bottom Line",
                             "name": "text_bottom_line",
                             "aria-label": "",
@@ -280,13 +281,12 @@
                             "prepend": "",
                             "append": ""
                         }
-                    ],
-                    "parent_repeater": "field_68647b2fd7518"
+                    ]
                 }
             ]
         },
         {
-            "key": "field_683a12ef1e3ff",
+            "key": "field_68ed5a0f8d6eb",
             "label": "Right Text Top Line",
             "name": "val_prop_right_text_top_line",
             "aria-label": "",
@@ -307,7 +307,7 @@
             "append": ""
         },
         {
-            "key": "field_683a12fb1e400",
+            "key": "field_68ed5a0f8d6ed",
             "label": "Right Text Bottom Line",
             "name": "val_prop_right_text_bottom_line",
             "aria-label": "",
@@ -328,7 +328,7 @@
             "append": ""
         },
         {
-            "key": "field_683a2e0f6b4a6",
+            "key": "field_68ed5a0f8d6f0",
             "label": "Image & Title CTA Cards",
             "name": "",
             "aria-label": "",
@@ -346,7 +346,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_683a2e922f4f2",
+            "key": "field_68ed5a0f8d6f2",
             "label": "Background Image",
             "name": "it_cta_cards_background_image",
             "aria-label": "",
@@ -372,7 +372,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_683a2e2f2f4ed",
+            "key": "field_68ed5a0f8d6f5",
             "label": "Heading",
             "name": "it_cta_cards_heading",
             "aria-label": "",
@@ -393,7 +393,7 @@
             "new_lines": "br"
         },
         {
-            "key": "field_683a2e4a2f4ee",
+            "key": "field_68ed5a0f8d6f8",
             "label": "Cards",
             "name": "it_cta_cards_cards",
             "aria-label": "",
@@ -415,7 +415,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_683a2e642f4ef",
+                    "key": "field_68ed5a0f96f3c",
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
@@ -439,10 +439,10 @@
                     "mime_types": "",
                     "allow_in_bindings": 0,
                     "preview_size": "medium",
-                    "parent_repeater": "field_683a2e4a2f4ee"
+                    "parent_repeater": "field_68ed5a0f8d6f8"
                 },
                 {
-                    "key": "field_683a2e702f4f0",
+                    "key": "field_68ed5a0f96f40",
                     "label": "Link",
                     "name": "link",
                     "aria-label": "",
@@ -457,12 +457,12 @@
                     },
                     "return_format": "array",
                     "allow_in_bindings": 0,
-                    "parent_repeater": "field_683a2e4a2f4ee"
+                    "parent_repeater": "field_68ed5a0f8d6f8"
                 }
             ]
         },
         {
-            "key": "field_683a2e7a2f4f1",
+            "key": "field_68ed5a0f8d6fb",
             "label": "CTA Link",
             "name": "it_cta_cards_cta_link",
             "aria-label": "",
@@ -479,7 +479,7 @@
             "allow_in_bindings": 0
         },
         {
-            "key": "field_683a544485b52",
+            "key": "field_68ed5a0f8d6fe",
             "label": "Icon & Title Cards",
             "name": "",
             "aria-label": "",
@@ -497,7 +497,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_683a545f85b53",
+            "key": "field_68ed5a0f8d701",
             "label": "Heading",
             "name": "itc_heading",
             "aria-label": "",
@@ -518,7 +518,7 @@
             "new_lines": "br"
         },
         {
-            "key": "field_683a547285b54",
+            "key": "field_68ed5a0f8d703",
             "label": "Cards",
             "name": "itc_cards",
             "aria-label": "",
@@ -540,7 +540,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_683a547b85b55",
+                    "key": "field_68ed5a0f99a04",
                     "label": "Icon",
                     "name": "icon",
                     "aria-label": "",
@@ -564,10 +564,10 @@
                     "mime_types": "",
                     "allow_in_bindings": 0,
                     "preview_size": "medium",
-                    "parent_repeater": "field_683a547285b54"
+                    "parent_repeater": "field_68ed5a0f8d703"
                 },
                 {
-                    "key": "field_683a548385b56",
+                    "key": "field_68ed5a0f99a0d",
                     "label": "Title",
                     "name": "title",
                     "aria-label": "",
@@ -586,12 +586,12 @@
                     "rows": 4,
                     "placeholder": "",
                     "new_lines": "br",
-                    "parent_repeater": "field_683a547285b54"
+                    "parent_repeater": "field_68ed5a0f8d703"
                 }
             ]
         },
         {
-            "key": "field_683c511720f2e",
+            "key": "field_68ed5a0f8d706",
             "label": "Button Link",
             "name": "itc_button_link",
             "aria-label": "",
@@ -608,7 +608,7 @@
             "allow_in_bindings": 0
         },
         {
-            "key": "field_68c33ad0b1042",
+            "key": "field_68ed5a0f8d708",
             "label": "Alert Popup",
             "name": "",
             "aria-label": "",
@@ -626,7 +626,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_68c33ae3b1043",
+            "key": "field_68ed5a0f8d70b",
             "label": "Enable",
             "name": "alert_popup_enable",
             "aria-label": "",
@@ -647,7 +647,7 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_68c33af8b1044",
+            "key": "field_68ed5a0f8d70e",
             "label": "Image",
             "name": "alert_popup_image",
             "aria-label": "",
@@ -673,7 +673,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_68c33b05b1045",
+            "key": "field_68ed5a0f8d710",
             "label": "Link",
             "name": "alert_popup_link",
             "aria-label": "",
@@ -707,5 +707,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": "2025-09-21 14:07:38"
+    "modified": 1760385551
 }
