@@ -75,7 +75,7 @@ $slides = $fields['quote_hero_slides'] ?? null;
 										<div class="grid-x grid-padding-x align-center">
 											<div class="cell small-12 large-10 xxlarge-8">
 												<div class="grid-x grid-padding-x align-right">
-													<div class="cell small-12 medium-4 medium-offset-8 relative">
+													<div class="cell small-12 xlarge-4 xlarge-offset-8 relative">
 														<div class="swiper-pagination"></div>
 													</div>
 												</div>

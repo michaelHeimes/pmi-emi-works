@@ -175,14 +175,16 @@
 		}
 	}
 	&.style-quote-slider {
-		.img-mask {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 356px;
-			max-height: 70%;
-			box-shadow: inset 0px 203px 99px 0px rgba(0,0,0,1);
+		@include breakpoint(tablet) {
+			.img-mask {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 356px;
+				max-height: 70%;
+				box-shadow: inset 0px 203px 99px 0px rgba(0,0,0,1);
+			}
 		}
 		.swiper-slide {
 			padding-bottom: 5rem;
@@ -241,4 +243,9 @@
 
 body:not(.home) .page-banner .hero-slider .swiper-wrapper {
 	min-height: 42.067vw;
+}
+body:not(.home) .page-banner.style-quote-slider .swiper-wrapper {
+	@media (min-width: 1550px) {
+		min-height: 652px;
+	}
 }
