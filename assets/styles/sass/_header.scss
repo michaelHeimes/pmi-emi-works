@@ -16,6 +16,19 @@ header.site-header {
 		height: $mobile_header_height;
 		// padding-bottom: .8rem;
 	}
+	.top-bar-alert {
+		background-color: #1C1D1F;
+		padding-top: .75rem;
+		padding-bottom: .75rem;
+		color: $color-light-blue;
+		p {
+			margin: 0;
+			color: $color-light-blue;
+		}
+		a {
+			color: $color-link-blue;
+		}
+	}
 	@include breakpoint(small down) {
 		.top-bar .top-bar-left, .top-bar .top-bar-right {
 			flex: 0 0 auto;
@@ -258,6 +271,7 @@ header.site-header {
 	header.site-header .top-bar.load {
 		position: absolute;
 		height: 100%;
+		top: var(--topBarHeight);
 	}
 }
 

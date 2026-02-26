@@ -416,7 +416,7 @@ $alert_popup_link = $fields['alert_popup_link'] ?? null;
 						</section>
 					<?php endif;?>
 					
-					<?php if($alert_popup_enable == 'true' && $alert_popup_image && $alert_popup_link):?>
+					<?php if($alert_popup_enable && $alert_popup_image && $alert_popup_link):?>
 						<div class="reveal" id="home-alert" data-reveal data-overlay="true">
 							<div class="grid-x grid-padding-x align-center align-middle">
 								<div class="small-12 grid-x align-right">

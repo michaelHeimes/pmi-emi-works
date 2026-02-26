@@ -32,21 +32,19 @@ $slides = $fields['hero_slides'] ?? null;
 									</div>
 								<?php endif;?>
 							</div>
-							<?php if( $title ):?>
-								<div class="grid-container grid-x align-center">
-									<div class="content relative grid-x align-center align-middle">
-										<div class="grid-x grid-padding-x align-center">
-											<div class="cell small-12 tablet-10 xlarge-8 xxlarge-7">
-												<?php if( $title ):?>
-													<div class="h1 text-center">
-														<?=wp_kses_post($title);?>
-													</div>
-												<?php endif;?>
-											</div>
+							<div class="grid-container grid-x align-center">
+								<div class="content relative grid-x align-center align-middle">
+									<div class="grid-x grid-padding-x align-center">
+										<div class="cell small-12 tablet-10 xlarge-8 xxlarge-7">
+											<?php if( $title ):?>
+												<div class="h1 text-center">
+													<?=wp_kses_post($title);?>
+												</div>
+											<?php endif;?>
 										</div>
 									</div>
 								</div>
-							<?php endif;?>
+							</div>
 						</div>
 					<?php $i++; endforeach; endif;?>
 				</div>

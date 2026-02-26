@@ -83,6 +83,9 @@
 				padding-top: 10rem;
 				padding-bottom: 10rem;
 			}
+			.grid-container {
+				padding-top: var(--topBarHeight);
+			}
 		}
 	}
 	&.style-home-hero-slider {
@@ -188,6 +191,9 @@
 		}
 		.swiper-slide {
 			padding-bottom: 5rem;
+			.grid-container {
+				padding-top: var(--topBarHeight);	
+			}
 			.content {
 				padding: 4rem 0 1.5rem;
 				@include breakpoint(tablet) {

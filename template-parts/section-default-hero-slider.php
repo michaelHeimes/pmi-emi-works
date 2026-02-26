@@ -38,15 +38,15 @@ $slides = get_field('hero_slides') ?? null;
 							</div>
 						</div>
 					</div>
-					<?php if( $hero_slider_heading_and_text ):?>
-						<div class="grid-container">
-							<div class="content relative grid-x align-center align-middle">
-								<div class="cell small-11 large-10 color-white">
-									<?=wp_kses_post( $hero_slider_heading_and_text );?>
-								</div>
+					<div class="grid-container">
+						<div class="content relative grid-x align-center align-middle">
+							<?php if( $hero_slider_heading_and_text ):?>
+							<div class="cell small-11 large-10 color-white">
+								<?=wp_kses_post( $hero_slider_heading_and_text );?>
 							</div>
+							<?php endif;?>
 						</div>
-					<?php endif;?>
+					</div>
 				</div>
 			<?php endif;?>
 		</div>

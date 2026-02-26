@@ -4,11 +4,24 @@
  *
  * For more info: https://jointswp.com/docs/off-canvas-menu/
  */
+ $header_top_bar_alert = get_field('header_top_bar_alert', 'option') ?? null;
  $logo = get_field('header_logo', 'option');
  $pre_header_links = get_field('pre-header_links', 'options') ?? null;
  $global_social_links = get_field('global_social_links', 'option') ?? null;
  $get_info_link = get_field('get_info_link', 'option') ?? null;
 ?>
+
+<?php if( $header_top_bar_alert):?>
+	<div id="top-bar-alert" class="top-bar-alert">
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<div class="cell small-12">
+					<?=wp_kses_post(  $header_top_bar_alert );?>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php endif;?>
 
 <div class="top-bar-wrap grid-container fluid">
 
@@ -59,7 +72,6 @@
 	</div>
 	
 	<div class="top-bar load relative">
-	
 		<div class="top-bar-left float-left grid-x align-middle">
 			
 			<div class="site-branding show-for-sr">
