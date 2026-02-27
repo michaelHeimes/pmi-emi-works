@@ -25,7 +25,7 @@
 
 <div class="top-bar-wrap grid-container fluid">
 
-	<div class="top-bar fixed show-for-xlarge">
+	<div class="top-bar fixed">
 	
 		<div class="top-bar-left float-left">
 			
@@ -57,15 +57,20 @@
 			</ul>
 		</div>
 		<div class="top-bar-right">
-			<div class="grid-x align-right">
+			<div class="grid-x align-right align-middle">
 				<?php get_template_part('template-parts/part', 'chev-btn',
 					array(
 						'link' =>  $get_info_link,
 						'bg-color' => 'link-blue',
 						'title-color' => 'white',
-						'chev-width' => '9'
+						'chev-width' => '9',
+						'classes' => 'show-for-medium'
 					),
 				);?>
+				<ul class="menu cell shrink hide-for-xlarge">
+					<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
+					<li><a class="menu-toggle top-row-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
+				</ul>
 			</div>
 		</div>
 

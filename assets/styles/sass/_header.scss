@@ -8,13 +8,12 @@ header.site-header {
 	z-index: 99999;
 	background-color: #0F0F1F;
 	@include breakpoint(medium down) {
-		position: fixed;
-		z-index: 99999;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: $mobile_header_height;
-		// padding-bottom: .8rem;
+		// position: fixed;
+		// z-index: 99999;
+		// top: 0;
+		// left: 0;
+		// width: 100%;
+		// height: $mobile_header_height;
 	}
 	.top-bar-alert {
 		background-color: #1C1D1F;
@@ -51,6 +50,9 @@ header.site-header {
 		a.button {
 			font-size: rem-calc(18);
 			padding: 0.85em 1.239em;
+			&.show-for-medium {
+				margin-right: 2rem;
+			}
 		}
 	}
 	.top-bar {

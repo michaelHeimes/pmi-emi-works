@@ -178,24 +178,6 @@ _app.body_scrolled = function() {
     if (!loadNav) return;
     
     const observer = new IntersectionObserver(
-        ([entry]) => {
-            if (!entry.isIntersecting) {
-                document.body.classList.add("has-scrolled");
-            } else {
-                document.body.classList.remove("has-scrolled");
-            }
-        },
-        { rootMargin: "0px 0px 0px 0px", threshold: 0 }
-    );
-    
-    observer.observe(loadNav);
-}
-
-_app.body_scrolled = function() {
-    const loadNav = document.querySelector(".top-bar.load");
-    if (!loadNav) return;
-    
-    const observer = new IntersectionObserver(
             ([entry]) => {
             if (!entry.isIntersecting) {
                 document.body.classList.add("has-scrolled");
