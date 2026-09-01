@@ -123,7 +123,7 @@
 		.content {
 			z-index: 1;
 			width: 100%;
-			padding-top: clamp(4.5rem, 2rem + 10.667vw, 10rem);
+			padding-top: clamp(8.5rem, 6rem + 10.667vw, 14rem);
 			padding-bottom: clamp(4.5rem, 2rem + 10.667vw, 10rem);
 			@include breakpoint(medium) {
 				padding-top: 10rem;
@@ -191,6 +191,9 @@
 		}
 		.swiper-slide {
 			padding-bottom: 5rem;
+			@include breakpoint(medium down) {
+				padding-top: 4rem;
+			}
 			.grid-container {
 				padding-top: var(--topBarHeight);	
 			}
